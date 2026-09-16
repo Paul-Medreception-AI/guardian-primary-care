@@ -49,7 +49,7 @@ export default function TermsSmsPage() {
               3. Support Information:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
-              If you experience issues with the messaging program, reply with the keyword &quot;HELP&quot; for more assistance, or reach out directly to preston.holifield@guardianprimary.com during business hours.
+              If you experience issues with the messaging program, reply with the keyword &quot;HELP&quot; for more assistance, or reach out directly to myprovider@guardianprimary.com or call (573) 200-6143 during business hours.
             </p>
 
             <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
@@ -157,7 +157,7 @@ export default function TermsSmsPage() {
               To access certain features of the Site, you may be required to register and create an account. You agree to provide accurate, current, and complete information during the registration process. You are responsible for maintaining the confidentiality of your login credentials and for all activities conducted under your account.
             </p>
             <p className="text-[var(--color-muted)] mb-6">
-              If you suspect unauthorized use of your account, notify us immediately at preston.holifield@guardianprimary.com. We are not liable for any loss or damage arising from your failure to comply with this obligation.
+              If you suspect unauthorized use of your account, notify us immediately at myprovider@guardianprimary.com. We are not liable for any loss or damage arising from your failure to comply with this obligation.
             </p>
 
             <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
@@ -171,7 +171,7 @@ export default function TermsSmsPage() {
               Governing Law
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
-              These Terms of Service shall be governed by and construed in accordance with the laws of the State of AL. Any dispute arising under these Terms shall be resolved exclusively through binding arbitration in that jurisdiction.
+              These Terms of Service shall be governed by and construed in accordance with the laws of the State of Missouri. Any dispute arising under these Terms shall be resolved exclusively through binding arbitration in that jurisdiction.
             </p>
 
             <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
@@ -189,7 +189,8 @@ export default function TermsSmsPage() {
             </p>
             <div className="bg-[var(--color-cream)] border border-[var(--color-border)] rounded-lg p-6">
               <p className="text-[var(--color-ink)] font-semibold mb-2">Guardian Primary Care</p>
-              <p className="text-[var(--color-muted)] mb-2">Email: preston.holifield@guardianprimary.com</p>
+              <p className="text-[var(--color-muted)] mb-2">Phone: (573) 200-6143</p>
+              <p className="text-[var(--color-muted)] mb-2">Email: myprovider@guardianprimary.com</p>
               <p className="text-[var(--color-muted)]">Website: https://www.guardianprimary.com</p>
             </div>
 

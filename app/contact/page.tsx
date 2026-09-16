@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Guardian Primary Care, Cape Girardeau MO',
@@ -67,98 +68,8 @@ export default function ContactPage() {
                 <a href="tel:+15732006143" className="text-[var(--color-primary)] hover:underline">(573) 200-6143</a>{' '}
                 is the fastest way to reach our team.
               </p>
-              {/* Routes to the practice's own published inbox. TODO(launch): swap in the practice's
-                  hosted form endpoint once one exists, so submissions land in their workflow.
-                  Do NOT point this at a third-party form service without a signed BAA. */}
-              <form
-                method="POST"
-                action="mailto:myprovider@guardianprimary.com"
-                encType="text/plain"
-              >
-                <div className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-[var(--color-ink)] mb-2">
-                      Full Name*
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="border border-[var(--color-border)] rounded-xl px-4 py-3 w-full focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none transition-shadow"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-[var(--color-ink)] mb-2">
-                      Email*
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="border border-[var(--color-border)] rounded-xl px-4 py-3 w-full focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none transition-shadow"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-[var(--color-ink)] mb-2">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="border border-[var(--color-border)] rounded-xl px-4 py-3 w-full focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none transition-shadow"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-semibold text-[var(--color-ink)] mb-2">
-                      How can we help?
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="border border-[var(--color-border)] rounded-xl px-4 py-3 w-full focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none transition-shadow"
-                    >
-                      <option value="">Select a topic...</option>
-                      <option value="New Patient Appointment">New patient appointment</option>
-                      <option value="Existing Patient Appointment">Existing patient appointment</option>
-                      <option value="Guardian Direct Care">Guardian Direct Care</option>
-                      <option value="Insurance Question">Insurance or billing question</option>
-                      <option value="Telehealth">Telehealth visit</option>
-                      <option value="Employer Plan">Employer or business plan</option>
-                      <option value="Other">Something else</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-[var(--color-ink)] mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="border border-[var(--color-border)] rounded-xl px-4 py-3 w-full focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none transition-shadow resize-none"
-                    ></textarea>
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white py-4 rounded-xl font-semibold transition-colors mt-2"
-                  >
-                    Send Message
-                  </button>
-
-                  <p className="text-[var(--color-muted)] text-xs mt-4 leading-relaxed">
-                    Please do not include sensitive medical information in this form. To share health details securely,
-                    use the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a> or call the office. If this is a medical emergency, call 911.
-                  </p>
-                </div>
-              </form>
+              {/* Posts to /api/contact, which forwards to MedReception Studio. */}
+              <ContactForm />
             </div>
 
             <div className="space-y-8">

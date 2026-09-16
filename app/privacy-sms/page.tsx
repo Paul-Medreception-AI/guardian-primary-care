@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacySmsPage() {
   return (
-    <main className="min-h-screen bg-white font-opensans">
+    <main className="min-h-screen bg-white">
       <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="font-display text-5xl font-bold mb-4">Guardian Primary Care - Privacy Policy</h1>
@@ -112,7 +112,7 @@ export default function PrivacySmsPage() {
             Help &amp; Support:
           </p>
           <ul className="list-disc pl-6 mb-6 text-[var(--color-ink)] space-y-2">
-            <li>Reply &quot;HELP&quot; for assistance or contact us at preston.holifield@guardianprimary.com</li>
+            <li>Reply &quot;HELP&quot; for assistance or contact us at myprovider@guardianprimary.com</li>
             <li>Customer support is available during regular business hours</li>
           </ul>
           <p className="text-[var(--color-ink)] mb-2 leading-relaxed font-semibold">
@@ -255,7 +255,8 @@ export default function PrivacySmsPage() {
           </p>
           <div className="bg-[var(--color-cream)] border border-[var(--color-border)] rounded-lg p-6 mb-8">
             <p className="text-[var(--color-ink)] font-semibold mb-2">Guardian Primary Care</p>
-            <p className="text-[var(--color-muted)] mb-2">Email: preston.holifield@guardianprimary.com</p>
+            <p className="text-[var(--color-muted)] mb-2">Phone: (573) 200-6143</p>
+            <p className="text-[var(--color-muted)] mb-2">Email: myprovider@guardianprimary.com</p>
             <p className="text-[var(--color-muted)]">Website: https://www.guardianprimary.com</p>
           </div>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
