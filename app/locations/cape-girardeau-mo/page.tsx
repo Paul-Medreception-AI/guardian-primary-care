@@ -179,7 +179,7 @@ export default function CapeGirardeauLocationPage() {
 
             <div className="animate-fade-up">
               <h2 className="font-display text-4xl font-light text-[var(--color-ink)] mb-6">Visit Us</h2>
-              <dl className="space-y-4 text-[var(--color-ink)]/80">
+              <dl className="space-y-4 text-ink/80">
                 <div>
                   <dt className="text-xs uppercase tracking-widest text-[var(--color-primary)] mb-1">Address</dt>
                   <dd className="text-lg">
@@ -246,7 +246,7 @@ export default function CapeGirardeauLocationPage() {
           <h2 className="font-display text-4xl md:text-5xl font-light text-[var(--color-ink)] mb-8 text-center">
             Serving Cape Girardeau and Southeast Missouri
           </h2>
-          <div className="space-y-6 text-lg text-[var(--color-ink)]/80 leading-relaxed">
+          <div className="space-y-6 text-lg text-ink/80 leading-relaxed">
             <p>
               Guardian Primary Care has cared for patients in Cape Girardeau since 2024. Families come to
               us from across the region, including Jackson, Scott City, Perryville, Sikeston, and Chaffee,
@@ -304,7 +304,7 @@ export default function CapeGirardeauLocationPage() {
                   <h3 className="font-display text-2xl font-light text-[var(--color-ink)] mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[var(--color-ink)]/70 mb-6 flex-1 leading-relaxed">{service.body}</p>
+                  <p className="text-ink/70 mb-6 flex-1 leading-relaxed">{service.body}</p>
                   <span className="text-[var(--color-accent)] font-medium group-hover:underline">
                     Learn More →
                   </span>
@@ -329,7 +329,7 @@ export default function CapeGirardeauLocationPage() {
           <h2 className="font-display text-3xl md:text-4xl font-light text-[var(--color-ink)] mb-6 text-center">
             A Long Drive? Ask About Telehealth
           </h2>
-          <div className="space-y-4 text-lg text-[var(--color-ink)]/80 leading-relaxed">
+          <div className="space-y-4 text-lg text-ink/80 leading-relaxed">
             <p>
               If you are coming from Perryville, Sikeston, or anywhere else that turns a short visit into
               a long afternoon, a telehealth appointment may be all you need. Virtual visits work well for
@@ -362,7 +362,7 @@ export default function CapeGirardeauLocationPage() {
             {FAQS.map((faq) => (
               <div key={faq.q} className="border-l-4 border-[var(--color-accent)] pl-6 py-2 animate-fade-up">
                 <h3 className="font-display text-2xl font-light text-[var(--color-ink)] mb-3">{faq.q}</h3>
-                <p className="text-[var(--color-ink)]/70 leading-relaxed">{faq.a}</p>
+                <p className="text-ink/70 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

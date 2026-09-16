@@ -33,7 +33,7 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl inline-block px-3 py-2">
-              <img src="/logo.png" alt="Guardian Primary Care" className="h-10 w-auto" width={280} height={80} />
+              <img src="/logo.png" alt="Guardian Primary Care" className="h-[60px] w-auto" width={280} height={80} />
             </div>
             <p className="text-white/70 text-sm leading-relaxed mt-4">
               Comprehensive healthcare for every stage of life in Cape Girardeau, Missouri. Routine, sick and

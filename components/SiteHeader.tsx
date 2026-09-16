@@ -35,9 +35,9 @@ export default function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--color-border)] shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[104px] flex items-center justify-between gap-4">
         <a href="/" className="shrink-0" aria-label="Guardian Primary Care home">
-          <img src="/logo.png" alt="Guardian Primary Care" className="h-11 w-auto" width={280} height={80} />
+          <img src="/logo.png" alt="Guardian Primary Care" className="h-[66px] w-auto" width={280} height={80} />
         </a>
 
         {/* ── Desktop nav ─────────────────────────────────────────────── */}
@@ -188,7 +188,7 @@ export default function SiteHeader() {
           </svg>
         </label>
 
-        <div className="mobile-panel hidden lg:!hidden absolute left-0 right-0 top-20 bg-white border-b border-[var(--color-border)] shadow-xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+        <div className="mobile-panel hidden lg:!hidden absolute left-0 right-0 top-[104px] bg-white border-b border-[var(--color-border)] shadow-xl max-h-[calc(100vh-104px)] overflow-y-auto">
           <nav className="px-5 py-5 space-y-5" aria-label="Mobile">
             <a
               href="/contact"

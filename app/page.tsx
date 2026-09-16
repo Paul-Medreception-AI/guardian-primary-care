@@ -62,9 +62,19 @@ export default function HomePage() {
           sizes="100vw" 
           className="object-cover object-center" 
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-dark)]/85 via-[var(--color-dark)]/70 to-[var(--color-primary)]/65" />
+        {/* Scrim. Written as an explicit rgba gradient on purpose: Tailwind cannot
+            apply an alpha modifier to an arbitrary var() colour, so
+            `from-[var(--color-dark)]/85` compiles to NOTHING and the hero text ends
+            up white on a bright photo. #00304B = 0,48,75 · #0095E9 = 0,149,233. */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom right, rgba(0,48,75,0.92) 0%, rgba(0,48,75,0.80) 45%, rgba(0,149,233,0.66) 100%)',
+          }}
+        />
         <div className="relative max-w-5xl mx-auto px-6 text-center py-20">
-          <h1 className="text-6xl sm:text-7xl font-light tracking-tight leading-tight font-display">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] font-display max-w-4xl mx-auto">
             Comprehensive Primary Care Built Around You and Your Family
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mt-6 leading-relaxed">

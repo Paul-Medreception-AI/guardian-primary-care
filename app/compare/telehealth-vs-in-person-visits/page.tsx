@@ -53,7 +53,7 @@ export default function TelehealthVsInPersonPage() {
             </div>
             
             {/* Scope of Care */}
-            <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-[var(--color-cream)]/30">
+            <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-cream/30">
               <div className="p-6 font-semibold text-[var(--color-ink)] border-r border-[var(--color-border)] bg-[var(--color-cream)]">
                 Scope of Care
               </div>
@@ -79,7 +79,7 @@ export default function TelehealthVsInPersonPage() {
             </div>
             
             {/* Wait Times */}
-            <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-[var(--color-cream)]/30">
+            <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-cream/30">
               <div className="p-6 font-semibold text-[var(--color-ink)] border-r border-[var(--color-border)] bg-[var(--color-cream)]">
                 Wait Times
               </div>
@@ -105,7 +105,7 @@ export default function TelehealthVsInPersonPage() {
             </div>
             
             {/* Technology Requirements */}
-            <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-[var(--color-cream)]/30">
+            <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-cream/30">
               <div className="p-6 font-semibold text-[var(--color-ink)] border-r border-[var(--color-border)] bg-[var(--color-cream)]">
                 Technology Requirements
               </div>
