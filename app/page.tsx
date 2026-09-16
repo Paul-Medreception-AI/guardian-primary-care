@@ -54,29 +54,38 @@ export default function HomePage() {
     <main>
       {/* Hero — the photograph is the hero; the copy answers only
           what this is, who it is for, and what to do next. */}
-      <section className="relative min-h-[88vh] flex items-center text-white overflow-hidden bg-[var(--color-dark)]">
+      <section className="relative min-h-[82vh] lg:min-h-[88vh] flex items-start lg:items-center text-white overflow-hidden bg-[var(--color-dark)]">
         <Image
           src="/images/site/hero-family.jpg"
           alt="A Guardian Primary Care provider examining an infant while the child's mother holds them"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[30%_center] lg:object-center"
         />
         {/* Localized scrim only. Strongest behind the copy, fading completely into
             the photo so the image keeps its full brightness at the edges instead of
             taking a flat grey wash. Inline rgba on purpose: Tailwind cannot apply an
             alpha modifier to an arbitrary var() colour, so `from-[var(--color-dark)]/85`
             compiles to nothing and the white copy lands on bare photograph. */}
+        {/* Mobile: a vertical band behind the centred copy. */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 lg:hidden"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(15,35,45,0.62) 0%, rgba(15,35,45,0.58) 34%, rgba(15,35,45,0.22) 48%, rgba(15,35,45,0) 58%)',
+          }}
+        />
+        {/* Desktop: a feathered pool placed on the copy's actual position. */}
+        <div
+          className="absolute inset-0 hidden lg:block"
           style={{
             background:
               'radial-gradient(ellipse 42% 36% at 46% 20%, rgba(15,35,45,0.56) 0%, rgba(15,35,45,0.52) 48%, rgba(15,35,45,0.22) 74%, rgba(15,35,45,0) 100%)',
           }}
         />
 
-        <div className="relative w-full px-6 pb-24 self-center -translate-y-[6%] lg:-translate-y-[calc(20%_+_105px)]">
+        <div className="relative w-full px-6 pt-8 pb-10 self-start lg:self-center lg:pt-0 lg:pb-24 lg:-translate-y-[calc(20%_+_105px)]">
           <div className="mx-auto lg:mx-0 lg:ml-[25%] text-center" style={{ maxWidth: '600px' }}>
             <h1
               className="font-display text-[34px] sm:text-[46px] lg:text-[57px] leading-[1.08] tracking-tight"
@@ -99,8 +108,7 @@ export default function HomePage() {
               </Link>
               <a
                 href="tel:+15732006143"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white/20"
-                style={{ backgroundColor: 'rgba(10,40,60,0.20)' }}
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white/20 bg-[rgba(10,40,60,0.55)] lg:bg-[rgba(10,40,60,0.20)] backdrop-blur-[2px]"
               >
                 Call (573) 200-6143
               </a>
@@ -109,18 +117,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Credibility strip — the coverage facts, out of the hero's way */}
+      {/* Credibility strip — the coverage facts, out of the hero's way.
+          Each fact is a nowrap unit so it wraps BETWEEN facts, never mid-phrase. */}
       <section className="bg-white py-5 border-b border-[var(--color-border)]">
         <div className="max-w-5xl mx-auto px-6">
-          <p className="text-center text-sm sm:text-[15px] text-[var(--color-muted)] leading-relaxed">
-            <span className="text-[var(--color-ink)] font-semibold">Most major commercial insurance accepted</span>
-            <span className="mx-2 text-[var(--color-border)]" aria-hidden="true">&bull;</span>Medicare
-            <span className="mx-2 text-[var(--color-border)]" aria-hidden="true">&bull;</span>Medicaid
-            <span className="mx-2 text-[var(--color-border)]" aria-hidden="true">&bull;</span>
-            <Link href="/services/guardian-direct-care" className="text-[var(--color-primary)] font-semibold hover:underline">
-              Guardian Direct Care available
-            </Link>
-          </p>
+          <ul className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-sm sm:text-[15px] leading-snug">
+            <li className="whitespace-nowrap text-[var(--color-ink)] font-semibold">Most major commercial insurance accepted</li>
+            <li aria-hidden="true" className="text-[var(--color-border)]">&bull;</li>
+            <li className="whitespace-nowrap text-[var(--color-muted)]">Medicare</li>
+            <li aria-hidden="true" className="text-[var(--color-border)]">&bull;</li>
+            <li className="whitespace-nowrap text-[var(--color-muted)]">Medicaid</li>
+            <li aria-hidden="true" className="text-[var(--color-border)]">&bull;</li>
+            <li className="whitespace-nowrap">
+              <Link href="/services/guardian-direct-care" className="text-[var(--color-primary)] font-semibold hover:underline">
+                Guardian Direct Care available
+              </Link>
+            </li>
+          </ul>
         </div>
       </section>
 
