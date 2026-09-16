@@ -1,13 +1,15 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Telehealth vs. In-Person Visits: Choosing the Right Option | Guardian Primary Care',
-  description: 'Discover when to choose telehealth or in-person care. Learn the benefits, limitations, and best use cases for each option from our Birmingham primary care experts.',
+  title: 'Telehealth vs. In-Person Visits: How to Choose | Guardian',
+  description: 'When a video visit is enough, when you need to be seen in person, and how to decide, from the primary care team in Cape Girardeau, Missouri.',
   openGraph: {
-    title: 'Telehealth vs. In-Person Visits: Choosing the Right Option',
-    description: 'Expert guidance on selecting between telehealth and in-person medical visits for your healthcare needs.',
+    title: 'Telehealth vs. In-Person Visits: How to Choose',
+    description: 'When a video visit is enough, when you need to be seen in person, and how to decide, from the primary care team in Cape Girardeau, Missouri.',
     type: 'article',
     publishedTime: '2024-01-15T09:00:00Z',
+    authors: ['Guardian Primary Care'],
   },
 }
 
@@ -32,7 +34,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h1 className="text-5xl font-light leading-tight text-center mb-8 font-display">
             Telehealth vs. In-Person Visits: Choosing the Right Option
           </h1>
 
@@ -42,17 +44,35 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
           </div>
         </div>
       </section>
 
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative w-full h-80 rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/hero-poster.jpg"
+              alt="A provider greeting a patient at the entrance of the Guardian Primary Care clinic"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover object-center"
+            />
+          </div>
+          <p className="text-[var(--color-muted)] text-sm mt-4 text-center leading-relaxed">
+            Guardian Primary Care offers both in-office and telehealth visits. Appointments are scheduled by request, so ask for whichever suits the problem.
+          </p>
+        </div>
+      </section>
+
       {/* Article Body */}
-      <article className="bg-white py-20">
+      <article className="bg-white py-16">
         <div className="max-w-3xl mx-auto px-6">
           {/* Opening */}
           <p className="text-[var(--color-ink)] leading-loose text-lg mb-6">
-            You wake up feeling under the weather—sore throat, mild fever, and fatigue. Do you schedule an in-person doctor's visit, or could a video call from the comfort of your home be just as effective? The rise of telehealth has transformed how we access medical care, offering unprecedented convenience. But with options comes the question: which type of visit is right for your specific situation?
+            You wake up feeling under the weather: sore throat, mild fever, fatigue. Do you book an in-person visit, or would a video call from home work just as well? Telehealth has changed how we reach our care team, and with the extra option comes a question: which type of visit is right for this particular problem?
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -60,7 +80,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             What Is Telehealth?
           </h2>
 
@@ -69,20 +89,20 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            The COVID-19 pandemic accelerated telehealth adoption dramatically. According to the American Medical Association, telehealth visits increased by more than 50 times their pre-pandemic levels in 2020. While utilization has moderated since peak pandemic times, telehealth has firmly established itself as a valuable tool in modern healthcare delivery.
+            The COVID-19 pandemic accelerated the adoption of telehealth across the country. Use has settled back since the peak of the pandemic, but virtual visits did not go away: telehealth is now a standard tool in primary care rather than an emergency measure.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            In Birmingham, AL, many primary care practices now offer hybrid models that combine traditional in-person appointments with convenient virtual options, giving patients flexibility without sacrificing quality care.
+            In Cape Girardeau, Missouri, many primary care practices now combine in-office appointments with virtual options, which gives patients flexibility without giving up quality. Guardian Primary Care offers both, and you can read how our virtual visits work on our <a href="/telehealth" className="text-[var(--color-primary)] underline">telehealth</a> page.
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             When Telehealth Excels
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Telehealth isn't just convenient—it's genuinely effective for many medical situations. Virtual visits can provide the same quality of care as in-person appointments for numerous conditions while saving time and reducing exposure to illness in waiting rooms.
+            Telehealth is not only convenient, it is genuinely effective for many situations. For a good number of concerns a virtual visit does the same work as an office visit, while saving you travel time and keeping you out of a waiting room full of other people&apos;s germs.
           </p>
 
           <div className="my-8">
@@ -136,21 +156,21 @@ export default function BlogPost() {
           </div>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Research published in the Journal of the American Medical Association found that telehealth visits achieved comparable clinical outcomes to in-person visits for common primary care conditions, with the added benefit of reduced time burden and travel costs for patients.
+            For many common primary care concerns, a virtual visit reaches the same plan of care as an office visit would, with less time away from work and no drive. The judgment call is not really telehealth against in-person care, it is whether this particular problem needs hands on it.
           </p>
 
           {/* Pull Quote */}
-          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
-            "Telehealth isn't replacing traditional care—it's expanding access and offering patients choice. The best healthcare model uses both approaches strategically."
+          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-light font-display">
+            &ldquo;Telehealth is not replacing traditional care. It is widening access and giving patients a choice, and the best care uses both approaches deliberately.&rdquo;
           </blockquote>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             When In-Person Visits Are Essential
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            While telehealth offers remarkable convenience, certain medical situations absolutely require the hands-on evaluation that only in-person visits can provide. Physical examinations, diagnostic testing, and procedures necessitate your physical presence.
+            For all its convenience, some situations require the hands-on evaluation only an in-person visit can provide. Physical examination, diagnostic testing and procedures all need you in the room.
           </p>
 
           <div className="my-8">
@@ -204,11 +224,11 @@ export default function BlogPost() {
           </div>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            If you're uncertain whether your situation warrants an in-person visit, don't hesitate to call your provider's office. Staff can help triage your concern and recommend the most appropriate visit type.
+            If you are not sure which your situation calls for, call the office and ask. Our team can talk through your concern and recommend the right kind of visit: call (573) 200-6143.
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Comparing the Benefits and Limitations
           </h2>
 
@@ -232,18 +252,18 @@ export default function BlogPost() {
           </p>
           <ul className="space-y-2 mb-6 ml-6">
             <li className="text-[var(--color-ink)] leading-loose">• <strong>Comprehensive examination:</strong> Providers can perform hands-on assessments critical for accurate diagnosis</li>
-            <li className="text-[var(--color-ink)] leading-loose">• <strong>Immediate testing:</strong> On-site labs and diagnostic equipment provide instant results</li>
+            <li className="text-[var(--color-ink)] leading-loose">• <strong>Testing in the same visit:</strong> Samples can be collected and testing arranged while you are there, instead of scheduling a second trip</li>
             <li className="text-[var(--color-ink)] leading-loose">• <strong>Procedures and interventions:</strong> Many treatments simply require your physical presence</li>
             <li className="text-[var(--color-ink)] leading-loose">• <strong>Personal connection:</strong> Some patients find face-to-face interaction more reassuring and easier for building rapport</li>
             <li className="text-[var(--color-ink)] leading-loose">• <strong>No technology barriers:</strong> Eliminates concerns about internet connectivity or digital literacy</li>
           </ul>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            The limitations mirror these advantages—telehealth can't perform physical exams or procedures, while in-person visits require time, travel, and potential exposure to illness.
+            The limitations mirror these advantages, telehealth can't perform physical exams or procedures, while in-person visits require time, travel, and potential exposure to illness.
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Making the Right Choice for Your Situation
           </h2>
 
@@ -256,7 +276,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            <strong>Need for physical examination:</strong> Ask yourself: "Would the doctor need to touch, listen to, or closely examine my body to properly evaluate this?" If yes, schedule in-person.
+            <strong>Need for physical examination:</strong> Ask yourself whether your provider would need to listen to, feel or closely examine something in order to evaluate it properly. If the answer is yes, book an in-person visit.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -272,16 +292,16 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Many primary care practices in Birmingham offer hybrid models where you can start with a telehealth consultation, and the provider will recommend an in-person follow-up if needed. This approach combines convenience with comprehensive care.
+            Many practices in Cape Girardeau work in a hybrid way: you start with a telehealth visit, and your provider asks you to come in if the problem needs a closer look. That approach keeps the convenience without giving up thoroughness.
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             The Future: Blended Care Models
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            The future of primary care isn't about choosing between telehealth and in-person visits—it's about intelligently integrating both. Progressive practices are developing blended care models that leverage the strengths of each approach.
+            The future of primary care is not about choosing between telehealth and in-person visits, it is about combining them sensibly. Blended care uses the strengths of each.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -289,7 +309,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Direct Primary Care (DPC) models are particularly well-suited to this hybrid approach. With extended appointment times, unlimited access to your provider, and the flexibility to choose virtual or in-person visits based on your needs, DPC practices in Birmingham, AL are pioneering personalized, patient-centered care delivery.
+            Direct-care models suit this hybrid approach well, because longer appointments and direct access to your provider make it easy to start virtually and come in if needed. At Guardian Primary Care you can use your insurance (we are in-network with most major commercial insurances, Medicare and Medicaid) or choose <a href="/services/guardian-direct-care" className="text-[var(--color-primary)] underline">Guardian Direct Care</a>, which includes telehealth either way.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -297,7 +317,7 @@ export default function BlogPost() {
           </p>
 
           {/* Closing */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Your Healthcare, Your Choice
           </h2>
 
@@ -306,11 +326,11 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Don't hesitate to discuss with your provider which visit type makes the most sense for your needs. A responsive primary care practice will work with you to create a care plan that combines the convenience of virtual visits with the thoroughness of in-person care when needed.
+            Talk with your provider about which visit type makes the most sense for you. A responsive practice will build a plan that uses virtual visits where they work and in-office visits where they matter.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            If you're looking for a primary care practice that offers both exceptional in-person care and convenient telehealth options in Birmingham, AL, we're here to help. Our team is committed to providing personalized, accessible healthcare that fits your life.
+            If you are looking for a primary care practice in Cape Girardeau, Missouri that offers both in-office care and telehealth, we are here to help. Visits are by appointment: call (573) 200-6143 or request an appointment online, and existing patients can self-schedule on the Patient Ally portal.
           </p>
         </div>
 
@@ -322,8 +342,8 @@ export default function BlogPost() {
             </svg>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Clinical Team</h3>
-            <p className="text-[var(--color-muted)] leading-relaxed">Board-certified providers specializing in Primary Care / DPC</p>
+            <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care team</h3>
+            <p className="text-[var(--color-muted)] leading-relaxed">Led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri Licensed Collaborating Physician, caring for patients in Cape Girardeau and Southeast Missouri.</p>
           </div>
         </div>
       </article>
@@ -331,13 +351,13 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 font-light text-center" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h3 className="text-3xl text-[var(--color-ink)] mb-8 font-light text-center font-display">
             Related Resources
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)] opacity-50" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
@@ -345,8 +365,8 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-accent)] mb-2">Preventive Care</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  The Importance of Annual Physical Exams
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors font-display">
+                  The Importance of Annual Wellness Exams for Adults
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
                   Discover why routine checkups are essential for catching health issues early and maintaining long-term wellness.
@@ -355,7 +375,7 @@ export default function BlogPost() {
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/understanding-direct-primary-care-is-it-right-for-you" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)] opacity-50" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -363,17 +383,17 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-accent)] mb-2">Patient Care</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  Understanding Direct Primary Care: Is It Right for You?
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors font-display">
+                  Direct Primary Care: Is It Right for You?
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Learn how the DPC model provides more time, better access, and personalized attention from your primary care provider.
+                  How Guardian Direct Care compares with using your insurance benefits, and who each option suits.
                 </p>
               </div>
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/managing-multiple-chronic-conditions-a-coordinated-care-appr" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)] opacity-50" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -381,11 +401,11 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-accent)] mb-2">Chronic Disease</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  Managing Chronic Conditions: A Comprehensive Guide
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors font-display">
+                  Managing Multiple Chronic Conditions: A Coordinated Approach
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Expert strategies for living well with chronic health conditions through proactive management and lifestyle modifications.
+                  How one care team keeps several long-term conditions, and their treatments, working together.
                 </p>
               </div>
             </a>
@@ -396,18 +416,29 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-4xl font-light mb-4 font-display">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Our team is here to help.
+            Telehealth or in office, our team in Cape Girardeau will help you pick the visit that fits the problem.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-          >
-            Schedule Your Visit
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/contact"
+              className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              Schedule Your Visit
+            </a>
+            <a
+              href="tel:+15732006143"
+              className="inline-block border border-white/60 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/10"
+            >
+              Call (573) 200-6143
+            </a>
+          </div>
+          <p className="text-white/80 text-sm mt-6">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Visits are by appointment.
+          </p>
         </div>
       </section>
     </main>

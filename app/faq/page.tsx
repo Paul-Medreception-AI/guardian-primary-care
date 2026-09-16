@@ -1,14 +1,136 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata = {
-  title: 'Frequently Asked Questions | Guardian Primary Care',
-  description: 'Get answers to common questions about our primary care services, direct primary care membership, insurance, appointments, and patient care in Birmingham, AL.',
+export const metadata: Metadata = {
+  title: 'Frequently Asked Questions | Guardian Primary Care, Cape Girardeau MO',
+  description:
+    'Answers about insurance, Guardian Direct Care pricing, telehealth, who you will see and how to become a patient at Guardian Primary Care in Cape Girardeau, Missouri.',
+  alternates: { canonical: '/faq' },
+}
+
+type Faq = { question: string; answer: string }
+
+const faqs: Faq[] = [
+  {
+    question: 'Do you take my insurance?',
+    answer:
+      'Guardian Primary Care is in-network with most major commercial insurances, Medicare and Medicaid, including plans such as Blue Cross Blue Shield, Aetna, Humana, Oscar Health, Mutual of Omaha, Centene and HealthLink. Networks change often, so call us at (573) 200-6143 with the details on your card and we will verify your benefits before your first visit. If you would rather not use insurance for your primary care, Guardian Direct Care is available as an alternative.',
+  },
+  {
+    question: 'Who will I see at Guardian Primary Care?',
+    answer:
+      'Your provider is Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner licensed by the Missouri State Board of Nursing, who practices in partnership with a Missouri Licensed Collaborating Physician. You will also be cared for by our team: Madi Hayden-Moore, BSN, RN, and Tamera Crowden, a certified medical assistant. Heather Pullen, MSN, APRN, FNP-C, RN, leads Guardian Aesthetics.',
+  },
+  {
+    question: 'What is Guardian Direct Care, and what does it cost?',
+    answer:
+      'Guardian Direct Care is our direct care option for patients who want predictable pricing and direct access to their provider, without hidden fees or surprise bills. It is offered alongside insurance, not instead of it, and joining is entirely your choice. Monthly pricing is $85 for adults 18 to 64, $70 for seniors 65 and over, $40 for children 0 to 17, $150 for a couple and $210 for a family of two adults and up to two children, with each additional child at $30 a month. Prepaying annually saves you money, and there is a one time $25 enrollment fee that is waived with a referral from a licensed provider.',
+  },
+  {
+    question: 'Is Guardian Direct Care the same as health insurance?',
+    answer:
+      'No. Guardian Direct Care is a membership that covers your primary care at Guardian. It is not insurance, and it does not cover hospital stays, specialist care, imaging or prescription drug costs. Many members keep a health plan for those things and use Guardian Direct Care for their day to day care. You can see the full pricing and what is included on our Care Access page.',
+  },
+  {
+    question: 'Do you see children?',
+    answer:
+      'Yes. Guardian Primary Care is a family practice and we care for patients at every stage of life, from children through older adults. Guardian Direct Care includes plans for children 0 to 17 at $40 a month, which cover annual and sports physicals. A child plan requires a parent or guardian to be enrolled as well.',
+  },
+  {
+    question: 'Do you offer telehealth or virtual visits?',
+    answer:
+      'Yes. Guardian offers both in-person and telehealth appointments. Telehealth works well for follow ups, medication management, mental health check ins and many minor illnesses. Some concerns do need an in-person exam, and our team will help you choose the right kind of visit when you schedule.',
+  },
+  {
+    question: 'Where are you located?',
+    answer:
+      'We are at 2441 Myra Dr, Cape Girardeau, MO 63703. We care for patients from across Southeast Missouri, including Jackson, Scott City, Perryville and Sikeston.',
+  },
+  {
+    question: 'What are your office hours?',
+    answer:
+      'Guardian Primary Care sees patients by appointment, and we are closed on US major holidays. Call us at (573) 200-6143 and we will find a time that fits your schedule, in the office or by telehealth.',
+  },
+  {
+    question: 'How do I become a new patient?',
+    answer:
+      'Call us at (573) 200-6143 or request your first appointment online through our contact page. We will ask for your basic contact and insurance information so we can be ready for you. Patients who are already established with us can self-schedule on the Patient Ally portal.',
+  },
+  {
+    question: 'What should I bring to my first appointment?',
+    answer:
+      'Bring a current photo ID, your insurance card if you are using insurance, a list of everything you take including over the counter medicines and supplements, and any recent lab work or records from other providers. Bring your questions too. If something is hard to track down, come anyway and we will sort it out together.',
+  },
+  {
+    question: 'Can I be seen quickly when I am sick?',
+    answer:
+      'Guardian Direct Care members have same day or next day sick visits included in their membership. If you are not a member, call us at (573) 200-6143 as early in the day as you can and we will do our best to fit you in. For a life threatening emergency such as chest pain, trouble breathing, severe bleeding or stroke symptoms, call 911 or go to the nearest emergency room.',
+  },
+  {
+    question: 'What should I do if I have an urgent concern after hours?',
+    answer:
+      'For any life threatening emergency, call 911 or go to the nearest emergency room. If you are in a mental health crisis, call or text 988, the Suicide and Crisis Lifeline. For concerns that are not emergencies, call the office at (573) 200-6143 or leave a message through the Patient Ally portal, and we will get back to you when the office is next open.',
+  },
+  {
+    question: 'Do you treat chronic conditions like diabetes and high blood pressure?',
+    answer:
+      'Yes. Ongoing care for chronic conditions is central to what we do, including diabetes, high blood pressure, high cholesterol, asthma, COPD, heart disease, thyroid conditions and arthritis. Our approach combines medication management, regular monitoring, education and lifestyle support, with referrals to specialists when that is the right step.',
+  },
+  {
+    question: 'Do you provide annual wellness exams and preventive care?',
+    answer:
+      'Yes. We provide routine annual wellness visits, cancer screenings, school, sports and employment screenings, nutrition counseling, guidance on exercise and activity, and wellness care for women. Preventive visits are a good time to catch things early and to set goals you can actually keep.',
+  },
+  {
+    question: 'Do you provide mental health care?',
+    answer:
+      'Yes. Mental health is one of our service lines, because mental and physical health are not separate. We offer screening, diagnosis and treatment for common concerns such as depression, anxiety and stress related conditions, and we can prescribe and manage medication when that is appropriate. When someone needs specialized therapy or psychiatric care, we refer to trusted clinicians in the area. If you are in crisis, call or text 988.',
+  },
+  {
+    question: 'Do I need a referral to see a specialist?',
+    answer:
+      'That depends on your insurance plan. Some plans, particularly HMOs, require a referral from your primary care provider before you see a specialist, while many PPO plans do not. Either way, we are glad to make referrals and to coordinate with the specialists you see, so that everyone caring for you is working from the same picture.',
+  },
+  {
+    question: 'How do I request a prescription refill?',
+    answer:
+      'You can request refills through the Patient Ally portal, by calling the office, or by asking your pharmacy to send us the request. Please ask before you run out so we have time to review it. Some medications, including controlled substances, need an office visit before a refill can be authorized.',
+  },
+  {
+    question: 'Can I see my medical records online?',
+    answer:
+      'Yes. Patients have access to the Patient Ally portal, where you can review visit information and test results, request refills, message our team and schedule appointments. If you need help getting signed in, call the office and we will walk you through it.',
+  },
+  {
+    question: 'What else do you offer besides primary care?',
+    answer:
+      'Alongside primary care, Guardian offers weight loss care, aging services and dementia support, hormone and testosterone therapy, mental health care, Guardian Performance, and aesthetic treatments through Guardian Aesthetics. If you are not sure where your concern fits, call us and we will point you in the right direction.',
+  },
+  {
+    question: 'What makes Guardian Primary Care different?',
+    answer:
+      'You get a choice in how you pay, insurance or Guardian Direct Care, and the same care either way. You see a nationally certified nurse practitioner who takes the time to look for the root cause rather than pushing you through, working with a collaborating physician and a small team who will know your name. We care for the whole family, in person or by telehealth, right here in Cape Girardeau.',
+  },
+]
+
+const FAQ_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
 }
 
 export default function FAQPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
+      />
+
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
           <nav className="text-sm mb-6 opacity-90">
@@ -16,265 +138,70 @@ export default function FAQPage() {
             <span className="mx-2">›</span>
             <span>FAQ</span>
           </nav>
-          <h1 className="text-5xl font-light mb-6" style={{fontFamily: 'var(--font-cormorant)'}}>
-            Frequently Asked Questions
-          </h1>
+          <h1 className="font-display text-5xl font-light mb-6">Frequently Asked Questions</h1>
           <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            Everything you need to know about our practice and services
+            Straight answers about coverage, cost, scheduling and what to expect at Guardian Primary Care.
           </p>
         </div>
       </section>
 
-      {/* FAQ Content */}
-      <section className="bg-[var(--color-cream)] py-24">
+      <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-4xl mx-auto px-6">
-          
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do you accept my insurance?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Guardian Primary Care is in-network with most major insurance plans, including Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna, Medicare, and Medicaid. We recommend contacting our office with your specific insurance information so we can verify coverage and benefits before your first visit. Our staff is happy to help you understand your out-of-pocket costs, copays, and deductibles. We also offer a Direct Primary Care membership option for those who prefer to bypass insurance entirely.
-            </div>
-          </details>
+          {faqs.map((faq) => (
+            <details key={faq.question} className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
+              <summary className="cursor-pointer p-6 font-display font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center gap-4">
+                <span>{faq.question}</span>
+                <svg
+                  className="w-5 h-5 flex-shrink-0 transition-transform group-open:rotate-45 text-[var(--color-accent)]"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">{faq.answer}</div>
+            </details>
+          ))}
 
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What is Direct Primary Care and how does it work?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Direct Primary Care (DPC) is a membership-based healthcare model where patients pay a monthly or annual fee for enhanced access to primary care services. Instead of billing insurance for every visit, our DPC members enjoy longer appointment times, same-day or next-day scheduling, direct communication with providers via phone, email, or text, and significantly reduced wait times. This model removes the administrative complexity of insurance billing and allows us to focus entirely on your health. Many DPC members also maintain a high-deductible health insurance plan for catastrophic coverage while enjoying affordable, predictable primary care costs.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>How do I become a new patient?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Becoming a new patient is simple. Contact our office by phone or through our website to schedule a new patient appointment. We'll ask for basic demographic and insurance information, and we'll send you new patient forms to complete before your first visit. Plan to arrive 10-15 minutes early to complete any remaining paperwork. During your initial visit, we'll conduct a comprehensive health assessment, review your medical history, discuss your health goals, and create a personalized care plan. We welcome patients of all ages and families seeking a medical home in Birmingham.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What should I bring to my first appointment?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Please bring a valid photo ID, your insurance card (if applicable), a list of all current medications including dosages, any relevant medical records or test results from previous providers, and a list of questions or health concerns you'd like to discuss. If you have a chronic condition, bringing recent lab results or specialist reports is very helpful. We also recommend bringing a payment method for any copays or out-of-pocket costs. Arriving prepared helps us make the most of your appointment time and ensures we have all the information needed to provide excellent care from day one.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do you offer same-day appointments?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Yes, we strive to accommodate same-day appointments for urgent medical concerns whenever possible. We understand that illness and injury don't follow a schedule, and we reserve appointment slots each day for acute care needs. If you're experiencing a non-emergency urgent health issue, please call our office as early in the day as possible to maximize availability. Our Direct Primary Care members typically have priority access to same-day scheduling. For life-threatening emergencies, please call 911 or visit your nearest emergency room.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do you offer telehealth or virtual visits?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Absolutely. We offer secure telehealth appointments for many types of visits, including sick visits, medication management, mental health consultations, chronic disease follow-ups, and routine check-ins. Telehealth appointments provide the convenience of receiving care from home, your workplace, or anywhere with a reliable internet connection. While some conditions require an in-person exam, many concerns can be effectively addressed through a video visit. Our staff will help determine if telehealth is appropriate for your specific needs when you schedule your appointment.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What ages do you treat?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Guardian Primary Care provides comprehensive care for patients of all ages, from pediatrics through geriatrics. We're proud to serve as a true family practice where children, adults, and seniors can all receive care under one roof. Whether you need a well-child check, a sports physical for your teenager, chronic disease management for a parent, or specialized dementia care for an aging loved one, our providers have the training and experience to meet your family's diverse healthcare needs. We believe in building long-term relationships that span generations.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>How do I request a prescription refill?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Prescription refills can be requested through our patient portal, by phone, or through your pharmacy. We ask that you submit refill requests at least 48-72 hours before you run out of medication to allow adequate processing time. Please note that some medications, particularly controlled substances, may require an office visit before refills can be authorized. We recommend scheduling a medication management appointment if you're on multiple long-term prescriptions so we can review your regimen, assess effectiveness, monitor for side effects, and ensure your treatment plan remains optimal for your health goals.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What is your cancellation policy?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              We require at least 24 hours' notice for appointment cancellations or rescheduling. Late cancellations or missed appointments (no-shows) without adequate notice may result in a fee, as they prevent other patients from accessing that appointment slot. We understand that emergencies and unexpected circumstances arise, and we'll work with you on a case-by-case basis. To cancel or reschedule your appointment, please call our office as soon as possible. Respecting our cancellation policy helps us maintain appointment availability for all patients and ensures our practice runs efficiently.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do I need a referral to see a specialist?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Whether you need a referral depends on your insurance plan. Some insurance plans, particularly HMOs, require a referral from your primary care provider before seeing a specialist. PPO plans typically allow you to see specialists without a referral, though getting one may help with care coordination and insurance coverage. Regardless of insurance requirements, we're happy to provide referrals and help coordinate your specialist care. We maintain relationships with excellent specialists throughout Birmingham and will ensure your care team communicates effectively to provide seamless, comprehensive healthcare.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What payment methods do you accept?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              We accept cash, checks, credit cards (Visa, MasterCard, Discover, American Express), and debit cards. For patients with insurance, we'll bill your insurance company directly and collect any applicable copays, coinsurance, or deductibles at the time of service. For uninsured patients or those choosing our Direct Primary Care membership, we offer transparent, affordable pricing and flexible payment options. If you have questions about costs or payment arrangements, please don't hesitate to speak with our billing staff. We believe financial concerns should never be a barrier to receiving quality healthcare.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Can I access my medical records online?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Yes, all patients have access to our secure online patient portal where you can view test results, review visit summaries, access your medical history, request prescription refills, communicate with your care team, schedule appointments, and update your personal information. The portal is available 24/7 from any device with internet access. We'll provide login credentials and instructions during your first visit. Having online access to your medical records empowers you to be an active participant in your healthcare and provides convenient access to important health information whenever you need it.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What should I do if I have a medical emergency after hours?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              For life-threatening emergencies such as chest pain, difficulty breathing, severe bleeding, loss of consciousness, or stroke symptoms, call 911 immediately or go to your nearest emergency room. For urgent but non-emergency concerns after hours, our answering service can connect you with an on-call provider who can provide guidance and triage your concern. You can also utilize telehealth urgent care services for many after-hours needs. Direct Primary Care members have enhanced after-hours access to providers via phone, text, or email. We take your health seriously around the clock and will ensure you receive appropriate guidance whenever health concerns arise.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do you provide annual wellness exams and preventive care?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Absolutely. Preventive care is a cornerstone of our practice philosophy. We provide comprehensive annual wellness exams that include physical examination, age-appropriate health screenings, cancer screenings (mammograms, colonoscopies, skin checks), immunizations, cardiovascular risk assessment, mental health screening, and lifestyle counseling. Most insurance plans cover annual wellness visits at 100% with no copay when billed as preventive care. These visits are essential for catching health issues early, maintaining optimal wellness, and building a strong patient-provider relationship. We strongly encourage all patients to schedule an annual exam as a foundation of proactive healthcare.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do you treat chronic conditions like diabetes and high blood pressure?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Yes, chronic disease management is one of our core services. We provide comprehensive care for conditions including diabetes, hypertension, high cholesterol, asthma, COPD, thyroid disorders, heart disease, arthritis, and many others. Our approach includes medication management, lifestyle counseling, regular monitoring, patient education, and coordination with specialists when needed. We believe in empowering patients with the knowledge and tools to actively manage their conditions and achieve the best possible health outcomes. Regular follow-up appointments and consistent communication are key to successful chronic disease management, and we're committed to being your partner every step of the way.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Do you provide mental health services?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              We integrate mental health care into our primary care services, recognizing that mental and physical health are inseparably connected. We provide screening, diagnosis, and treatment for common mental health conditions including depression, anxiety, ADHD, and stress-related disorders. We can prescribe and manage psychiatric medications when appropriate and provide counseling and lifestyle interventions. For patients requiring specialized mental health services or intensive therapy, we maintain referral relationships with excellent psychiatrists, psychologists, and counselors in the Birmingham area. If you're experiencing a mental health crisis, please call 988 (Suicide and Crisis Lifeline) or go to your nearest emergency room.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>Can you help coordinate care with my specialists?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Care coordination is an essential part of comprehensive primary care. We actively communicate with your specialists, review their recommendations, monitor your progress, and ensure all aspects of your care work together cohesively. We'll track specialist appointments, follow up on test results, integrate specialist recommendations into your overall care plan, and serve as your healthcare quarterback to prevent gaps or duplications in care. When you have multiple providers, it's crucial to have a primary care home that maintains the big picture of your health. We're committed to being that central hub that keeps your healthcare organized, efficient, and patient-centered.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>What makes Guardian Primary Care different from other practices?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Guardian Primary Care combines the best of traditional and innovative healthcare delivery. We offer both insurance-based care and Direct Primary Care membership, giving patients flexibility in how they access services. Our board-certified providers prioritize building genuine, long-term relationships with patients and take the time to truly listen and understand your unique health journey. We provide care for all ages under one roof, making us a true family practice. We embrace technology through telehealth and patient portals while maintaining the personal touch of compassionate, face-to-face care. Our commitment to access, trust, and thoughtful care means you'll never feel like just a number—you're a valued partner in a healthcare relationship built on mutual respect and shared goals.
-            </div>
-          </details>
-
-          <details className="border border-[var(--color-border)] rounded-xl mb-3 bg-white group">
-            <summary className="cursor-pointer p-6 font-semibold text-[var(--color-ink)] text-xl list-none flex justify-between items-center" style={{fontFamily: 'var(--font-cormorant)'}}>
-              <span>How long are typical appointments?</span>
-              <svg className="w-5 h-5 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path d="M12 5v14m7-7H5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </summary>
-            <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed text-sm">
-              Appointment length varies based on the type and complexity of your visit. Routine sick visits or follow-ups typically last 15-20 minutes, while annual wellness exams and new patient appointments are scheduled for 30-45 minutes to allow adequate time for comprehensive assessment. Direct Primary Care members often enjoy longer appointment times—sometimes 45-60 minutes—because we're not constrained by insurance billing requirements. We believe quality healthcare requires adequate time, and we structure our schedule to minimize rushing while respecting your time. Our goal is for you to leave every appointment feeling heard, informed, and confident in your care plan.
-              </div>
-          </details>
-
+          <div className="mt-12 bg-[var(--color-light)] rounded-2xl p-8 text-center">
+            <p className="text-[var(--color-ink)] leading-relaxed">
+              Looking for pricing details? Our{' '}
+              <Link href="/insurance" className="text-[var(--color-primary)] font-semibold hover:underline">
+                Care Access page
+              </Link>{' '}
+              lays out insurance and Guardian Direct Care side by side. New to the practice? Start with our{' '}
+              <Link href="/new-patients" className="text-[var(--color-primary)] font-semibold hover:underline">
+                new patient guide
+              </Link>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="bg-[var(--color-ink)] text-white py-20 text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-6" style={{fontFamily: 'var(--font-cormorant)'}}>
-            Still Have Questions?
-          </h2>
-          <p className="text-lg mb-8 opacity-90">
-            Our team is here to help. Contact us today and we'll be happy to answer any questions about our services, insurance, or how we can support your health journey.
+          <h2 className="font-display text-4xl font-light mb-6">Still Have Questions?</h2>
+          <p className="text-lg mb-10 opacity-90 leading-relaxed">
+            Our team is happy to help. Call us and we will answer honestly, whether the question is about your coverage,
+            your visit or whether we are the right fit for you.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-semibold px-8 py-4 rounded-full transition-all"
-          >
-            Contact Us Today
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+15732006143"
+              className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-semibold px-8 py-4 rounded-full transition-colors"
+            >
+              Call (573) 200-6143
+            </a>
+            <Link
+              href="/contact"
+              className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition-colors backdrop-blur-sm"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </section>
     </main>

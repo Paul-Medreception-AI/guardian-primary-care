@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Managing Multiple Chronic Conditions: A Coordinated Care Approach | Guardian Primary Care',
-  description: 'Learn how coordinated care helps patients manage multiple chronic conditions effectively. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+  title: 'Managing Multiple Chronic Conditions Together',
+  description: 'Why treating conditions one at a time fails, and how coordinated primary care unifies medications, care plans and specialists around the whole person.',
   openGraph: {
-    title: 'Managing Multiple Chronic Conditions: A Coordinated Care Approach',
-    description: 'Learn how coordinated care helps patients manage multiple chronic conditions effectively. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+    title: 'Managing Multiple Chronic Conditions Together',
+    description: 'Why treating conditions one at a time fails, and how coordinated primary care unifies medications, care plans and specialists around the whole person.',
     type: 'article',
-    url: 'https://guardianprimary.com/blog/managing-multiple-chronic-conditions-a-coordinated-care-appr',
+    url: 'https://www.guardianprimary.com/blog/managing-multiple-chronic-conditions-a-coordinated-care-appr',
   },
 }
 
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h1 className="font-display text-5xl font-light leading-tight text-center mb-8">
             Managing Multiple Chronic Conditions: A Coordinated Care Approach
           </h1>
 
@@ -55,32 +56,48 @@ export default function BlogPost() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Featured Image */}
+      <div className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-role-of-holistic-integrative-care.jpg"
+              alt="A calm consultation setting, illustrating care that looks at the whole person rather than one condition at a time"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Article Body */}
-      <article className="bg-white py-20">
+      <article className="bg-white pt-12 pb-20">
         <div className="max-w-3xl mx-auto px-6">
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              If you're managing diabetes, high blood pressure, and heart disease simultaneously, you're not alone. Nearly half of all American adults live with multiple chronic conditions—a situation that grows increasingly common as we age. What many don't realize is that managing several conditions at once isn't simply about treating each disease separately. It requires a fundamentally different approach to healthcare, one that looks at the whole person rather than isolated diagnoses.
+              If you're managing diabetes, high blood pressure, and heart disease simultaneously, you're not alone. Millions of American adults live with multiple chronic conditions, a situation that grows more common as we age. What many don't realize is that managing several conditions at once isn't simply about treating each disease separately. It requires a fundamentally different approach to healthcare, one that looks at the whole person rather than isolated diagnoses.
             </p>
             <p className="mb-6">
-              The challenge of managing multiple chronic conditions, often called multimorbidity, can feel overwhelming. Different specialists, conflicting medication schedules, and competing treatment priorities create a complex healthcare landscape that's difficult to navigate alone. But there's a better way—one that places you at the center of a coordinated care team working together toward your overall health and wellbeing.
+              The challenge of managing multiple chronic conditions, often called multimorbidity, can feel overwhelming. Different specialists, conflicting medication schedules, and competing treatment priorities create a complex healthcare landscape that's difficult to navigate alone. But there's a better way, one that places you at the center of a coordinated care team working together toward your overall health and wellbeing.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Understanding Multimorbidity
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Multimorbidity is defined as having two or more chronic conditions at the same time. These conditions might include diabetes, heart disease, chronic kidney disease, arthritis, depression, asthma, or any combination of long-term health issues. According to the Centers for Disease Control and Prevention, approximately 27% of adults have multiple chronic conditions, with that percentage rising to 85% among those over age 65.
+              Multimorbidity is defined as having two or more chronic conditions at the same time. These conditions might include diabetes, heart disease, chronic kidney disease, arthritis, depression, asthma, or any combination of long-term health issues. According to the Centers for Disease Control and Prevention, more than a quarter of U.S. adults live with multiple chronic conditions, and the share climbs steeply with age.
             </p>
             <p className="mb-6">
               What makes multimorbidity particularly challenging is that chronic conditions often interact with each other in complex ways. Diabetes can worsen heart disease. Depression can make it harder to manage physical conditions. Arthritis can limit the exercise needed to control blood sugar. Each condition influences the others, creating a web of interconnected health challenges that require comprehensive, coordinated management.
@@ -88,43 +105,43 @@ export default function BlogPost() {
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             The Problem with Fragmented Care
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Traditional healthcare often treats each condition in isolation. You might see a cardiologist for your heart, an endocrinologist for your diabetes, and a rheumatologist for your arthritis. Each specialist focuses on their area of expertise, prescribing medications and treatments based on their specific condition. While each doctor provides excellent care within their specialty, the lack of coordination between providers can create significant problems.
+              Traditional healthcare often treats each condition in isolation. You might see a cardiologist for your heart, an endocrinologist for your diabetes, and a rheumatologist for your arthritis. Each specialist focuses on their area of expertise, prescribing medications and treatments based on their specific condition. While each specialist provides excellent care within their own field, the lack of coordination between them can create real problems.
             </p>
             <p className="mb-6">
-              Fragmented care leads to medication conflicts, duplicated tests, contradictory advice, and treatment plans that don't account for your other conditions. You become responsible for coordinating your own care, keeping track of multiple appointments, remembering which doctor said what, and trying to reconcile conflicting recommendations. This burden not only creates stress but can lead to medication errors, missed appointments, and worse health outcomes.
+              Fragmented care leads to medication conflicts, duplicated tests, contradictory advice, and treatment plans that don't account for your other conditions. You become responsible for coordinating your own care, keeping track of multiple appointments, remembering which provider said what, and trying to reconcile conflicting recommendations. This burden not only creates stress but can lead to medication errors, missed appointments, and worse health outcomes.
             </p>
           </div>
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
-              "Coordinated care isn't just about treating diseases—it's about caring for the whole person and ensuring that all aspects of your health work together rather than against each other."
+            <p className="text-[var(--color-ink)] italic text-xl font-light">
+              "Coordinated care isn't just about treating diseases, it's about caring for the whole person and ensuring that all aspects of your health work together rather than against each other."
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             What Coordinated Care Looks Like
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Coordinated care places a primary care physician at the center of your healthcare team. This physician knows your complete medical history, understands how your conditions interact, and works to ensure that all aspects of your care align with your overall health goals. Rather than managing conditions in silos, coordinated care takes a holistic approach that considers the whole person.
+              Coordinated care places a primary care provider at the center of your healthcare team. That provider knows your complete medical history, understands how your conditions interact, and works to keep every part of your care aligned with your overall health goals. Rather than managing conditions in silos, coordinated care takes a holistic approach that considers the whole person.
             </p>
             <p className="mb-6">
-              In a coordinated care model, your primary care physician communicates regularly with your specialists, reviews all medications to prevent interactions, helps you prioritize treatments when resources are limited, and ensures that care plans from different providers complement rather than conflict with each other. This physician serves as your healthcare quarterback, coordinating the team and making sure everyone works toward the same goals.
+              In a coordinated care model, your primary care provider communicates regularly with your specialists, reviews all medications to prevent interactions, helps you prioritize treatments when time and money are limited, and makes sure care plans from different offices complement rather than contradict each other. Your provider becomes the point person for the whole team, keeping everyone working toward the same goals.
             </p>
             <p className="mb-6">
-              Direct Primary Care practices in Birmingham, AL excel at providing this coordinated approach. With longer appointment times, direct communication access, and a focus on preventive care, these practices offer the time and attention needed to effectively manage complex, multiple chronic conditions.
+              At Guardian Primary Care in Cape Girardeau, Missouri, this is the everyday work of primary care. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available as an alternative if you would rather pay a flat monthly rate with direct access to your provider. Longer visits and steady communication are what make managing several conditions at once workable.
             </p>
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Key Components of Effective Coordination
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -176,7 +193,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             The Role of Technology in Coordination
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -189,12 +206,12 @@ export default function BlogPost() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Taking an Active Role in Your Care
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              While coordinated care requires a strong physician leader, your active participation is equally essential. You are the only person who experiences all aspects of your health every day, making your observations and concerns invaluable to the care team.
+              While coordinated care requires a provider willing to lead the team, your active participation matters just as much. You are the only person who experiences all aspects of your health every day, making your observations and concerns invaluable to the care team.
             </p>
             <p className="mb-6">
               Practical steps you can take include keeping a current list of all medications including dosages, tracking symptoms or concerning changes in a journal, preparing questions before appointments, being honest about challenges you face in following treatment plans, and reporting side effects or new symptoms promptly rather than waiting for your next scheduled visit.
@@ -207,10 +224,10 @@ export default function BlogPost() {
           {/* Closing */}
           <div className="text-[var(--color-ink)] leading-loose text-base mt-12 pt-8 border-t border-[var(--color-border)]">
             <p className="mb-6">
-              Managing multiple chronic conditions doesn't have to feel overwhelming or impossible. With coordinated care that places you at the center of an integrated team, it's possible to not just manage your conditions but to thrive despite them. The key is finding a primary care physician who has the time, expertise, and commitment to see you as a whole person rather than a collection of diagnoses.
+              Managing multiple chronic conditions doesn't have to feel overwhelming or impossible. With coordinated care that places you at the center of an integrated team, it's possible to not just manage your conditions but to thrive despite them. The key is finding a primary care provider who has the time, the expertise, and the commitment to see you as a whole person rather than a collection of diagnoses.
             </p>
             <p>
-              If you're struggling to coordinate care across multiple providers or feeling lost in a fragmented healthcare system, it may be time to explore a different approach. Coordinated primary care can transform your experience from frustrating and confusing to supported and manageable.
+              If you're struggling to coordinate care across several offices, or you feel lost in a fragmented system, it may be time for a different approach. Call Guardian Primary Care in Cape Girardeau, Missouri at <a href="tel:+15732006143" className="text-[var(--color-primary)] underline">(573) 200-6143</a> and we will start by getting the whole picture in one place.
             </p>
           </div>
         </div>
@@ -230,7 +247,7 @@ export default function BlogPost() {
                 Written by the Guardian Primary Care Clinical Team
               </div>
               <div className="text-[var(--color-muted)] text-sm">
-                Board-certified providers specializing in Primary Care / DPC
+                Nurse practitioner led primary care in Cape Girardeau, Missouri. Reviewed by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner.
               </div>
             </div>
           </div>
@@ -240,12 +257,12 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center font-light">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <Link href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <Link href="/blog/managing-type-2-diabetes-lifestyle-changes-that-make-a-diffe" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white opacity-50" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
@@ -255,17 +272,17 @@ export default function BlogPost() {
                 <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">
                   Health Management
                 </div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  Understanding Diabetes Management in Primary Care
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Managing Type 2 Diabetes: Lifestyle Changes That Make a Difference
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Comprehensive strategies for managing diabetes with coordinated primary care support.
+                  Practical strategies for managing type 2 diabetes with coordinated primary care support.
                 </p>
               </div>
             </Link>
 
             {/* Card 2 */}
-            <Link href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <Link href="/blog/heart-disease-prevention-small-changes-that-protect-your-hea" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white opacity-50" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -275,17 +292,17 @@ export default function BlogPost() {
                 <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">
                   Preventive Care
                 </div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  Heart Health: Prevention and Early Detection
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Heart Disease Prevention: Small Changes That Protect Your Heart
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Learn how proactive primary care helps prevent and manage cardiovascular disease.
+                  How proactive primary care helps prevent and manage cardiovascular disease.
                 </p>
               </div>
             </Link>
 
             {/* Card 3 */}
-            <Link href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <Link href="/blog/the-role-of-exercise-in-chronic-disease-management" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white opacity-50" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -295,11 +312,11 @@ export default function BlogPost() {
                 <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">
                   Patient Education
                 </div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                  Medication Management: What You Need to Know
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Role of Exercise in Chronic Disease Management
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Essential guidance for safely managing multiple medications and preventing interactions.
+                  How movement supports several conditions at once, and how to start at any fitness level.
                 </p>
               </div>
             </Link>
@@ -310,18 +327,29 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 font-light">
-            Our team is here to help you coordinate your care and manage your health effectively.
+            Our care team in Cape Girardeau, Missouri is here to bring your care together in one place.
           </p>
-          <Link 
-            href="/contact" 
-            className="inline-block bg-[var(--color-accent)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--color-accent-dark)] transition-all duration-300 hover:scale-105"
-          >
-            Schedule a Consultation
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-block bg-white text-[var(--color-primary)] px-8 py-4 rounded-full font-medium hover:bg-[var(--color-cream)] transition-all duration-300 hover:scale-105"
+            >
+              Schedule a Consultation
+            </Link>
+            <a
+              href="tel:+15732006143"
+              className="inline-block border border-white/70 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
+            >
+              Call (573) 200-6143
+            </a>
+          </div>
+          <p className="text-sm text-white/70 mt-6">
+            Guardian Primary Care &middot; 2441 Myra Dr, Cape Girardeau, MO 63703 &middot; By Appointment
+          </p>
         </div>
       </section>
     </main>

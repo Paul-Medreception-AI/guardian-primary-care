@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Skin Cancer Prevention and Early Detection | Guardian Primary Care',
-  description: 'Learn evidence-based strategies for preventing skin cancer and detecting it early. Expert guidance from Guardian Primary Care in Birmingham, AL.',
-  keywords: 'skin cancer prevention, melanoma detection, UV protection, skin exam, dermatology, Birmingham AL, Guardian Primary Care',
+  title: 'Skin Cancer Prevention and Early Detection',
+  description: 'Evidence based ways to prevent skin cancer and catch it early: sun protection, the ABCDEs of melanoma, monthly self exams, and when to call your provider.',
+  keywords: 'skin cancer prevention, melanoma detection, UV protection, skin exam, dermatology, Cape Girardeau MO, Guardian Primary Care',
 }
 
 export default function SkinCancerPreventionPage() {
@@ -28,7 +29,7 @@ export default function SkinCancerPreventionPage() {
           </div>
           
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h1 className="font-display text-5xl font-light leading-tight text-center mb-8">
             Skin Cancer Prevention and Early Detection
           </h1>
           
@@ -38,7 +39,23 @@ export default function SkinCancerPreventionPage() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/cond-eczema.jpg"
+              alt="Close up of the skin on an open palm, a reminder to check your skin regularly for new or changing spots"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -50,15 +67,15 @@ export default function SkinCancerPreventionPage() {
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Every hour, more than two people die from skin cancer in the United States. Yet this is one of the most preventable and treatable cancers when caught early. Whether you're a sun lover, an outdoor worker, or someone who simply wants to protect your family's health, understanding skin cancer prevention and early detection could save your life.
+              Skin cancer is the most commonly diagnosed cancer in the United States. It is also one of the most preventable, and one of the most treatable when it is caught early. Whether you're a sun lover, an outdoor worker, or someone who simply wants to protect your family's health, understanding skin cancer prevention and early detection could save your life.
             </p>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, we believe that education and proactive care are your best defenses against skin cancer. Let's explore evidence-based strategies that can help you protect your skin and catch problems early when they're most treatable.
+              At Guardian Primary Care in Cape Girardeau, MO, we believe that education and proactive care are your best defenses against skin cancer. Let's explore evidence-based strategies that can help you protect your skin and catch problems early when they're most treatable.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Understanding Skin Cancer: The Basics
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -70,35 +87,35 @@ export default function SkinCancerPreventionPage() {
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Basal cell carcinoma</strong> — the most common type, rarely spreads, often appears as a pearly bump or pink patch</span>
+                <span><strong>Basal cell carcinoma</strong>: the most common type, rarely spreads, often appears as a pearly bump or pink patch</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Squamous cell carcinoma</strong> — the second most common, can spread if untreated, may look like a scaly red patch or open sore</span>
+                <span><strong>Squamous cell carcinoma</strong>: the second most common, can spread if untreated, may look like a scaly red patch or open sore</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Melanoma</strong> — the most dangerous type, can spread rapidly, often develops from an existing mole or appears as a new dark spot</span>
+                <span><strong>Melanoma</strong>: the most dangerous type, can spread rapidly, often develops from an existing mole or appears as a new dark spot</span>
               </li>
             </ul>
             <p className="mb-6">
-              According to the American Cancer Society, more than 5.4 million cases of basal and squamous cell skin cancers are diagnosed each year in the U.S., while melanoma accounts for about 100,000 new cases annually. The good news? When detected early, the five-year survival rate for melanoma is 99%.
+              Basal and squamous cell skin cancers are by far the most common, and melanoma, while less common, causes the majority of skin cancer deaths. The good news is that melanoma found early, while it is still thin and has not spread, is highly treatable.
             </p>
           </div>
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-              "When it comes to skin cancer, an ounce of prevention truly is worth a pound of cure. The habits you develop today can dramatically reduce your risk tomorrow."
+            <p className="font-display text-[var(--color-ink)] italic text-xl font-light">
+              When it comes to skin cancer, prevention really is easier than treatment. The habits you build today can meaningfully lower your risk tomorrow.
             </p>
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Who Is at Risk?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -110,37 +127,37 @@ export default function SkinCancerPreventionPage() {
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Fair skin</strong> — lighter skin has less melanin, which provides some natural protection from UV radiation</span>
+                <span><strong>Fair skin</strong>: lighter skin has less melanin, which provides some natural protection from UV radiation</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>History of sunburns</strong> — even one severe sunburn in childhood or adolescence can double your risk of melanoma</span>
+                <span><strong>History of sunburns</strong>: even one severe sunburn in childhood or adolescence raises your risk of melanoma later in life</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Many moles</strong> — having more than 50 moles increases melanoma risk</span>
+                <span><strong>Many moles</strong>: having a large number of moles, particularly irregular ones, increases melanoma risk</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Family history</strong> — about 10% of melanoma cases run in families</span>
+                <span><strong>Family history</strong>: melanoma can run in families</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Excessive sun or tanning bed exposure</strong> — cumulative UV damage over time</span>
+                <span><strong>Excessive sun or tanning bed exposure</strong>: cumulative UV damage over time</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span><strong>Weakened immune system</strong> — due to medical conditions or medications</span>
+                <span><strong>Weakened immune system</strong>: due to medical conditions or medications</span>
               </li>
             </ul>
             <p className="mb-6">
@@ -149,7 +166,7 @@ export default function SkinCancerPreventionPage() {
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Essential Prevention Strategies
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -175,7 +192,7 @@ export default function SkinCancerPreventionPage() {
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Use enough — most adults need about one ounce (a shot glass full) to cover exposed skin</span>
+                <span>Use enough: most adults need about one ounce (a shot glass full) to cover exposed skin</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -215,12 +232,12 @@ export default function SkinCancerPreventionPage() {
 
             <h3 className="text-xl font-semibold mb-3 mt-6">Avoid Tanning Beds</h3>
             <p className="mb-6">
-              The World Health Organization classifies UV-emitting tanning devices as carcinogenic to humans. Just one indoor tanning session before age 35 increases melanoma risk by 75%. There is no such thing as a "safe" tan from a tanning bed.
+              The World Health Organization classifies UV-emitting tanning devices as carcinogenic to humans, and indoor tanning that begins in the teens or twenties raises melanoma risk substantially. There is no such thing as a "safe" tan from a tanning bed.
             </p>
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Early Detection: The ABCDEs of Melanoma
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -270,7 +287,7 @@ export default function SkinCancerPreventionPage() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Performing Self-Exams
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -321,8 +338,8 @@ export default function SkinCancerPreventionPage() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-            When to See a Doctor
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
+            When to Contact Your Provider
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
@@ -361,7 +378,7 @@ export default function SkinCancerPreventionPage() {
               </li>
             </ul>
             <p className="mb-6">
-              Annual skin checks are especially important if you're at higher risk. Your primary care provider can perform a full-body skin examination and refer you to a dermatologist if needed.
+              Annual skin checks are especially important if you are at higher risk. Your provider can perform a full body skin examination and refer you to a dermatology specialist if anything needs a closer look.
             </p>
           </div>
 
@@ -371,7 +388,7 @@ export default function SkinCancerPreventionPage() {
               Skin cancer prevention and early detection are within your control. By practicing sun safety, performing regular self-exams, and staying vigilant about changes in your skin, you're taking powerful steps to protect your health. Remember, most skin cancers are highly treatable when caught early, making awareness and action your most valuable tools.
             </p>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, we're committed to helping you maintain healthy skin throughout your life. Whether you need a skin check, have concerns about a suspicious spot, or simply want guidance on prevention strategies, our team is here to provide personalized, comprehensive care.
+              At Guardian Primary Care in Cape Girardeau, MO, we are committed to helping you keep your skin healthy throughout your life. Whether you need a skin check, have a spot that worries you, or simply want guidance on prevention, our team is here to help. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you would rather pay a flat monthly fee. Call (573) 200-6143 to schedule.
             </p>
           </div>
 
@@ -388,8 +405,8 @@ export default function SkinCancerPreventionPage() {
               </svg>
             </div>
             <div>
-              <div className="font-semibold text-[var(--color-ink)] mb-1">Written by the Guardian Primary Care Clinical Team</div>
-              <div className="text-[var(--color-muted)] text-sm">Board-certified providers specializing in Primary Care / DPC</div>
+              <div className="font-semibold text-[var(--color-ink)] mb-1">Written by the Guardian Primary Care Team</div>
+              <div className="text-[var(--color-muted)] text-sm">Guardian Primary Care is a nurse practitioner led practice in Cape Girardeau, Missouri. Preston Holifield, DNP, APRN, FNP-C is nationally certified by the American Academy of Nurse Practitioners and works with a Missouri Licensed Collaborating Physician.</div>
             </div>
           </div>
         </div>
@@ -398,13 +415,13 @@ export default function SkinCancerPreventionPage() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 font-light">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -412,31 +429,31 @@ export default function SkinCancerPreventionPage() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Preventive Care</div>
-                <h4 className="text-xl font-light mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-                  Understanding Your Annual Physical Exam
+                <h4 className="font-display text-xl font-light mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Importance of Annual Wellness Exams
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">What to expect and how to prepare for your yearly checkup</p>
               </div>
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="/blog/preventative-cancer-screenings-which-tests-you-need-and-when" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
                 </svg>
               </div>
               <div className="p-6">
-                <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Chronic Care</div>
-                <h4 className="text-xl font-light mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-                  Managing Chronic Conditions with DPC
+                <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Preventive Care</div>
+                <h4 className="font-display text-xl font-light mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Preventative Cancer Screenings
                 </h4>
-                <p className="text-[var(--color-muted)] text-sm">How direct primary care improves outcomes for ongoing health needs</p>
+                <p className="text-[var(--color-muted)] text-sm">Which cancer screenings you need, and the age to start each one</p>
               </div>
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+            <a href="/blog/building-a-relationship-with-your-primary-care-provider" className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
@@ -444,10 +461,10 @@ export default function SkinCancerPreventionPage() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-muted)] mb-2">Patient Education</div>
-                <h4 className="text-xl font-light mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-                  The Importance of Health Screenings
+                <h4 className="font-display text-xl font-light mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Building a Relationship with Your Provider
                 </h4>
-                <p className="text-[var(--color-muted)] text-sm">Evidence-based guidelines for cancer and disease prevention</p>
+                <p className="text-[var(--color-muted)] text-sm">Why continuity of care makes every visit more useful</p>
               </div>
             </a>
 
@@ -458,18 +475,22 @@ export default function SkinCancerPreventionPage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{fontFamily: 'Cormorant Garamond, serif'}}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Our team is here to help.
+            Have a spot you want looked at? Our team is here to help.
           </p>
           <a 
             href="/contact" 
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
+            className="inline-block bg-white text-[var(--color-primary)] px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-[var(--color-cream)] hover:scale-105"
           >
             Schedule Your Visit
           </a>
+          <p className="mt-6 text-white/90">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Call{' '}
+            <a href="tel:+15732006143" className="underline hover:text-white">(573) 200-6143</a>. Visits are by appointment.
+          </p>
         </div>
       </section>
 

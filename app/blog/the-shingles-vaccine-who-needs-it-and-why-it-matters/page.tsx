@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'The Shingles Vaccine: Who Needs It and Why It Matters | Guardian Primary Care',
-  description: 'Learn who should get the shingles vaccine, why it\'s important for adults over 50, and how it protects against painful complications. Expert guidance from Guardian Primary Care in Birmingham, AL.',
-  keywords: 'shingles vaccine, Shingrix, herpes zoster, vaccine Birmingham AL, adult vaccinations, preventive care, primary care',
+  title: 'Shingles Vaccine: Who Needs It and Why It Matters',
+  description: 'Who should get the shingles vaccine, how the two-dose series works and what to expect, explained by Guardian Primary Care in Cape Girardeau, MO.',
+  keywords: 'shingles vaccine, Shingrix, herpes zoster, vaccine Cape Girardeau MO, adult vaccinations, preventive care, primary care',
 }
 
 export default function ShinglesVaccinePage() {
@@ -28,7 +29,7 @@ export default function ShinglesVaccinePage() {
           </div>
           
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             The Shingles Vaccine: Who Needs It and Why It Matters
           </h1>
           
@@ -38,7 +39,23 @@ export default function ShinglesVaccinePage() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/handshake-care.jpg"
+              alt="A health care provider in a white coat shaking hands with a patient in a clinic hallway before a preventive care visit."
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -50,20 +67,20 @@ export default function ShinglesVaccinePage() {
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Imagine waking up to a painful, blistering rash that wraps around one side of your torso like a band of fire. For many adults, this is the reality of shingles—a reactivation of the chickenpox virus that can strike decades after childhood. The pain can be debilitating, lasting weeks or even months, and in some cases, it never fully goes away. Yet this suffering is largely preventable with a simple, safe vaccine.
+              Imagine waking up to a painful, blistering rash that wraps around one side of your torso like a band of fire. For many adults, this is the reality of shingles, a reactivation of the chickenpox virus that can strike decades after childhood. The pain can be debilitating, lasting weeks or even months, and in some cases, it never fully goes away. Yet this suffering is largely preventable with a simple, safe vaccine.
             </p>
             <p className="mb-6">
-              If you're over 50, the shingles vaccine isn't just recommended—it's one of the most important preventive measures you can take for your long-term health and quality of life. Let's explore what shingles is, who's at risk, and why vaccination matters so much.
+              If you&apos;re over 50, the shingles vaccine is not just recommended, it is one of the most important preventive measures you can take for your long-term health and quality of life. Let's explore what shingles is, who's at risk, and why vaccination matters so much.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             What Is Shingles and Why Does It Happen?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Shingles, medically known as herpes zoster, is caused by the varicella-zoster virus—the same virus responsible for chickenpox. After you recover from chickenpox (usually in childhood), the virus doesn't leave your body. Instead, it lies dormant in nerve tissue near your spinal cord and brain, waiting silently for decades.
+              Shingles, medically known as herpes zoster, is caused by the varicella-zoster virus, the same virus responsible for chickenpox. After you recover from chickenpox (usually in childhood), the virus doesn't leave your body. Instead, it lies dormant in nerve tissue near your spinal cord and brain, waiting silently for decades.
             </p>
             <p className="mb-6">
               As we age, our immune system naturally weakens. This decline gives the dormant virus an opportunity to reactivate, traveling along nerve pathways to the skin and causing the characteristic painful rash of shingles. The rash typically appears as a stripe of blisters on one side of the body, often around the torso or face.
@@ -74,12 +91,12 @@ export default function ShinglesVaccinePage() {
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Who Is at Risk?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Anyone who has had chickenpox can develop shingles, but the risk increases significantly with age. About one in three people in the United States will develop shingles in their lifetime, with the risk rising sharply after age 50.
+              Anyone who has had chickenpox can develop shingles, but the risk increases significantly with age. A large share of adults in the United States will develop shingles at some point in their lives, with the risk rising sharply after age 50.
             </p>
             <p className="mb-6">
               Certain factors increase your vulnerability:
@@ -116,20 +133,20 @@ export default function ShinglesVaccinePage() {
           </div>
 
           {/* Pull Quote */}
-          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl" style={{ fontFamily: 'Cormorant, serif' }}>
-            "The shingles vaccine is more than 90% effective at preventing shingles and its complications. It's one of the most powerful tools we have to protect quality of life as we age."
-          </blockquote>
+          <div className="font-display bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] text-xl">
+            The shingles vaccine is highly effective at preventing shingles and its complications. It is one of the most powerful tools we have for protecting quality of life as we age.
+          </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             The Serious Complications of Shingles
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              While the rash and acute pain of shingles typically resolve within a few weeks, complications can be severe and long-lasting. The most common and debilitating complication is postherpetic neuralgia (PHN)—nerve pain that persists for months or even years after the rash heals.
+              While the rash and acute pain of shingles typically resolve within a few weeks, complications can be severe and long-lasting. The most common and debilitating complication is postherpetic neuralgia (PHN), nerve pain that persists for months or even years after the rash heals.
             </p>
             <p className="mb-6">
-              PHN affects 10-18% of shingles patients, and the risk increases with age. This chronic pain can be so severe that it interferes with sleep, mobility, and mental health. Many patients with PHN describe a reduced quality of life comparable to major chronic diseases.
+              PHN affects a meaningful share of people who get shingles, and the risk increases with age. This chronic pain can be so severe that it interferes with sleep, mobility, and mental health. Many patients with PHN describe a reduced quality of life comparable to major chronic diseases.
             </p>
             <p className="mb-6">
               Other potential complications include:
@@ -166,7 +183,7 @@ export default function ShinglesVaccinePage() {
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             The Shingles Vaccine: Shingrix and Its Effectiveness
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -181,19 +198,19 @@ export default function ShinglesVaccinePage() {
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>More than 90% effective at preventing shingles in adults 50 and older</span>
+                <span>Highly effective at preventing shingles in adults 50 and older</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Protection remains high (over 85%) for at least seven years after vaccination</span>
+                <span>Protection stays strong for years after vaccination</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>89% effective at preventing postherpetic neuralgia (PHN)</span>
+                <span>Also protects against postherpetic neuralgia, the lingering nerve pain that follows some cases</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -211,7 +228,7 @@ export default function ShinglesVaccinePage() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Who Should Get the Shingles Vaccine?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -245,7 +262,7 @@ export default function ShinglesVaccinePage() {
               </li>
             </ul>
             <p className="mb-6">
-              You should talk to your doctor before getting vaccinated if you:
+              You should talk with your provider before getting vaccinated if you:
             </p>
             <ul className="space-y-3 mb-6">
               <li className="flex items-start gap-3">
@@ -279,12 +296,12 @@ export default function ShinglesVaccinePage() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Taking Action: What to Do Next
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              If you're 50 or older and haven't been vaccinated against shingles, now is the time to take action. Don't wait until you're experiencing symptoms—prevention is far more effective than treatment.
+              If you're 50 or older and haven't been vaccinated against shingles, now is the time to take action. Don&apos;t wait until you are experiencing symptoms. Prevention is far more effective than treatment.
             </p>
             <p className="mb-6">
               Here's what you can do:
@@ -300,7 +317,7 @@ export default function ShinglesVaccinePage() {
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Check with your insurance—most plans, including Medicare Part D, cover the vaccine</span>
+                <span>Check with your insurance, since most plans, including Medicare Part D, cover the vaccine</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -316,7 +333,7 @@ export default function ShinglesVaccinePage() {
               </li>
             </ul>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, we're committed to helping you stay healthy through evidence-based preventive care. The shingles vaccine is a powerful tool to protect your quality of life as you age, and we're here to answer any questions you may have about whether it's right for you.
+              At Guardian Primary Care in Cape Girardeau, Missouri, we are committed to helping you stay healthy through evidence-based preventive care. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer predictable monthly pricing. Call (573) 200-6143 and our care team will answer your questions about whether the shingles vaccine is right for you.
             </p>
             <p className="mb-6">
               Don't let the risk of shingles hang over your future. Take control of your health today with a simple, effective vaccine that can spare you from significant pain and complications down the road. Your future self will thank you.
@@ -337,10 +354,10 @@ export default function ShinglesVaccinePage() {
             </div>
             <div>
               <div className="text-[var(--color-ink)] font-semibold text-lg mb-1">
-                Written by the Guardian Primary Care Clinical Team
+                Written by the Guardian Primary Care Team
               </div>
               <div className="text-[var(--color-muted)] text-sm">
-                Board-certified providers specializing in Primary Care / DPC
+                Primary care for every stage of life in Cape Girardeau, Missouri. Our care team is led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri licensed collaborating physician.
               </div>
             </div>
           </div>
@@ -350,13 +367,13 @@ export default function ShinglesVaccinePage() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/flu-vaccines-myths-facts-and-why-you-should-get-one" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -364,47 +381,47 @@ export default function ShinglesVaccinePage() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">Preventive Care</div>
-                <h4 className="text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Understanding Adult Immunizations: What You Need and When
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Flu Vaccines: Myths, Facts and Why to Get One
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  A comprehensive guide to recommended vaccines for adults at every stage of life.
+                  Straight answers to the most common flu shot myths, and who should be vaccinated.
                 </p>
               </div>
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/preventative-cancer-screenings-which-tests-you-need-and-when" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="p-6">
-                <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">Healthy Aging</div>
-                <h4 className="text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Healthy Aging: Key Health Screenings After 50
+                <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">Preventive Care</div>
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Preventive Cancer Screenings: Which Tests and When
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Learn which preventive screenings are essential as you age and why they matter.
+                  Which screenings are recommended as you age, and the ages at which they start.
                 </p>
               </div>
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/understanding-medicare-primary-care-coverage-for-seniors" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
               <div className="p-6">
-                <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">Wellness</div>
-                <h4 className="text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Managing Chronic Pain: A Comprehensive Approach
+                <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">Medicare</div>
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Medicare Primary Care Coverage for Seniors
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Explore evidence-based strategies for living well with chronic pain conditions.
+                  What Medicare covers for primary care, wellness visits and preventive services.
                 </p>
               </div>
             </a>
@@ -416,18 +433,21 @@ export default function ShinglesVaccinePage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Our team is here to help you stay protected with the shingles vaccine and other preventive care.
+          <p className="text-xl mb-8 text-white/90">Our care team is here to answer your questions about the shingles vaccine and the rest of your preventive care.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              Schedule an Appointment
+            </a>
+            <a href="tel:+15732006143" className="inline-block bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 border border-white/30">
+              Call (573) 200-6143
+            </a>
+          </div>
+          <p className="mt-6 text-sm text-white/80">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Visits are by appointment. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer predictable monthly pricing.
           </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105"
-          >
-            Schedule Your Vaccination
-          </a>
         </div>
       </section>
 

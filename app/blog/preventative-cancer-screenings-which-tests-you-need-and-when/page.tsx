@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Preventative Cancer Screenings: Which Tests You Need and When | Guardian Primary Care',
-  description: 'Learn which cancer screenings you need based on your age, risk factors, and family history. Evidence-based guidance from Birmingham\'s trusted primary care team.',
-  keywords: 'cancer screening, preventative care, mammogram, colonoscopy, cancer prevention, Birmingham primary care, health screenings',
+  title: 'Cancer Screenings: Which Tests You Need and When',
+  description: 'A guide to cancer screening for adults: breast, colorectal, cervical and lung tests, the age to start each one, and how family history changes the plan.',
+  keywords: 'cancer screening, preventative care, mammogram, colonoscopy, cancer prevention, Cape Girardeau primary care, health screenings',
 }
 
 export default function BlogPost() {
@@ -27,7 +28,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Preventative Cancer Screenings: Which Tests You Need and When
           </h1>
 
@@ -37,7 +38,23 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/cond-cancer-screenings.jpg"
+              alt="A clinician in a white coat holding a red cancer awareness ribbon"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -48,43 +65,43 @@ export default function BlogPost() {
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Early detection saves lives. It's a simple truth that carries profound weight when it comes to cancer care. Many cancers, when caught in their earliest stages, are highly treatable—and in some cases, even preventable. Yet confusion about which screenings to get, when to start, and who really needs them often keeps people from taking this crucial step in protecting their health.
+              Early detection saves lives. It's a simple truth that carries profound weight when it comes to cancer care. Many cancers, when caught in their earliest stages, are highly treatable, and in some cases, even preventable. Yet confusion about which screenings to get, when to start, and who really needs them often keeps people from taking this crucial step in protecting their health.
             </p>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, we believe that knowledge empowers action. Understanding the recommended cancer screenings for your age, risk factors, and personal health history is one of the most important conversations you can have with your healthcare provider. Let's walk through the essential screenings, demystify the recommendations, and help you take control of your preventative care journey.
+              At Guardian Primary Care in Cape Girardeau, MO, we believe that knowledge empowers action. Understanding the recommended cancer screenings for your age, risk factors, and personal health history is one of the most important conversations you can have with your healthcare provider. Let's walk through the essential screenings, demystify the recommendations, and help you take control of your preventative care journey.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Why Cancer Screenings Matter
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Cancer screenings are medical tests performed on people who have no symptoms but may be at risk for certain types of cancer. The goal is to detect cancer early—before it causes symptoms and when treatment is most likely to be successful.
+              Cancer screenings are medical tests performed on people who have no symptoms but may be at risk for certain types of cancer. The goal is to detect cancer early, before it causes symptoms and when treatment is most likely to be successful.
             </p>
             <p className="mb-6">
-              Research consistently shows that screening saves lives. For example, colorectal cancer screening has been shown to reduce colorectal cancer deaths by up to 68%. Mammography reduces breast cancer mortality by approximately 20-30% in women aged 50-69. These aren't just statistics—they represent real people, families, and futures preserved through early detection.
+              Research consistently shows that screening saves lives. Colorectal cancer screening finds polyps that can be removed before they ever become cancer, and it catches cancers at an earlier, more treatable stage. Regular mammography lowers the risk of dying from breast cancer. Behind those findings are real people, families, and futures preserved through early detection.
             </p>
             <p className="mb-6">
-              But screening isn't one-size-fits-all. Your personal risk factors—including age, family history, genetic predisposition, lifestyle factors, and previous medical conditions—all influence which screenings you need and when to start them.
+              But screening isn't one-size-fits-all. Your personal risk factors, including age, family history, genetic predisposition, lifestyle factors, and previous medical conditions, all influence which screenings you need and when to start them.
             </p>
           </div>
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl" style={{ fontFamily: 'Cormorant, serif' }}>
-              "Early detection through appropriate screening is one of the most powerful tools we have in cancer prevention. The key is knowing which tests you need and staying consistent with your screening schedule."
+            <p className="font-display text-[var(--color-ink)] italic text-xl">
+              Early detection through appropriate screening is one of the most powerful tools we have in cancer prevention. The key is knowing which tests you need and staying consistent with your screening schedule.
             </p>
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Breast Cancer Screening
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Breast cancer is the second most common cancer among women in the United States. Mammography—an X-ray of the breast—is the primary screening tool.
+              Breast cancer is the most common cancer among women in the United States, aside from skin cancer. Mammography, an X-ray of the breast, is the primary screening tool.
             </p>
             <p className="mb-6">
               <strong>General Guidelines:</strong>
@@ -121,12 +138,12 @@ export default function BlogPost() {
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Colorectal Cancer Screening
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Colorectal cancer is the third leading cause of cancer death in the U.S., yet it's also one of the most preventable through screening. Recent guidelines have lowered the recommended starting age due to rising rates in younger adults.
+              Colorectal cancer is among the leading causes of cancer death in the U.S., yet it's also one of the most preventable through screening. Recent guidelines have lowered the recommended starting age due to rising rates in younger adults.
             </p>
             <p className="mb-6">
               <strong>General Guidelines:</strong>
@@ -169,7 +186,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Cervical Cancer Screening
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -200,12 +217,12 @@ export default function BlogPost() {
               </li>
             </ul>
             <p className="mb-6">
-              Women with certain risk factors—such as HIV, a weakened immune system, or a history of cervical precancer—may need more frequent screening.
+              Women with certain risk factors, such as HIV, a weakened immune system, or a history of cervical precancer, may need more frequent screening.
             </p>
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Lung Cancer Screening
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -230,12 +247,12 @@ export default function BlogPost() {
               </li>
             </ul>
             <p className="mb-6">
-              This screening is specifically for high-risk individuals—it's not recommended for the general population without significant smoking history.
+              This screening is specifically for high-risk individuals, it's not recommended for the general population without significant smoking history.
             </p>
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Other Important Screenings
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -265,7 +282,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 7 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Taking Action: Your Next Steps
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -273,10 +290,10 @@ export default function BlogPost() {
               Knowledge is only powerful when paired with action. If you're unsure about which screenings you need, when to schedule them, or whether your family history puts you at higher risk, now is the time to have that conversation with your primary care provider.
             </p>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, we take a personalized approach to preventative care. We'll review your individual risk factors, discuss the benefits and limitations of each screening option, and create a screening schedule tailored to your needs. Our Direct Primary Care model means you'll have the time and access you need to make informed decisions about your health.
+              At Guardian Primary Care in Cape Girardeau, MO, we take a personalized approach to preventative care. We review your individual risk factors, discuss the benefits and limitations of each screening option, and build a screening schedule that fits you. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you would rather pay a flat monthly fee. Either way, you get unhurried visits and direct access to your provider.
             </p>
             <p className="mb-6">
-              Early detection saves lives—but only if you take the first step. Don't wait for symptoms to appear. Schedule your preventative care visit today and take control of your health journey.
+              Early detection saves lives, but only if you take the first step. Do not wait for symptoms to appear. Call (573) 200-6143 or request a visit online, and take control of your health.
             </p>
           </div>
         </div>
@@ -293,10 +310,10 @@ export default function BlogPost() {
             </div>
             <div>
               <div className="text-lg font-semibold text-[var(--color-ink)] mb-1">
-                Written by the Guardian Primary Care Clinical Team
+                Written by the Guardian Primary Care Team
               </div>
               <div className="text-[var(--color-muted)] text-sm">
-                Board-certified providers specializing in Primary Care / DPC
+                Guardian Primary Care is a nurse practitioner led practice in Cape Girardeau, Missouri. Preston Holifield, DNP, APRN, FNP-C is nationally certified by the American Academy of Nurse Practitioners and works with a Missouri Licensed Collaborating Physician.
               </div>
             </div>
           </div>
@@ -306,37 +323,37 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <a href="/blog" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+            <a href="/blog/skin-cancer-prevention-and-early-detection" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Understanding Your Family Health History
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors">
+                  Skin Cancer Prevention and Early Detection
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Learn why your family medical history matters and how to use it to guide your preventative care plan.
+                  Sun safety, the ABCDEs of melanoma, and how to run a thorough skin check at home.
                 </p>
               </div>
             </a>
 
             {/* Card 2 */}
-            <a href="/blog" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  The Complete Guide to Annual Physicals
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Importance of Annual Wellness Exams
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
                   What to expect during your yearly checkup and how to make the most of your appointment time.
@@ -345,18 +362,18 @@ export default function BlogPost() {
             </a>
 
             {/* Card 3 */}
-            <a href="/blog" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+            <a href="/blog/women-s-health-after-40-what-screenings-you-need-and-when" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Taking Charge of Your Preventative Health
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-3 group-hover:text-[var(--color-primary)] transition-colors">
+                  Women&apos;s Health After 40
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Simple steps to build a proactive health routine that fits your life and reduces long-term risk.
+                  The screenings women need after 40, what each one looks for, and when to start.
                 </p>
               </div>
             </a>
@@ -367,7 +384,7 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
@@ -379,6 +396,10 @@ export default function BlogPost() {
           >
             Schedule Your Visit Today
           </a>
+          <p className="mt-6 text-white/90">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Call{' '}
+            <a href="tel:+15732006143" className="underline hover:text-white">(573) 200-6143</a>. Visits are by appointment.
+          </p>
         </div>
       </section>
     </main>

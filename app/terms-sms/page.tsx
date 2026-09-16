@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms and Conditions - SMS | Guardian Primary Care',
   description: 'Guardian Primary Care Terms and Conditions, including SMS messaging terms and compliance.',
-  alternates: { canonical: 'https://guardianprimary.com/terms-sms' },
+  alternates: { canonical: 'https://www.guardianprimary.com/terms-sms' },
 }
 
 export default function TermsSmsPage() {
@@ -11,7 +11,7 @@ export default function TermsSmsPage() {
     <main className="min-h-screen">
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="container mx-auto px-6">
-          <h1 className="font-cormorant text-5xl font-bold mb-4 animate-fade-up">
+          <h1 className="font-display text-5xl font-bold mb-4 animate-fade-up">
             Guardian Primary Care Terms and Conditions - SMS
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-up">
@@ -27,70 +27,70 @@ export default function TermsSmsPage() {
               Effective Date: September 16th, 2026
             </p>
 
-            <h2 id="sms-terms" className="font-cormorant text-3xl text-[var(--color-ink)] mt-10 mb-4">
+            <h2 id="sms-terms" className="font-display text-3xl text-[var(--color-ink)] mt-10 mb-4">
               SMS Messaging Terms &amp; Compliance
             </h2>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               1. Program Description:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
-              This messaging program sends appointment confirmation and reminder messages to customers who have booked an appointment with Guardian Primary Care through our website at https://guardianprimary.com, or via our scheduling forms, and have explicitly opted in to receive SMS notifications. Opt-in is collected via web forms with a dedicated checkbox for SMS consent. Messages include scheduling confirmations, appointment reminders, rescheduling updates, and customer support communications.
+              This messaging program sends appointment confirmation and reminder messages to customers who have booked an appointment with Guardian Primary Care through our website at https://www.guardianprimary.com, or via our scheduling forms, and have explicitly opted in to receive SMS notifications. Opt-in is collected via web forms with a dedicated checkbox for SMS consent. Messages include scheduling confirmations, appointment reminders, rescheduling updates, and customer support communications.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               2. Cancellation Instructions:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               You can cancel the SMS service at any time. Simply text &quot;STOP&quot; to the same number that sent you messages. Upon sending &quot;STOP,&quot; we will confirm your unsubscribe status via SMS. Following this confirmation, you will no longer receive SMS messages from us. To rejoin, sign up as you did initially, and we will resume sending SMS messages to you.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               3. Support Information:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               If you experience issues with the messaging program, reply with the keyword &quot;HELP&quot; for more assistance, or reach out directly to preston.holifield@guardianprimary.com during business hours.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               4. Carrier Liability:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               Carriers are not liable for delayed or undelivered messages.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               5. Message &amp; Data Rates:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               Message and data rates may apply for messages sent to you from us and to us from you. Message frequency varies based on your service usage and appointment schedule. For questions about your text plan or data plan, contact your wireless provider.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               6. Supported Carriers:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               Our SMS program works with all major U.S. wireless carriers, including AT&amp;T, T-Mobile, Verizon, Sprint, and most regional carriers.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               7. Age Restriction:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               You must be 18 years or older to participate in our SMS program.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               8. Privacy Policy:
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
-              For privacy-related inquiries, please refer to our <a href="/privacy-sms" className="text-[var(--color-primary)] underline">Privacy Policy</a> at https://guardianprimary.com/privacy-sms
+              For privacy-related inquiries, please refer to our <a href="/privacy-sms" className="text-[var(--color-primary)] underline">Privacy Policy</a> at https://www.guardianprimary.com/privacy-sms
             </p>
             <p className="text-[var(--color-muted)] mb-6">
               We comply with all applicable laws and regulations, including the Telephone Consumer Protection Act (TCPA) and CTIA guidelines, regarding the use of SMS communications.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               General Terms
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
@@ -103,11 +103,11 @@ export default function TermsSmsPage() {
               We reserve the right to change these Terms of Service or to impose new conditions on the use of the Site from time to time, in which case we will post the revised Terms of Service on this website. By continuing to use the Site after we post any such changes, you accept the Terms of Service, as modified.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Intellectual Property Rights
             </h2>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               Our Limited License to You
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
@@ -120,14 +120,14 @@ export default function TermsSmsPage() {
               Unless explicitly authorized, you may not modify, copy, reproduce, republish, upload, post, transmit, translate, sell, create derivative works, exploit, or distribute in any manner or medium any material from the Site. However, you may download and/or print one copy of individual pages for your personal, non-commercial use, provided that you keep intact all copyright and other proprietary notices.
             </p>
 
-            <h3 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4">
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4">
               Your License to Us
             </h3>
             <p className="text-[var(--color-muted)] mb-6">
               By posting or submitting any material (including comments, blog entries, social media posts, photos, and videos) to us via the Site, internet groups, or other digital venues, you represent that you own the material or have obtained the necessary permissions. You grant us a royalty-free, perpetual, irrevocable, non-exclusive, worldwide license to use, modify, transmit, sell, exploit, create derivative works from, distribute, and publicly perform or display such material.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Disclaimers
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
@@ -140,7 +140,7 @@ export default function TermsSmsPage() {
               You agree at all times to indemnify and hold harmless Guardian Primary Care, its affiliates, and their respective officers, directors, agents, and employees from any claims, causes of action, damages, liabilities, costs, and expenses arising out of or related to your breach of any obligation, warranty, or representation under these Terms of Service.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Online Commerce
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
@@ -150,7 +150,7 @@ export default function TermsSmsPage() {
               Your participation in any dealings with third-party vendors is solely between you and the third party. Guardian Primary Care shall not be responsible for any loss or damage incurred as a result of such dealings.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Registration &amp; Passwords
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
@@ -160,28 +160,28 @@ export default function TermsSmsPage() {
               If you suspect unauthorized use of your account, notify us immediately at preston.holifield@guardianprimary.com. We are not liable for any loss or damage arising from your failure to comply with this obligation.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Termination
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
               We reserve the right to terminate or suspend your access to the Site, without notice, if we determine that you have violated these Terms of Service or engaged in conduct that we deem inappropriate or unlawful. Upon termination, you must cease all use of the Site and any content obtained from it.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Governing Law
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
               These Terms of Service shall be governed by and construed in accordance with the laws of the State of AL. Any dispute arising under these Terms shall be resolved exclusively through binding arbitration in that jurisdiction.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Changes to Terms of Service
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
               We may update these Terms of Service from time to time. The latest version will always be available on our website with the effective date.
             </p>
 
-            <h2 className="font-cormorant text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Contact
             </h2>
             <p className="text-[var(--color-muted)] mb-6">
@@ -190,7 +190,7 @@ export default function TermsSmsPage() {
             <div className="bg-[var(--color-cream)] border border-[var(--color-border)] rounded-lg p-6">
               <p className="text-[var(--color-ink)] font-semibold mb-2">Guardian Primary Care</p>
               <p className="text-[var(--color-muted)] mb-2">Email: preston.holifield@guardianprimary.com</p>
-              <p className="text-[var(--color-muted)]">Website: https://guardianprimary.com</p>
+              <p className="text-[var(--color-muted)]">Website: https://www.guardianprimary.com</p>
             </div>
 
             <p className="text-[var(--color-muted)] mt-8">

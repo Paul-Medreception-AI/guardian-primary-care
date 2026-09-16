@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Medicare vs. Medicare Advantage for Primary Care Coverage | Guardian Primary Care',
-  description: 'Compare Medicare and Medicare Advantage for primary care coverage in Birmingham, AL. Understand benefits, costs, and which option is right for you.',
+  description: 'Compare Original Medicare and Medicare Advantage for primary care coverage in Cape Girardeau, MO. Guardian Primary Care is in-network with Medicare. Understand the benefits, the costs and the trade-offs.',
 }
 
 export default function MedicareComparisonPage() {
@@ -18,11 +19,11 @@ export default function MedicareComparisonPage() {
             <span className="mx-2">›</span>
             <span>Comparison</span>
           </nav>
-          <h1 className="font-['Cormorant'] text-5xl md:text-6xl font-light mb-6 leading-tight">
+          <h1 className="font-display text-5xl md:text-6xl font-light mb-6 leading-tight">
             Medicare vs. Medicare Advantage for Primary Care Coverage
           </h1>
           <p className="text-xl opacity-95 max-w-3xl mx-auto">
-            Understanding your coverage options in Birmingham, AL to make the best decision for your primary care needs
+            Understanding your coverage options in Cape Girardeau, MO to make the best decision for your primary care needs
           </p>
         </div>
       </section>
@@ -37,9 +38,9 @@ export default function MedicareComparisonPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="font-['Cormorant'] text-2xl font-semibold mb-3 text-[var(--color-ink)]">Original Medicare</h3>
+              <h3 className="font-display text-2xl font-semibold mb-3 text-[var(--color-ink)]">Original Medicare</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Federal health insurance program with Part A (hospital) and Part B (medical). Freedom to see any provider who accepts Medicare.
+                The federal program, with Part A (hospital) and Part B (medical). You may see any provider who accepts Medicare.
               </p>
             </div>
             <div className="bg-[var(--color-cream)] rounded-xl p-8 animate-fade-up">
@@ -48,7 +49,7 @@ export default function MedicareComparisonPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-              <h3 className="font-['Cormorant'] text-2xl font-semibold mb-3 text-[var(--color-ink)]">Medicare Advantage</h3>
+              <h3 className="font-display text-2xl font-semibold mb-3 text-[var(--color-ink)]">Medicare Advantage</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
                 Private insurance alternative (Part C) bundling hospital, medical, and often prescription coverage through network providers.
               </p>
@@ -57,10 +58,28 @@ export default function MedicareComparisonPage() {
         </div>
       </section>
 
+      {/* Visual */}
+      <section className="bg-white pb-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-lg animate-fade-up">
+            <Image
+              src="/images/site/wallet-cost.jpg"
+              alt="A wallet and everyday household costs, representing what Medicare coverage choices mean for your budget"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 896px"
+            />
+          </div>
+          <p className="text-sm text-[var(--color-muted)] text-center mt-4">
+            The right choice depends on how you use care and what you can plan for.
+          </p>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="bg-[var(--color-cream)] py-24">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-['Cormorant'] text-4xl md:text-5xl font-light text-center mb-12 text-[var(--color-ink)]">
+          <h2 className="font-display text-4xl md:text-5xl font-light text-center mb-12 text-[var(--color-ink)]">
             Side-by-Side Comparison
           </h2>
           
@@ -82,14 +101,14 @@ export default function MedicareComparisonPage() {
             {/* Provider Choice */}
             <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-[var(--color-cream)]">
               <div className="p-6 font-semibold text-[var(--color-ink)] bg-[var(--color-light)]">Provider Choice</div>
-              <div className="p-6 border-l border-[var(--color-border)]">Any doctor or hospital that accepts Medicare nationwide</div>
+              <div className="p-6 border-l border-[var(--color-border)]">Any provider or hospital that accepts Medicare, anywhere in the U.S.</div>
               <div className="p-6 border-l border-[var(--color-border)]">Network restrictions (HMO/PPO). May need referrals for specialists</div>
             </div>
 
             {/* Monthly Costs */}
             <div className="grid grid-cols-3 border-b border-[var(--color-border)]">
               <div className="p-6 font-semibold text-[var(--color-ink)] bg-[var(--color-light)]">Monthly Costs</div>
-              <div className="p-6 border-l border-[var(--color-border)]">Part B premium (~$174.70) + optional Medigap + Part D premiums</div>
+              <div className="p-6 border-l border-[var(--color-border)]">The standard Part B premium set by Medicare each year, plus optional Medigap and Part D premiums</div>
               <div className="p-6 border-l border-[var(--color-border)]">Part B premium + plan premium (sometimes $0). Often lower monthly cost</div>
             </div>
 
@@ -97,14 +116,14 @@ export default function MedicareComparisonPage() {
             <div className="grid grid-cols-3 border-b border-[var(--color-border)] bg-[var(--color-cream)]">
               <div className="p-6 font-semibold text-[var(--color-ink)] bg-[var(--color-light)]">Out-of-Pocket Maximum</div>
               <div className="p-6 border-l border-[var(--color-border)]">No annual cap (unless you buy Medigap)</div>
-              <div className="p-6 border-l border-[var(--color-border)]">Annual cap (typically $3,000-$8,000) protects against high costs</div>
+              <div className="p-6 border-l border-[var(--color-border)]">An annual out-of-pocket cap, set by the plan, protects against high costs</div>
             </div>
 
             {/* Primary Care Access */}
             <div className="grid grid-cols-3 border-b border-[var(--color-border)]">
               <div className="p-6 font-semibold text-[var(--color-ink)] bg-[var(--color-light)]">Primary Care Access</div>
               <div className="p-6 border-l border-[var(--color-border)]">See any primary care provider accepting Medicare</div>
-              <div className="p-6 border-l border-[var(--color-border)]">Must choose PCP from network. May need PCP referral for specialists</div>
+              <div className="p-6 border-l border-[var(--color-border)]">Choose a primary care provider from the network. A referral may be needed for specialists</div>
             </div>
 
             {/* Prescription Coverage */}
@@ -124,7 +143,7 @@ export default function MedicareComparisonPage() {
             {/* Best For */}
             <div className="grid grid-cols-3">
               <div className="p-6 font-semibold text-[var(--color-ink)] bg-[var(--color-light)]">Best For</div>
-              <div className="p-6 border-l border-[var(--color-border)]">Those who want provider flexibility, travel frequently, or prefer established relationships</div>
+              <div className="p-6 border-l border-[var(--color-border)]">People who want provider flexibility, travel often, or want to keep the relationships they already have</div>
               <div className="p-6 border-l border-[var(--color-border)]">Those comfortable with networks, want lower premiums, or need extra benefits</div>
             </div>
           </div>
@@ -139,32 +158,32 @@ export default function MedicareComparisonPage() {
               <svg className="w-8 h-8 text-[var(--color-accent)] flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <h2 className="font-['Cormorant'] text-4xl font-light text-[var(--color-ink)]">
+              <h2 className="font-display text-4xl font-light text-[var(--color-ink)]">
                 Original Medicare: Maximum Flexibility
               </h2>
             </div>
             
             <div className="space-y-6 text-[var(--color-muted)] leading-relaxed ml-12">
               <p>
-                Original Medicare, administered directly by the federal government, provides comprehensive coverage through two parts: Part A (hospital insurance) and Part B (medical insurance). This traditional option offers the greatest freedom when it comes to choosing healthcare providers. You can see any doctor, specialist, or visit any hospital in the United States that accepts Medicare—no referrals needed, no network restrictions.
+                Original Medicare, administered directly by the federal government, provides coverage through two parts: Part A (hospital insurance) and Part B (medical insurance). This is the option with the most freedom in choosing where you get care. You can see any provider, any specialist, or use any hospital in the United States that accepts Medicare, with no referrals needed and no network restrictions.
               </p>
               
               <p>
-                For primary care in Birmingham, AL, this means you have complete autonomy to establish and maintain relationships with the physicians you trust. If you see a specialist in another city or spend winters in a different state, your coverage travels with you seamlessly. You're never locked into a network, and you never need permission from a primary care physician to see a specialist.
+                For primary care in Cape Girardeau, MO, that means you decide who you see and you can stay with the care team you trust. Guardian Primary Care is in-network with Medicare, so Original Medicare patients are welcome here. If you see a specialist in another city or spend winters in a different state, your coverage travels with you. You are never locked into a network, and you do not need permission from a primary care provider to see a specialist.
               </p>
               
               <p>
-                However, Original Medicare doesn't include prescription drug coverage or an out-of-pocket maximum. Most beneficiaries purchase a Part D prescription plan and many also buy Medigap (Medicare Supplement Insurance) to help cover the 20% coinsurance and other gaps. While this flexibility comes with potentially higher monthly premiums when you add these policies, it provides predictable costs and comprehensive protection against medical expenses.
+                Original Medicare does not include prescription drug coverage or an out-of-pocket maximum on its own. Most beneficiaries add a Part D prescription plan, and many also buy Medigap (Medicare Supplement Insurance) to help cover the 20% coinsurance and other gaps. Adding those policies raises your monthly premium, but it makes your costs more predictable across the year.
               </p>
 
               <div className="bg-[var(--color-light)] rounded-xl p-8 mt-8">
-                <h3 className="font-['Cormorant'] text-2xl font-semibold mb-4 text-[var(--color-ink)]">What to Expect</h3>
+                <h3 className="font-display text-2xl font-semibold mb-4 text-[var(--color-ink)]">What to Expect</h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>See any Medicare-accepting provider without referrals</span>
+                    <span>See any Medicare-accepting provider, no referral needed</span>
                   </li>
                   <li className="flex gap-3">
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -201,26 +220,26 @@ export default function MedicareComparisonPage() {
               <svg className="w-8 h-8 text-[var(--color-accent)] flex-shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
-              <h2 className="font-['Cormorant'] text-4xl font-light text-[var(--color-ink)]">
+              <h2 className="font-display text-4xl font-light text-[var(--color-ink)]">
                 Medicare Advantage: All-in-One Coverage
               </h2>
             </div>
             
             <div className="space-y-6 text-[var(--color-muted)] leading-relaxed ml-12">
               <p>
-                Medicare Advantage (Part C) plans are offered by private insurance companies approved by Medicare. These plans bundle hospital, medical, and usually prescription drug coverage into a single plan—often with extra benefits like dental, vision, and hearing coverage that Original Medicare doesn't provide. Many plans have $0 monthly premiums beyond your Part B premium, making them attractive from a cost perspective.
+                Medicare Advantage (Part C) plans are offered by private insurance companies approved by Medicare. These plans bundle hospital, medical and usually prescription drug coverage into a single plan, often with extra benefits such as dental, vision and hearing that Original Medicare does not provide. Many plans carry a $0 monthly premium beyond your Part B premium, which is a big part of their appeal.
               </p>
               
               <p>
-                The trade-off for lower monthly costs is network restrictions. Most Medicare Advantage plans in Birmingham, AL operate as HMOs (Health Maintenance Organizations) or PPOs (Preferred Provider Organizations). You'll need to choose a primary care physician from the plan's network, and with HMO plans, you typically need referrals to see specialists. Out-of-network care may not be covered except in emergencies, which can be a consideration if you travel frequently or have established relationships with specialists outside the network.
+                The trade-off for lower monthly costs is the network. Medicare Advantage plans are usually built as HMOs (Health Maintenance Organizations) or PPOs (Preferred Provider Organizations). You choose a primary care provider from the plan&apos;s network, and with an HMO you typically need a referral to see a specialist. Out-of-network care may not be covered except in an emergency, which matters if you travel often or already see specialists outside the network. Before you enroll, check that the providers you want are in that plan&apos;s network.
               </p>
               
               <p>
-                A significant advantage is the annual out-of-pocket maximum, which caps your spending each year—something Original Medicare lacks without Medigap. This protection can be valuable if you face a serious illness or injury. However, plan networks, formularies, and benefits can change annually, and you may need to switch providers if your plan's network changes or if you move to a different service area.
+                A real advantage is the annual out-of-pocket maximum, which caps your spending for the year. Original Medicare has no such cap without Medigap. That protection matters if you face a serious illness or injury. The counterweight is that networks, drug formularies and benefits can change each year, so you may have to change providers if the network shifts or if you move outside the service area.
               </p>
 
               <div className="bg-[var(--color-light)] rounded-xl p-8 mt-8">
-                <h3 className="font-['Cormorant'] text-2xl font-semibold mb-4 text-[var(--color-ink)]">What to Expect</h3>
+                <h3 className="font-display text-2xl font-semibold mb-4 text-[var(--color-ink)]">What to Expect</h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3">
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -263,7 +282,7 @@ export default function MedicareComparisonPage() {
       <section className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-[var(--color-light)] rounded-2xl p-12 animate-fade-up">
-            <h2 className="font-['Cormorant'] text-4xl font-light text-center mb-12 text-[var(--color-ink)]">
+            <h2 className="font-display text-4xl font-light text-center mb-12 text-[var(--color-ink)]">
               How to Decide What's Right for You
             </h2>
 
@@ -273,7 +292,7 @@ export default function MedicareComparisonPage() {
                   <svg className="w-8 h-8 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <h3 className="font-['Cormorant'] text-2xl font-semibold text-[var(--color-ink)]">
+                  <h3 className="font-display text-2xl font-semibold text-[var(--color-ink)]">
                     Choose Original Medicare if you:
                   </h3>
                 </div>
@@ -282,7 +301,7 @@ export default function MedicareComparisonPage() {
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-[var(--color-muted)]">Want complete freedom to see any doctor or specialist without referrals</span>
+                    <span className="text-[var(--color-muted)]">Want the freedom to see any provider or specialist without a referral</span>
                   </li>
                   <li className="flex gap-3">
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -324,7 +343,7 @@ export default function MedicareComparisonPage() {
                   <svg className="w-8 h-8 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
-                  <h3 className="font-['Cormorant'] text-2xl font-semibold text-[var(--color-ink)]">
+                  <h3 className="font-display text-2xl font-semibold text-[var(--color-ink)]">
                     Choose Medicare Advantage if you:
                   </h3>
                 </div>
@@ -345,7 +364,7 @@ export default function MedicareComparisonPage() {
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-[var(--color-muted)]">Primarily receive care in Birmingham, AL and don't travel extensively</span>
+                    <span className="text-[var(--color-muted)]">Primarily receive care in Cape Girardeau, MO and don't travel extensively</span>
                   </li>
                   <li className="flex gap-3">
                     <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
@@ -381,15 +400,15 @@ export default function MedicareComparisonPage() {
       {/* Primary Care Considerations */}
       <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-['Cormorant'] text-4xl font-light text-center mb-12 text-[var(--color-ink)]">
-            Primary Care Considerations in Birmingham, AL
+          <h2 className="font-display text-4xl font-light text-center mb-12 text-[var(--color-ink)]">
+            Primary Care Considerations in Cape Girardeau, MO
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl p-8 animate-fade-up">
-              <h3 className="font-['Cormorant'] text-2xl font-semibold mb-4 text-[var(--color-ink)]">With Original Medicare</h3>
+              <h3 className="font-display text-2xl font-semibold mb-4 text-[var(--color-ink)]">With Original Medicare</h3>
               <p className="text-[var(--color-muted)] leading-relaxed mb-6">
-                You can choose any primary care physician in Birmingham who accepts Medicare. No need to stay within a network or obtain referrals. This is ideal if you've built a long-term relationship with your doctor or prefer the freedom to switch providers easily.
+                You can choose any primary care provider in Cape Girardeau who accepts Medicare, with no network to stay inside and no referrals to chase. Guardian Primary Care is in-network with Medicare. This suits you if you have built a long-term relationship with your care team, or if you want the freedom to change providers easily.
               </p>
               <ul className="space-y-3 text-[var(--color-muted)]">
                 <li className="flex gap-3">
@@ -398,7 +417,7 @@ export default function MedicareComparisonPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[var(--color-accent)] font-bold">•</span>
-                  <span>Keep your current doctor if they accept Medicare</span>
+                  <span>Keep your current provider if they accept Medicare</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[var(--color-accent)] font-bold">•</span>
@@ -408,14 +427,14 @@ export default function MedicareComparisonPage() {
             </div>
 
             <div className="bg-white rounded-xl p-8 animate-fade-up">
-              <h3 className="font-['Cormorant'] text-2xl font-semibold mb-4 text-[var(--color-ink)]">With Medicare Advantage</h3>
+              <h3 className="font-display text-2xl font-semibold mb-4 text-[var(--color-ink)]">With Medicare Advantage</h3>
               <p className="text-[var(--color-muted)] leading-relaxed mb-6">
-                You'll select a primary care physician from your plan's Birmingham network. Your PCP coordinates your care and may provide referrals for specialty services. Plans often include wellness programs and care coordination services.
+                You select a primary care provider from your plan&apos;s network in the Cape Girardeau area. That provider coordinates your care and issues referrals for specialty services. Plans often include wellness programs and care coordination. Check your plan&apos;s directory, or call us at (573) 200-6143 and we will help you confirm whether we are in your plan&apos;s network.
               </p>
               <ul className="space-y-3 text-[var(--color-muted)]">
                 <li className="flex gap-3">
                   <span className="text-[var(--color-accent)] font-bold">•</span>
-                  <span>Coordinated care through your chosen PCP</span>
+                  <span>Coordinated care through the primary care provider you choose</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[var(--color-accent)] font-bold">•</span>
@@ -423,21 +442,21 @@ export default function MedicareComparisonPage() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[var(--color-accent)] font-bold">•</span>
-                  <span>May offer telehealth and 24/7 nurse lines</span>
+                  <span>May offer telehealth and nurse advice lines</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="mt-12 bg-white rounded-xl p-8 border-l-4 border-[var(--color-accent)] animate-fade-up">
-            <h3 className="font-['Cormorant'] text-2xl font-semibold mb-4 text-[var(--color-ink)]">
-              Direct Primary Care (DPC) Works with Both Options
+            <h3 className="font-display text-2xl font-semibold mb-4 text-[var(--color-ink)]">
+              Guardian Accepts Medicare, and Also Offers Guardian Direct Care
             </h3>
             <p className="text-[var(--color-muted)] leading-relaxed mb-4">
-              At Guardian Primary Care, our Direct Primary Care model is compatible with both Original Medicare and Medicare Advantage. Many of our Birmingham patients use Medicare for hospital, specialist, and prescription coverage while enjoying the enhanced access, longer appointments, and personalized care that DPC provides.
+              Guardian Primary Care is in-network with Medicare and Medicaid as well as most major commercial insurances, so for most of our Cape Girardeau patients on Medicare, nothing about this page changes how they get care here: use your coverage and we will bill it.
             </p>
             <p className="text-[var(--color-muted)] leading-relaxed">
-              Our affordable monthly membership fee covers unlimited primary care visits, care coordination, and direct communication with your physician—complementing your Medicare coverage regardless of which option you choose.
+              For patients who would rather pay the practice directly at a flat published price, Guardian Direct Care is available as an alternative. Senior memberships are $70 per month, or $760 prepaid for the year, and include office visits with no visit limits, same-day or next-day sick visits, annual wellness visits, ongoing care for chronic conditions, and direct access to your provider. It is a membership for primary care, not insurance, so it does not replace Medicare for hospital stays, specialty care, imaging or prescriptions. Call us at (573) 200-6143 and we will walk you through which route makes more sense for you.
             </p>
           </div>
         </div>
@@ -446,7 +465,7 @@ export default function MedicareComparisonPage() {
       {/* FAQ Section */}
       <section className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-['Cormorant'] text-4xl font-light text-center mb-12 text-[var(--color-ink)]">
+          <h2 className="font-display text-4xl font-light text-center mb-12 text-[var(--color-ink)]">
             Frequently Asked Questions
           </h2>
 
@@ -471,7 +490,7 @@ export default function MedicareComparisonPage() {
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Medigap is optional but highly recommended. Original Medicare covers 80% of Part B services, leaving you responsible for 20% coinsurance with no annual limit. A Medigap policy fills these gaps, providing predictable costs and financial protection. Most beneficiaries find the peace of mind worth the additional premium, especially if facing ongoing medical needs.
+                Medigap is optional, and it is worth considering. Original Medicare covers 80% of Part B services, leaving you responsible for the remaining 20% coinsurance with no annual limit. A Medigap policy fills that gap and makes your costs far more predictable. Whether the extra premium is worth it depends on your health and your budget, and a licensed Medicare agent can price it out with you.
               </div>
             </details>
 
@@ -501,13 +520,13 @@ export default function MedicareComparisonPage() {
 
             <details className="group bg-[var(--color-cream)] rounded-xl overflow-hidden animate-fade-up">
               <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex justify-between items-center">
-                Can I use Direct Primary Care with my Medicare coverage?
+                Can I use Guardian Direct Care alongside my Medicare coverage?
                 <svg className="w-5 h-5 transition-transform group-open:rotate-180 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Absolutely. Direct Primary Care membership fees are separate from your Medicare coverage. You'll use your Medicare (Original or Advantage) for hospital care, specialists, prescriptions, labs, and imaging, while your DPC membership provides enhanced primary care access, longer appointments, and care coordination. Many Medicare beneficiaries find this combination gives them the best of both worlds: comprehensive insurance coverage plus personalized, accessible primary care.
+                You do not have to choose one or the other. Guardian Primary Care is in-network with Medicare, so most patients simply use their coverage here. If you prefer a flat published price for your primary care, a Guardian Direct Care membership is separate from your Medicare coverage: the membership fee is paid to the practice, while your Medicare plan (Original or Advantage) stays in place for hospital care, specialists, prescriptions, labs and imaging. Call us at (573) 200-6143 and our team will explain exactly how each option would work for your situation.
               </div>
             </details>
           </div>
@@ -517,26 +536,29 @@ export default function MedicareComparisonPage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] py-20">
         <div className="max-w-3xl mx-auto px-6 text-center text-white">
-          <h2 className="font-['Cormorant'] text-4xl md:text-5xl font-light mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-light mb-6">
             Discuss Your Medicare Options
           </h2>
           <p className="text-xl mb-8 opacity-95 leading-relaxed">
-            Choosing between Medicare and Medicare Advantage is an important decision. Let's discuss how each option works with your healthcare needs and our Direct Primary Care model in Birmingham, AL.
+            Choosing between Original Medicare and Medicare Advantage is a real decision, and it is easier with someone to talk it through. Guardian Primary Care in Cape Girardeau, MO is in-network with Medicare, and Guardian Direct Care is available if you would prefer a flat published price for your primary care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/contact" 
+            <a
+              href="/contact"
               className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-105"
             >
-              Schedule a Consultation
+              Schedule an Appointment
             </a>
-            <a 
-              href="/services" 
+            <a
+              href="tel:+15732006143"
               className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 border-2 border-white/30"
             >
-              Learn About Our Services
+              Call (573) 200-6143
             </a>
           </div>
+          <p className="mt-6 text-white/80 text-sm max-w-2xl mx-auto">
+            Guardian Primary Care does not sell insurance plans. This page is general education, not plan-specific advice.
+          </p>
         </div>
       </section>
     </>

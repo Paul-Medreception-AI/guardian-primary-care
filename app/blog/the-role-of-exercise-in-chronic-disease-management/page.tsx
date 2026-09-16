@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'The Role of Exercise in Chronic Disease Management | Guardian Primary Care',
-  description: 'Discover how regular physical activity can help manage chronic conditions like diabetes, heart disease, and arthritis. Evidence-based guidance from Birmingham\'s trusted primary care team.',
+  title: 'Exercise and Chronic Disease: Benefits and Safety',
+  description: 'How regular movement helps manage diabetes, heart disease, arthritis and COPD, and how to start safely. Guardian Primary Care, Cape Girardeau, Missouri.',
   openGraph: {
-    title: 'The Role of Exercise in Chronic Disease Management | Guardian Primary Care',
-    description: 'Discover how regular physical activity can help manage chronic conditions like diabetes, heart disease, and arthritis. Evidence-based guidance from Birmingham\'s trusted primary care team.',
-    url: 'https://guardianprimary.com/blog/the-role-of-exercise-in-chronic-disease-management',
+    title: 'Exercise and Chronic Disease: Benefits and Safety',
+    description: 'How regular movement helps manage diabetes, heart disease, arthritis and COPD, and how to start safely. Guardian Primary Care, Cape Girardeau, Missouri.',
+    url: 'https://www.guardianprimary.com/blog/the-role-of-exercise-in-chronic-disease-management',
     type: 'article',
     images: [{ url: '/logo.png', width: 1200, height: 630, alt: 'Guardian Primary Care' }]
   }
@@ -34,7 +35,7 @@ export default function BlogPost() {
           </div>
           
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="text-5xl font-light leading-tight text-center mb-8 font-display">
             The Role of Exercise in Chronic Disease Management
           </h1>
           
@@ -56,8 +57,24 @@ export default function BlogPost() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-exercise-activity.jpg"
+              alt="A runner in a blue shirt jogging along a sunlit concrete wall painted with colorful handprints"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -69,7 +86,7 @@ export default function BlogPost() {
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              When you're managing a chronic condition like diabetes, heart disease, or arthritis, the idea of exercise can feel overwhelming. Perhaps you're tired, in pain, or simply unsure where to start. Yet mounting evidence shows that physical activity is one of the most powerful tools available for managing chronic disease—often as effective as medication, and sometimes more so.
+              When you're managing a chronic condition like diabetes, heart disease, or arthritis, the idea of exercise can feel overwhelming. Perhaps you're tired, in pain, or simply unsure where to start. Yet mounting evidence shows that physical activity is one of the most powerful tools available for managing chronic disease, with benefits that reach well beyond fitness.
             </p>
             <p className="mb-6">
               The truth is, exercise isn't just about weight loss or fitness. For people living with chronic conditions, regular physical activity can reduce symptoms, improve quality of life, slow disease progression, and even reduce the need for medications. It's not about running marathons or spending hours at the gym. It's about finding sustainable movement that works for your body and your condition.
@@ -77,7 +94,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Understanding Exercise as Medicine
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -85,12 +102,12 @@ export default function BlogPost() {
               The concept of "exercise as medicine" isn't new, but research continues to reinforce just how profound the benefits are. When you move your body regularly, you trigger a cascade of positive physiological changes: improved circulation, reduced inflammation, better insulin sensitivity, enhanced immune function, and improved mood through endorphin release.
             </p>
             <p className="mb-6">
-              For chronic disease management, exercise works on multiple levels simultaneously. It addresses the root causes of many conditions—like insulin resistance in diabetes or arterial stiffness in heart disease—while also improving your body's ability to cope with symptoms and stress. Think of it as a compound intervention that touches nearly every system in your body.
+              For chronic disease management, exercise works on multiple levels simultaneously. It addresses the root causes of many conditions (like insulin resistance in diabetes or arterial stiffness in heart disease) while also improving your body's ability to cope with symptoms and stress. Think of it as a compound intervention that touches nearly every system in your body.
             </p>
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Exercise and Common Chronic Conditions
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -99,11 +116,11 @@ export default function BlogPost() {
             </p>
             <p className="mb-4 font-semibold">Type 2 Diabetes</p>
             <p className="mb-6">
-              Exercise increases insulin sensitivity, meaning your cells can use available glucose more effectively. Even a single bout of moderate exercise can lower blood sugar levels for up to 24 hours. Regular activity also helps with weight management, which is crucial for diabetes control. Studies show that combining aerobic exercise with resistance training produces the best outcomes for blood sugar management.
+              Exercise increases insulin sensitivity, meaning your cells can use available glucose more effectively. Even a single bout of moderate exercise can lower blood sugar for many hours afterward. Regular activity also helps with weight management, which is crucial for diabetes control. Studies show that combining aerobic exercise with resistance training produces the best outcomes for blood sugar management.
             </p>
             <p className="mb-4 font-semibold">Cardiovascular Disease</p>
             <p className="mb-6">
-              Physical activity strengthens your heart muscle, improves circulation, lowers blood pressure, and helps manage cholesterol levels. Cardiac rehabilitation programs—which are essentially structured exercise programs—have been shown to reduce mortality rates in heart disease patients by up to 25%. The key is starting slowly and building up gradually under medical supervision.
+              Physical activity strengthens your heart muscle, improves circulation, lowers blood pressure, and helps manage cholesterol levels. Cardiac rehabilitation programs (which are essentially structured exercise programs) have been shown to improve survival and quality of life for people living with heart disease. The key is starting slowly and building up gradually under medical supervision.
             </p>
             <p className="mb-4 font-semibold">Arthritis</p>
             <p className="mb-6">
@@ -117,13 +134,13 @@ export default function BlogPost() {
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl" style={{ fontFamily: 'Cormorant, serif' }}>
+            <p className="text-[var(--color-ink)] italic text-xl font-display">
               "The best exercise is the one you'll actually do. Start where you are, use what you have, and build gradually. Even five minutes of movement is better than none."
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             The Evidence Behind Exercise Recommendations
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -131,15 +148,15 @@ export default function BlogPost() {
               Major health organizations, including the American Heart Association, American Diabetes Association, and Centers for Disease Control, all recommend at least 150 minutes of moderate-intensity aerobic activity per week for adults with chronic conditions. This breaks down to just 30 minutes, five days a week.
             </p>
             <p className="mb-6">
-              Research published in the Journal of the American Medical Association found that regular physical activity reduced mortality risk by 30-35% in people with chronic diseases. Another landmark study in Circulation showed that even patients with advanced heart disease who engaged in regular exercise had significantly better outcomes than sedentary patients.
+              Large studies of adults living with chronic disease consistently link regular physical activity with a lower risk of dying early, and the pattern holds across many different conditions. Even people with advanced heart disease who exercise regularly tend to have better outcomes than those who stay sedentary.
             </p>
             <p className="mb-6">
-              The evidence is clear: exercise isn't optional for chronic disease management—it's essential. But the dose, type, and intensity must be individualized based on your specific condition, current fitness level, and any complications you may have.
+              The evidence is clear: exercise isn't optional for chronic disease management, it's essential. But the dose, type, and intensity must be individualized based on your specific condition, current fitness level, and any complications you may have.
             </p>
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Getting Started Safely
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -165,7 +182,7 @@ export default function BlogPost() {
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <p><span className="font-semibold">Choose activities you enjoy</span> so you're more likely to stick with them. Walking, swimming, dancing, gardening—it all counts.</p>
+                <p><span className="font-semibold">Choose activities you enjoy</span> so you're more likely to stick with them. Walking, swimming, dancing, gardening, it all counts.</p>
               </div>
               <div className="flex gap-3 items-start">
                 <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -189,7 +206,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Overcoming Common Barriers
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -197,13 +214,13 @@ export default function BlogPost() {
               Many people with chronic conditions face unique challenges when it comes to exercise. Acknowledging these barriers and developing strategies to address them is crucial for long-term success.
             </p>
             <p className="mb-6">
-              <span className="font-semibold">Fatigue:</span> If you're dealing with chronic fatigue, the idea of exercise can seem impossible. Start with extremely short sessions—even 3-5 minutes—and focus on gentle movement. Often, light activity actually improves energy levels over time.
+              <span className="font-semibold">Fatigue:</span> If you're dealing with chronic fatigue, the idea of exercise can seem impossible. Start with extremely short sessions (even three to five minutes) and focus on gentle movement. Often, light activity actually improves energy levels over time.
             </p>
             <p className="mb-6">
               <span className="font-semibold">Pain:</span> Work with your healthcare provider to find activities that don't exacerbate your pain. Water-based exercises, for example, take pressure off joints while still providing resistance. The right pain management strategy, combined with appropriate exercise, can create a positive cycle.
             </p>
             <p className="mb-6">
-              <span className="font-semibold">Fear of injury or making your condition worse:</span> This is a legitimate concern, which is why medical guidance is so important. A proper assessment can identify what's safe for you and what to avoid. Many people are surprised to find they can do more than they thought—safely.
+              <span className="font-semibold">Fear of injury or making your condition worse:</span> This is a legitimate concern, which is why medical guidance is so important. A proper assessment can identify what's safe for you and what to avoid. Many people are surprised to find they can safely do more than they thought.
             </p>
             <p className="mb-6">
               <span className="font-semibold">Time constraints:</span> Remember that exercise doesn't have to happen in one continuous block. Three 10-minute sessions spread throughout the day are just as beneficial as one 30-minute session.
@@ -211,15 +228,15 @@ export default function BlogPost() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Creating Your Personalized Exercise Plan
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              The most effective exercise program is one that's tailored to your specific needs, preferences, and medical situation. At Guardian Primary Care in Birmingham, we work with patients to develop individualized exercise prescriptions that consider your current health status, goals, and lifestyle.
+              The most effective exercise program is one that's tailored to your specific needs, preferences, and medical situation. At Guardian Primary Care in Cape Girardeau, we work with patients to develop individualized exercise prescriptions that consider your current health status, goals, and lifestyle.
             </p>
             <p className="mb-6">
-              Your exercise plan should be dynamic—adjusting as your fitness improves, your condition changes, or new symptoms emerge. Regular check-ins with your healthcare team ensure you're progressing safely and getting maximum benefit from your efforts.
+              Your exercise plan should be dynamic, adjusting as your fitness improves, your condition changes, or new symptoms emerge. Regular check-ins with your healthcare team ensure you're progressing safely and getting maximum benefit from your efforts.
             </p>
             <p className="mb-6">
               Remember that consistency matters more than intensity. A moderate exercise routine that you maintain for years will provide far greater benefits than an aggressive program you abandon after a few weeks. Be patient with yourself, celebrate small victories, and focus on how movement makes you feel rather than just physical outcomes.
@@ -232,7 +249,7 @@ export default function BlogPost() {
               Exercise is a cornerstone of chronic disease management, but navigating how to start safely and effectively can be challenging. If you're living with a chronic condition and want to incorporate exercise into your treatment plan, professional guidance can make all the difference.
             </p>
             <p>
-              Our team at Guardian Primary Care specializes in comprehensive, personalized chronic disease management. We'll work with you to develop an exercise strategy that fits your unique situation and supports your health goals. <a href="/contact" className="text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] transition-colors font-semibold">Contact us today</a> to schedule a consultation and take the first step toward better health through movement.
+              Our team at Guardian Primary Care specializes in comprehensive, personalized chronic disease management. We'll work with you to develop an exercise strategy that fits your unique situation and supports your health goals. <a href="/contact" className="text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] transition-colors font-semibold">Request an appointment</a> or call <a href="tel:+15732006143" className="text-[var(--color-accent)] hover:text-[var(--color-accent-dark)] transition-colors font-semibold">(573) 200-6143</a> to take the first step toward better health through movement.
             </p>
           </div>
 
@@ -250,10 +267,10 @@ export default function BlogPost() {
             </div>
             <div>
               <div className="text-[var(--color-ink)] font-semibold text-lg mb-1">
-                Written by the Guardian Primary Care Clinical Team
+                Written by the Guardian Primary Care team
               </div>
               <div className="text-[var(--color-muted)] text-sm">
-                Board-certified providers specializing in Primary Care / DPC
+                Led by Preston Holifield, DNP, APRN, FNP-C, a board-certified family nurse practitioner working with a Missouri Licensed Collaborating Physician.
               </div>
               <p className="text-[var(--color-ink)] mt-3 text-sm leading-relaxed">
                 Our team is dedicated to providing evidence-based, compassionate care to help you live your healthiest life. We believe in empowering patients with the knowledge and support they need to manage chronic conditions effectively.
@@ -266,7 +283,7 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center font-display">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -332,17 +349,17 @@ export default function BlogPost() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light mb-4 font-display">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Our team is here to help you develop a personalized approach to managing your health.
+            Our care team in Cape Girardeau, Missouri can help you build a movement plan that fits your condition and your life. We see patients by appointment, so call <a href="tel:+15732006143" className="font-semibold underline underline-offset-4 hover:text-white">(573) 200-6143</a> and we will find a time.
           </p>
           <a 
             href="/contact"
             className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"
           >
-            Schedule a Consultation
+            Request an Appointment
           </a>
         </div>
       </section>

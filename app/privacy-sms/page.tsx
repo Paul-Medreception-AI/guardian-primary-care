@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Privacy Policy | Guardian Primary Care',
   description: 'Guardian Primary Care - Privacy Policy, including SMS, TCPA and HIPAA disclosures.',
-  alternates: { canonical: 'https://guardianprimary.com/privacy-sms' },
+  alternates: { canonical: 'https://www.guardianprimary.com/privacy-sms' },
 }
 
 export default function PrivacySmsPage() {
@@ -11,7 +11,7 @@ export default function PrivacySmsPage() {
     <main className="min-h-screen bg-white font-opensans">
       <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h1 className="font-cormorant text-5xl font-bold mb-4">Guardian Primary Care - Privacy Policy</h1>
+          <h1 className="font-display text-5xl font-bold mb-4">Guardian Primary Care - Privacy Policy</h1>
           <p className="text-lg text-white/90">Guardian Primary Care</p>
         </div>
       </div>
@@ -22,14 +22,14 @@ export default function PrivacySmsPage() {
             Effective Date: September 16th, 2026
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             IMPORTANT NOTICE REGARDING TEXT MESSAGING DATA
           </h2>
           <p className="text-[var(--color-ink)] mb-6 leading-relaxed">
             Guardian Primary Care (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) DOES NOT share customer opt-in information, including phone numbers and consent records, with any affiliates or third parties for marketing, promotional, or any other purposes unrelated to providing our direct services. All text messaging originator opt-in data is kept strictly confidential.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             1. Information We Collect
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -60,7 +60,7 @@ export default function PrivacySmsPage() {
             <li>Service history and feedback</li>
           </ul>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             2. How We Use Your Information
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -75,7 +75,7 @@ export default function PrivacySmsPage() {
             <li>Maintaining records of your communication preferences and consent</li>
           </ul>
 
-          <h2 id="sms-messaging" className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 id="sms-messaging" className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             3. SMS Messaging &amp; Compliance
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed font-semibold">
@@ -133,7 +133,7 @@ export default function PrivacySmsPage() {
             We implement strict data protection measures to safeguard your SMS opt-in information and consent records.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             4. Information Sharing &amp; Disclosure
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -174,7 +174,7 @@ export default function PrivacySmsPage() {
             All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             5. Data Security
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -192,7 +192,7 @@ export default function PrivacySmsPage() {
             Despite these measures, no method of transmission over the Internet or electronic storage is 100% secure. We strive to use commercially acceptable means to protect your personal information but cannot guarantee absolute security.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             6. Cookies &amp; Tracking Technologies
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -208,7 +208,7 @@ export default function PrivacySmsPage() {
             You may control cookies through your browser settings. Disabling cookies may limit your ability to use certain features of our website.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             7. Your Rights &amp; Choices
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -226,7 +226,7 @@ export default function PrivacySmsPage() {
             To exercise these rights, please contact us using the information in Section 10.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             8. Privacy, HIPAA &amp; Health Information
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -240,14 +240,14 @@ export default function PrivacySmsPage() {
             <li>We comply with the Telephone Consumer Protection Act (TCPA), HIPAA, CTIA guidelines, and all applicable federal and state regulations regarding SMS communications and health information.</li>
           </ul>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             9. Changes to This Privacy Policy
           </h2>
           <p className="text-[var(--color-ink)] mb-6 leading-relaxed">
             We may update this policy periodically. The latest version will always be available on our website with the effective date. For significant changes, we will notify you by email or through a notice on our website.
           </p>
 
-          <h2 className="font-cormorant text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
+          <h2 className="font-display text-2xl text-[var(--color-ink)] mt-10 mb-4 font-semibold">
             10. Contact Us
           </h2>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
@@ -256,7 +256,7 @@ export default function PrivacySmsPage() {
           <div className="bg-[var(--color-cream)] border border-[var(--color-border)] rounded-lg p-6 mb-8">
             <p className="text-[var(--color-ink)] font-semibold mb-2">Guardian Primary Care</p>
             <p className="text-[var(--color-muted)] mb-2">Email: preston.holifield@guardianprimary.com</p>
-            <p className="text-[var(--color-muted)]">Website: https://guardianprimary.com</p>
+            <p className="text-[var(--color-muted)]">Website: https://www.guardianprimary.com</p>
           </div>
           <p className="text-[var(--color-ink)] mb-4 leading-relaxed">
             To file a HIPAA complaint, you may also contact:

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Hormone Changes and Menopause: What to Expect and How to Manage Symptoms | Guardian Primary Care',
-  description: 'Understanding menopause and hormone changes in Birmingham, AL. Learn what to expect, recognize symptoms, and discover evidence-based strategies to manage this natural transition with expert guidance.',
-  keywords: 'menopause, hormone changes, perimenopause, hot flashes, hormone therapy, Birmingham AL, primary care, womens health',
+  title: 'Hormone Changes and Menopause: What to Expect',
+  description: 'Perimenopause and menopause explained: why symptoms happen, which treatments work, and the lifestyle steps that help. Guardian Primary Care, Cape Girardeau MO.',
+  keywords: 'menopause, hormone changes, perimenopause, hot flashes, hormone therapy, Cape Girardeau MO, primary care, womens health',
 }
 
 export default function BlogPost() {
@@ -28,7 +29,7 @@ export default function BlogPost() {
           </div>
           
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center">
             Hormone Changes and Menopause: What to Expect and How to Manage Symptoms
           </h1>
           
@@ -38,7 +39,23 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/cond-role-of-holistic-integrative-care.jpg"
+              alt="Cupped hands gently holding a monarch butterfly, an image of a natural transition"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -49,28 +66,28 @@ export default function BlogPost() {
           
           {/* Opening Hook */}
           <p className="text-[var(--color-ink)] leading-loose text-lg mb-6">
-            For many women, the mention of menopause brings a mixture of uncertainty, concern, and questions. It's a natural biological transition that every woman will experience, yet it remains shrouded in misconceptions and unnecessary silence. Understanding what happens during menopause—and knowing you have options for managing symptoms—can transform this phase from something to dread into an opportunity for renewed health and vitality.
+            For many women, the mention of menopause brings a mixture of uncertainty, concern, and questions. It's a natural biological transition that every woman will experience, yet it remains shrouded in misconceptions and unnecessary silence. Understanding what happens during menopause, and knowing you have options for managing symptoms, can transform this phase from something to dread into an opportunity for renewed health and vitality.
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            Whether you're beginning to notice changes in your cycle, experiencing your first hot flash, or supporting someone going through this transition, having accurate, evidence-based information makes all the difference. At Guardian Primary Care in Birmingham, AL, we believe that comprehensive, compassionate guidance during menopause is an essential part of primary care.
+            Whether you're beginning to notice changes in your cycle, experiencing your first hot flash, or supporting someone going through this transition, having accurate, evidence-based information makes all the difference. At Guardian Primary Care in Cape Girardeau, MO, we believe that comprehensive, compassionate guidance during menopause is an essential part of primary care.
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             What Is Menopause?
           </h2>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Menopause is officially defined as the point when a woman has gone 12 consecutive months without a menstrual period, marking the end of reproductive years. The average age for menopause in the United States is 51, though it can occur anywhere from the mid-40s to late 50s. This transition doesn't happen overnight—it's a gradual process that typically unfolds over several years.
+            Menopause is officially defined as the point when a woman has gone 12 consecutive months without a menstrual period, marking the end of reproductive years. The average age for menopause in the United States is 51, though it can occur anywhere from the mid-40s to late 50s. This transition doesn't happen overnight, it's a gradual process that typically unfolds over several years.
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            The years leading up to menopause are called perimenopause, and this is when most women begin to notice symptoms. During perimenopause, hormone levels—particularly estrogen and progesterone—begin to fluctuate unpredictably before eventually declining. These hormonal shifts are responsible for the wide range of symptoms women experience.
+            The years leading up to menopause are called perimenopause, and this is when most women begin to notice symptoms. During perimenopause, hormone levels, particularly estrogen and progesterone, begin to fluctuate unpredictably before eventually declining. These hormonal shifts are responsible for the wide range of symptoms women experience.
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Common Symptoms and What Causes Them
           </h2>
           
@@ -141,12 +158,12 @@ export default function BlogPost() {
           </div>
 
           {/* Pull Quote */}
-          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl" style={{ fontFamily: 'Cormorant, serif' }}>
-            "Understanding that your symptoms have a biological cause—and that effective treatments exist—is the first step toward reclaiming your quality of life during this transition."
+          <blockquote className="font-display bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl">
+            Understanding that your symptoms have a biological cause, and that effective treatments exist, is the first step toward reclaiming your quality of life during this transition.
           </blockquote>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Evidence-Based Treatment Options
           </h2>
           
@@ -155,7 +172,7 @@ export default function BlogPost() {
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            <strong>Hormone Replacement Therapy (HRT):</strong> For many women, hormone therapy remains the most effective treatment for moderate to severe menopause symptoms. Modern HRT uses the lowest effective doses and can be tailored to your specific needs and risk profile. Research shows that for women who begin HRT within 10 years of menopause onset and are under 60, the benefits often outweigh the risks—particularly for quality of life and bone health.
+            <strong>Hormone Replacement Therapy (HRT):</strong> For many women, hormone therapy remains the most effective treatment for moderate to severe menopause symptoms. Modern HRT uses the lowest effective doses and can be tailored to your specific needs and risk profile. Research shows that for women who begin HRT within 10 years of menopause onset and are under 60, the benefits often outweigh the risks, particularly for quality of life and bone health.
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -167,7 +184,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Lifestyle Strategies That Make a Difference
           </h2>
           
@@ -228,7 +245,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Long-Term Health Considerations
           </h2>
           
@@ -237,7 +254,7 @@ export default function BlogPost() {
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            <strong>Bone health:</strong> Estrogen plays a protective role in bone density. After menopause, the risk of osteoporosis increases significantly. Bone density screening, adequate calcium and vitamin D intake, weight-bearing exercise, and—when appropriate—medication can help maintain strong bones.
+            <strong>Bone health:</strong> Estrogen plays a protective role in bone density. After menopause, the risk of osteoporosis increases significantly. Bone density screening, adequate calcium and vitamin D intake, weight-bearing exercise, and, when appropriate, medication can help maintain strong bones.
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -249,7 +266,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             When to Seek Professional Guidance
           </h2>
           
@@ -267,11 +284,11 @@ export default function BlogPost() {
 
           {/* Closing */}
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            At Guardian Primary Care in Birmingham, AL, we provide comprehensive menopause care that addresses both symptom management and long-term wellness. We take time to understand your unique experience, discuss all available options, and create a personalized plan that aligns with your health goals and values.
+            At Guardian Primary Care in Cape Girardeau, MO, we provide menopause care that addresses both symptom management and long-term wellness. We take time to understand your experience, discuss the available options, and build a plan that fits your health goals and your values. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you would rather pay a flat monthly fee.
           </p>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Menopause is not something to simply endure—it's a transition that, with the right support and strategies, can be navigated with confidence and even embraced as a new chapter of life. You deserve to feel your best, and we're here to help you achieve that.
+            Menopause is not something to simply endure. With the right support and strategies, it is a transition you can navigate with confidence and even welcome as a new chapter. You deserve to feel your best, and we are here to help. Call (573) 200-6143 to schedule a visit.
           </p>
 
         </div>
@@ -287,8 +304,8 @@ export default function BlogPost() {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Clinical Team</h3>
-              <p className="text-[var(--color-muted)] text-sm">Board-certified providers specializing in Primary Care / DPC, dedicated to delivering compassionate, evidence-based care to the Birmingham community.</p>
+              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Team</h3>
+              <p className="text-[var(--color-muted)] text-sm">Guardian Primary Care is a nurse practitioner led practice in Cape Girardeau, Missouri. Preston Holifield, DNP, APRN, FNP-C is nationally certified by the American Academy of Nurse Practitioners and works with a Missouri Licensed Collaborating Physician.</p>
             </div>
           </div>
         </div>
@@ -297,53 +314,53 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">
             Related Resources
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/women-s-health-after-40-what-screenings-you-need-and-when" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Understanding Preventive Care for Women
+                <h4 className="font-display text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Women&apos;s Health After 40
                 </h4>
-                <p className="text-[var(--color-muted)] text-sm">Essential health screenings and preventive measures for women at every life stage.</p>
+                <p className="text-[var(--color-muted)] text-sm">The screenings women need after 40, what each one looks for, and when to start.</p>
               </div>
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/osteoporosis-prevention-and-treatment-protecting-your-bone-h" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Bone Health and Osteoporosis Prevention
+                <h4 className="font-display text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Osteoporosis Prevention and Treatment
                 </h4>
-                <p className="text-[var(--color-muted)] text-sm">How to protect your bones and maintain strength as you age.</p>
+                <p className="text-[var(--color-muted)] text-sm">How to protect your bone health with screening, nutrition and weight bearing exercise.</p>
               </div>
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/thyroid-disorders-symptoms-testing-and-treatment-options" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Managing Stress and Mental Wellness
+                <h4 className="font-display text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Thyroid Disorders: Symptoms and Testing
                 </h4>
-                <p className="text-[var(--color-muted)] text-sm">Practical strategies for emotional health during life transitions.</p>
+                <p className="text-[var(--color-muted)] text-sm">Thyroid symptoms overlap with menopause. Here is how testing tells them apart.</p>
               </div>
             </a>
           </div>
@@ -353,7 +370,7 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
@@ -365,6 +382,10 @@ export default function BlogPost() {
           >
             Schedule Your Consultation
           </a>
+          <p className="mt-6 text-white/90">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Call{' '}
+            <a href="tel:+15732006143" className="underline hover:text-white">(573) 200-6143</a>. Visits are by appointment.
+          </p>
         </div>
       </section>
 

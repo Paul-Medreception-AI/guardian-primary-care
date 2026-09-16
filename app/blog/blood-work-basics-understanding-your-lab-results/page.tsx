@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Blood Work Basics: Understanding Your Lab Results | Guardian Primary Care',
-  description: 'Learn how to read and understand your blood work results. Expert guidance from Guardian Primary Care in Birmingham, AL on common lab tests and what they mean for your health.',
+  title: 'Blood Work Basics: Understanding Your Lab Results',
+  description: 'A plain-language guide to your lab results: what the CBC, metabolic panel, lipid panel and thyroid tests measure, and what a flagged value really means.',
   openGraph: {
     title: 'Blood Work Basics: Understanding Your Lab Results',
-    description: 'Learn how to read and understand your blood work results. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+    description: 'Learn how to read and understand your blood work results. Expert guidance from Guardian Primary Care in Cape Girardeau, MO.',
     type: 'article',
     publishedTime: '2025-01-15T09:00:00Z',
-    authors: ['Guardian Primary Care Clinical Team'],
+    authors: ['Guardian Primary Care Team'],
   }
 }
 
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="font-display text-5xl font-light leading-tight text-center mb-8">
             Blood Work Basics: Understanding Your Lab Results
           </h1>
 
@@ -55,11 +56,27 @@ export default function BlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Featured Image */}
+      <div className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-routine-annual-wellness.jpg"
+              alt="Wooden letter tiles spelling the word wellness, representing the routine preventive visits where blood work is ordered"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Article Body */}
       <article className="bg-white py-20">
@@ -68,20 +85,20 @@ export default function BlogPost() {
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-lg mb-8">
             <p className="mb-6">
-              You sit in the exam room, clutching a printout filled with numbers, acronyms, and ranges. Your doctor mentioned everything looks "mostly fine," but you're left wondering: What do these numbers actually mean? Is that slightly high cholesterol something to worry about? Why is one result flagged in bold?
+              You sit in the exam room, clutching a printout filled with numbers, acronyms, and ranges. Your provider mentioned everything looks "mostly fine," but you are left wondering: What do these numbers actually mean? Is that slightly high cholesterol something to worry about? Why is one result flagged in bold?
             </p>
             <p className="mb-6">
-              If you've ever felt overwhelmed by your lab results, you're not alone. Blood work is one of the most powerful tools in modern medicine, offering a window into your body's inner workings. Yet for many patients, understanding these results feels like deciphering a foreign language. At Guardian Primary Care in Birmingham, AL, we believe that informed patients are empowered patients—and that starts with understanding what your blood work is telling you.
+              If you've ever felt overwhelmed by your lab results, you're not alone. Blood work is one of the most powerful tools in modern medicine, offering a window into your body's inner workings. Yet for many patients, understanding these results feels like deciphering a foreign language. At Guardian Primary Care in Cape Girardeau, MO, we believe that informed patients are empowered patients, and that starts with understanding what your blood work is telling you.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             What Is Blood Work and Why Does It Matter?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-6">
             <p className="mb-4">
-              Blood work, or laboratory testing, involves analyzing a sample of your blood to measure various substances, cells, and chemicals. These tests provide critical information about your organ function, nutrient levels, immune system health, and potential disease markers—often before you experience any symptoms.
+              Blood work, or laboratory testing, involves analyzing a sample of your blood to measure various substances, cells, and chemicals. These tests provide critical information about your organ function, nutrient levels, immune system health, and potential disease markers, often before you experience any symptoms.
             </p>
             <p className="mb-4">
               Think of blood work as preventive maintenance for your body. Just as you wouldn't wait for your car's engine to fail before checking the oil, you shouldn't wait for serious symptoms to assess your health. Regular blood tests can catch problems early when they're most treatable, from prediabetes and thyroid disorders to vitamin deficiencies and cholesterol imbalances.
@@ -92,7 +109,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Decoding Common Blood Tests
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -100,7 +117,7 @@ export default function BlogPost() {
               Understanding the most frequently ordered tests can help you make sense of your results and have more productive conversations with your healthcare provider.
             </p>
             <p className="mb-4">
-              <strong>Complete Blood Count (CBC):</strong> This foundational test measures three main types of blood cells. Red blood cells carry oxygen throughout your body—low levels may indicate anemia, causing fatigue and weakness. White blood cells fight infection; abnormal counts can signal immune system problems or infection. Platelets help your blood clot; too few may cause excessive bleeding, while too many can increase clotting risk.
+              <strong>Complete Blood Count (CBC):</strong> This foundational test measures three main types of blood cells. Red blood cells carry oxygen throughout your body, and low levels may indicate anemia, causing fatigue and weakness. White blood cells fight infection; abnormal counts can signal immune system problems or infection. Platelets help your blood clot; too few may cause excessive bleeding, while too many can increase clotting risk.
             </p>
             <p className="mb-4">
               <strong>Comprehensive Metabolic Panel (CMP):</strong> This panel provides a comprehensive overview of your metabolic health. Glucose levels reveal your blood sugar control and diabetes risk. Kidney markers (creatinine and BUN) show how well your kidneys filter waste. Liver enzymes (ALT and AST) indicate liver health and function. Electrolytes (sodium, potassium, chloride) maintain fluid balance and nerve function.
@@ -114,23 +131,23 @@ export default function BlogPost() {
           </div>
 
           {/* Pull Quote */}
-          <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl" style={{ fontFamily: 'Cormorant, serif' }}>
-            "Lab results aren't just numbers—they're a conversation between your body and your healthcare team. Understanding them empowers you to take charge of your health."
+          <div className="font-display bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl">
+            Lab results are not just numbers. They are a conversation between your body and your care team, and understanding them puts you in charge of your health.
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Understanding Reference Ranges and Flags
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-6">
             <p className="mb-4">
-              Every lab result comes with a reference range—the typical values found in healthy people. These ranges are established through population studies and vary slightly between laboratories. Results outside the reference range are often flagged with "H" (high) or "L" (low) to catch your attention.
+              Every lab result comes with a reference range, the typical values found in healthy people. These ranges are established through population studies and vary slightly between laboratories. Results outside the reference range are often flagged with "H" (high) or "L" (low) to catch your attention.
             </p>
             <p className="mb-4">
-              However, a flagged result doesn't automatically mean something is wrong. Reference ranges represent about 95% of the healthy population, which means 5% of healthy people will naturally fall outside these ranges. Context matters enormously. Your age, gender, medications, time of day, hydration status, and even recent meals can affect results.
+              However, a flagged result does not automatically mean something is wrong. A reference range is built to cover the great majority of healthy people, which means some perfectly healthy people fall just outside it. Context matters enormously. Your age, gender, medications, time of day, hydration status, and even recent meals can affect results.
             </p>
             <p className="mb-4">
-              This is why your healthcare provider's interpretation is essential. They consider your complete clinical picture: your symptoms, medical history, medications, lifestyle factors, and trends over time. A slightly elevated glucose reading after a large breakfast means something very different than a fasting glucose consistently above 100 mg/dL. Similarly, a mildly low iron level in a menstruating woman is far more common and less concerning than the same result in a post-menopausal woman.
+              This is why your provider's interpretation is essential. They consider your complete clinical picture: your symptoms, medical history, medications, lifestyle factors, and trends over time. A slightly elevated glucose reading after a large breakfast means something very different than a fasting glucose consistently above 100 mg/dL. Similarly, a mildly low iron level in a menstruating woman is far more common and less concerning than the same result in a post-menopausal woman.
             </p>
             <p className="mb-4">
               At Guardian Primary Care, we take the time to explain not just what your results are, but what they mean for you specifically. We look at patterns, consider your unique circumstances, and create a personalized plan rather than treating numbers in isolation.
@@ -138,7 +155,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             What Affects Your Lab Results?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -166,7 +183,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             When to Be Concerned vs. When to Monitor
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -183,12 +200,12 @@ export default function BlogPost() {
               <strong>Results to monitor over time:</strong> Fasting glucose in the "prediabetic" range; gradually declining vitamin D levels; slightly low iron without symptoms; mildly elevated inflammatory markers.
             </p>
             <p className="mb-4">
-              The key is establishing a relationship with a provider who knows your baseline, understands your health goals, and can track trends over time. In direct primary care models like ours, this longitudinal relationship enables truly personalized interpretation of your lab work.
+              The key is building a relationship with a provider who knows your baseline, understands your health goals, and can track trends over time. That continuity is what makes an interpretation personal rather than generic.
             </p>
           </div>
 
           {/* Section 6 - Practical Tips */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             How to Prepare for Blood Work and Get Accurate Results
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -201,7 +218,7 @@ export default function BlogPost() {
                 <svg className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <p><strong>Follow fasting instructions carefully.</strong> If fasting is required, stick to water only for the specified period. Black coffee is sometimes acceptable—ask your provider.</p>
+                <p><strong>Follow fasting instructions carefully.</strong> If fasting is required, stick to water only for the specified period. Black coffee is sometimes acceptable, so ask your provider.</p>
               </div>
               
               <div className="flex gap-3 items-start">
@@ -254,10 +271,10 @@ export default function BlogPost() {
               Blood work is a powerful tool for understanding and protecting your health, but numbers alone don't tell the whole story. The true value comes from having a healthcare partner who takes the time to explain your results in context, answer your questions, and work with you to create a plan that makes sense for your life.
             </p>
             <p className="mb-4">
-              At Guardian Primary Care in Birmingham, AL, we believe in transparent, unhurried care that puts you at the center. Our direct primary care model means we have time to review your lab work thoroughly, explain what each result means, and develop personalized strategies to optimize your health. Whether you're managing a chronic condition, focusing on prevention, or simply seeking to understand your body better, we're here to guide you every step of the way.
+              At Guardian Primary Care in Cape Girardeau, MO, we believe in transparent, unhurried care that puts you at the center. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available for patients who prefer transparent, predictable pricing. Either way, there is time to review your lab work properly, explain what each result means, and build a plan around it. Whether you are managing a chronic condition, focusing on prevention, or simply want to understand your body better, we are here to guide you.
             </p>
             <p>
-              Ready to take control of your health with a team that truly listens? Contact us today to learn how our approach to primary care can help you feel confident, informed, and empowered.
+              Ready to take control of your health with a team that truly listens? Call us at (573) 200-6143 or request an appointment, and see how our approach to primary care helps you feel confident, informed, and empowered.
             </p>
           </div>
 
@@ -275,10 +292,10 @@ export default function BlogPost() {
             </div>
             <div>
               <div className="text-lg font-semibold text-[var(--color-ink)] mb-1">
-                Written by the Guardian Primary Care Clinical Team
+                Written by the Guardian Primary Care Team
               </div>
               <div className="text-[var(--color-muted)] text-sm leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC, dedicated to delivering personalized, accessible healthcare to the Birmingham community.
+                Primary care in Cape Girardeau, MO, led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri licensed collaborating physician.
               </div>
             </div>
           </div>
@@ -288,13 +305,13 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">
             Related Resources
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/heart-disease-prevention-small-changes-that-protect-your-hea" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -302,17 +319,17 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-2">Prevention</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Heart Health 101: Small Steps, Big Impact
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Heart Disease Prevention: Small Changes That Protect Your Heart
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Discover evidence-based strategies to protect your cardiovascular health and reduce your risk of heart disease.
+                  Evidence-based habits that protect your cardiovascular health and lower your risk.
                 </p>
               </div>
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/managing-multiple-chronic-conditions-a-coordinated-care-appr" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
@@ -320,17 +337,17 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-2">Wellness</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Understanding Chronic Disease Management
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Managing Multiple Chronic Conditions
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Learn how proactive management and partnership with your care team can improve outcomes for chronic conditions.
+                  How coordinated care and a steady partnership with your care team improve outcomes.
                 </p>
               </div>
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -338,11 +355,11 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-2">Patient Education</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  What Is Direct Primary Care?
+                <h4 className="font-display text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Importance of Annual Wellness Exams
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Explore how the DPC model transforms healthcare by prioritizing time, accessibility, and personalized attention.
+                  What an annual visit covers, which labs are ordered, and why the visit is worth keeping.
                 </p>
               </div>
             </a>
@@ -353,18 +370,26 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Our team is here to help you understand your health and achieve your wellness goals.
+            Our care team in Cape Girardeau, MO is here to help you understand your results and reach your health goals.
           </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-[var(--color-accent)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--color-accent-dark)] transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-          >
-            Get In Touch
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-[var(--color-primary)] px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-[var(--color-cream)] hover:shadow-2xl"
+            >
+              Schedule an Appointment
+            </a>
+            <a
+              href="tel:+15732006143"
+              className="inline-block border border-white/70 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
+            >
+              Call (573) 200-6143
+            </a>
+          </div>
         </div>
       </section>
 

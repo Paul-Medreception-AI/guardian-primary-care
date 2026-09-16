@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Managing Arthritis Pain: Medications and Beyond | Guardian Primary Care',
-  description: 'Learn evidence-based strategies for managing arthritis pain, from medications to lifestyle modifications. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+  title: 'Managing Arthritis Pain: Medications and Beyond',
+  description: 'What actually helps arthritis pain: medications, movement, weight and diet changes, complementary therapies, and when to consider advanced treatments.',
   openGraph: {
     title: 'Managing Arthritis Pain: Medications and Beyond',
     description: 'Comprehensive guide to arthritis pain management including medications, lifestyle changes, and alternative therapies.',
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
           
           {/* Title */}
-          <h1 className="font-serif text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Managing Arthritis Pain: Medications and Beyond
           </h1>
           
@@ -55,28 +56,44 @@ export default function BlogPost() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/cond-arthritis.jpg"
+              alt="A person in a blue shirt holding and massaging a stiff, aching hand"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Article Body */}
-      <article className="bg-white py-20">
+      <article className="bg-white pt-12 pb-20">
         <div className="max-w-3xl mx-auto px-6">
           
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              The morning stiffness. The persistent ache that makes opening a jar feel impossible. The frustration of watching activities you love become increasingly difficult. If you're living with arthritis, you know these experiences all too well. Arthritis affects over 58 million Americans, making it one of the most common causes of chronic pain and disability in the United States. But here's the encouraging news: with the right combination of treatments and lifestyle strategies, most people with arthritis can significantly reduce their pain and maintain an active, fulfilling life.
+              The morning stiffness. The persistent ache that makes opening a jar feel impossible. The frustration of watching activities you love become increasingly difficult. If you are living with arthritis, you know these experiences all too well. Arthritis is one of the most common causes of chronic pain and disability in the United States. But here's the encouraging news: with the right combination of treatments and lifestyle strategies, most people with arthritis can significantly reduce their pain and maintain an active, fulfilling life.
             </p>
             <p className="mb-6">
-              Managing arthritis effectively isn't about finding a single miracle cure—it's about building a comprehensive approach that addresses pain from multiple angles. While medications play an important role, they're just one piece of a larger puzzle that includes movement, lifestyle modifications, and sometimes alternative therapies. Let's explore the full spectrum of options available to help you take control of your arthritis pain.
+              Managing arthritis effectively is not about finding a single miracle cure. It is about building a comprehensive approach that addresses pain from multiple angles. While medications play an important role, they're just one piece of a larger puzzle that includes movement, lifestyle modifications, and sometimes alternative therapies. Let's explore the full spectrum of options available to help you take control of your arthritis pain.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Understanding Arthritis and Pain
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -89,7 +106,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 2 */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Medication Options: Building Your Foundation
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -106,13 +123,13 @@ export default function BlogPost() {
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl font-serif">
-              "The most successful arthritis management plans combine appropriate medications with lifestyle modifications and physical activity—no single approach works in isolation."
+            <p className="text-[var(--color-ink)] italic text-xl font-display">
+              The most successful arthritis management plans combine appropriate medications with lifestyle modifications and physical activity. No single approach works in isolation.
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             The Power of Movement: Exercise as Medicine
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -123,20 +140,20 @@ export default function BlogPost() {
               The key is choosing the right types of exercise and building up gradually. Low-impact activities like walking, swimming, water aerobics, cycling, and tai chi are particularly beneficial for people with arthritis. These activities provide cardiovascular benefits and strengthen muscles without putting excessive stress on joints. Strength training, when done properly, builds muscle that helps stabilize and protect joints. Even gentle stretching and range-of-motion exercises help maintain joint flexibility and reduce stiffness.
             </p>
             <p className="mb-6">
-              Starting slowly is crucial—even 10 minutes of gentle movement can make a difference. Many people find that while they might feel stiff when beginning exercise, their pain actually improves after moving. Working with a physical therapist, especially when you're first starting, can help you develop an exercise program tailored to your specific needs and limitations.
+              Starting slowly is crucial. Even 10 minutes of gentle movement can make a difference. Many people find that while they might feel stiff when beginning exercise, their pain actually improves after moving. Working with a physical therapist, especially when you're first starting, can help you develop an exercise program tailored to your specific needs and limitations.
             </p>
           </div>
 
           {/* Section 4 */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Lifestyle Modifications That Make a Difference
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Beyond medications and exercise, several lifestyle strategies can significantly impact arthritis pain. Weight management stands out as particularly important—every pound of excess weight puts approximately four pounds of extra pressure on knee joints. Even modest weight loss can lead to meaningful pain reduction and improved mobility.
+              Beyond medications and exercise, several lifestyle strategies can significantly impact arthritis pain. Weight management stands out as particularly important, because extra body weight places additional load on weight-bearing joints such as the knees. Even modest weight loss can lead to meaningful pain reduction and improved mobility.
             </p>
             <p className="mb-6">
-              Diet also plays a role in managing arthritis. While no specific diet cures arthritis, an anti-inflammatory eating pattern—rich in fruits, vegetables, whole grains, fish, and healthy fats like olive oil—may help reduce inflammation and support overall joint health. Some people find that certain foods trigger flare-ups, making it worthwhile to notice patterns between what you eat and how you feel.
+              Diet also plays a role in managing arthritis. While no specific diet cures arthritis, an anti-inflammatory eating pattern (rich in fruits, vegetables, whole grains, fish and healthy fats like olive oil) may help reduce inflammation and support overall joint health. Some people find that certain foods trigger flare-ups, making it worthwhile to notice patterns between what you eat and how you feel.
             </p>
             <p className="mb-6">
               Joint protection strategies in daily life can prevent unnecessary pain. This includes using assistive devices when helpful, pacing activities to avoid overuse, applying heat or cold therapy, getting adequate sleep (which helps your body manage pain and inflammation), and managing stress through techniques like meditation or deep breathing.
@@ -144,7 +161,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Alternative and Complementary Therapies
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -160,7 +177,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             When to Consider Advanced Treatments
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -173,7 +190,7 @@ export default function BlogPost() {
           </div>
 
           {/* Practical Tips Section */}
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Practical Steps You Can Take Today
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -182,13 +199,13 @@ export default function BlogPost() {
                 <svg className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Keep a pain diary to identify patterns and triggers—this information is valuable for your healthcare provider</span>
+                <span>Keep a pain diary to identify patterns and triggers, since this information is valuable for your provider</span>
               </li>
               <li className="flex gap-3 items-start">
                 <svg className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Start with gentle movement—even a 10-minute walk can begin building the exercise habit</span>
+                <span>Start with gentle movement, since even a 10-minute walk can begin building the exercise habit</span>
               </li>
               <li className="flex gap-3 items-start">
                 <svg className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -212,7 +229,7 @@ export default function BlogPost() {
                 <svg className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Don't hesitate to use assistive devices—they're tools that help you stay active and independent</span>
+                <span>Do not hesitate to use assistive devices, which are tools that help you stay active and independent</span>
               </li>
               <li className="flex gap-3 items-start">
                 <svg className="w-6 h-6 text-[var(--color-accent)] shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -232,7 +249,7 @@ export default function BlogPost() {
               Remember that arthritis management is a journey, not a destination. Your needs may change over time, and your treatment plan should evolve accordingly. The key is staying engaged with your care, maintaining open communication with your providers, and remaining open to trying different approaches. With comprehensive management, most people with arthritis can reduce their pain, maintain their mobility, and continue enjoying the activities that matter most to them.
             </p>
             <p className="mb-6">
-              If you're struggling to manage arthritis pain or feel your current treatment plan isn't working as well as it should, don't wait. Early, proactive management typically leads to better long-term outcomes. Our team at Guardian Primary Care is here to partner with you in developing a personalized arthritis management plan that addresses your unique needs and goals.
+              If you are struggling to manage arthritis pain, or your current treatment plan is not working as well as it should, do not wait. Early, proactive management typically leads to better long-term outcomes. Our team at Guardian Primary Care in Cape Girardeau, Missouri is here to partner with you on a personalized arthritis management plan that addresses your needs and goals. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available for patients who prefer a membership option.
             </p>
           </div>
 
@@ -250,10 +267,10 @@ export default function BlogPost() {
             </div>
             <div>
               <div className="text-[var(--color-ink)] font-semibold text-lg mb-1">
-                Written by the Guardian Primary Care Clinical Team
+                Written by the Guardian Primary Care team
               </div>
               <div className="text-[var(--color-muted)] text-sm leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC, dedicated to delivering personalized, evidence-based care to patients in Birmingham, AL.
+                Primary care in Cape Girardeau, Missouri, led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri Licensed Collaborating Physician.
               </div>
             </div>
           </div>
@@ -263,13 +280,13 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="font-serif text-3xl text-[var(--color-ink)] mb-8 text-center">
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             
             {/* Card 1 */}
-            <a href="/blog" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-up group">
+            <a href="/blog/managing-multiple-chronic-conditions-a-coordinated-care-appr" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-up group">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -279,17 +296,17 @@ export default function BlogPost() {
                 <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">
                   Chronic Disease Management
                 </div>
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Living Well with Chronic Conditions
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Managing Multiple Chronic Conditions: A Coordinated Care Approach
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Practical strategies for managing chronic health conditions and maintaining quality of life.
+                  Practical strategies for managing several conditions without losing quality of life.
                 </p>
               </div>
             </a>
 
             {/* Card 2 */}
-            <a href="/blog" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-up group">
+            <a href="/blog/managing-chronic-pain-without-opioids-alternative-approaches" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-up group">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
@@ -297,19 +314,19 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">
-                  Preventive Care
+                  Pain Management
                 </div>
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Understanding Inflammation and Your Health
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Managing Chronic Pain Without Opioids: Alternative Approaches
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Learn how inflammation affects your body and what you can do to reduce chronic inflammation.
+                  Non-opioid options that lower pain and help restore function.
                 </p>
               </div>
             </a>
 
             {/* Card 3 */}
-            <a href="/blog" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-up group">
+            <a href="/blog/the-role-of-exercise-in-chronic-disease-management" className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-up group">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -319,11 +336,11 @@ export default function BlogPost() {
                 <div className="text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">
                   Wellness & Lifestyle
                 </div>
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Exercise and Movement for Joint Health
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Role of Exercise in Chronic Disease Management
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                  Discover safe, effective exercises that strengthen joints and reduce pain.
+                  Safe, effective movement that strengthens joints and reduces pain.
                 </p>
               </div>
             </a>
@@ -335,17 +352,23 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-light mb-4 animate-fade-up">
+          <h2 className="font-display text-4xl font-light mb-4 animate-fade-up">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 animate-fade-up">
-            Our team is here to help you develop a comprehensive arthritis management plan.
+            Our care team in Cape Girardeau, Missouri is here to help you build a comprehensive arthritis management plan. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer a membership option.
           </p>
           <a 
             href="/contact" 
             className="inline-block bg-[var(--color-accent)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--color-accent-dark)] transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-up"
           >
-            Schedule a Consultation
+            Schedule an Appointment
+          </a>
+          <a
+            href="tel:+15732006143"
+            className="inline-block border border-white/70 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/10 mt-4 sm:mt-0 sm:ml-4"
+          >
+            Call (573) 200-6143
           </a>
         </div>
       </section>

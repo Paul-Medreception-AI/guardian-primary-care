@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Prediabetes: Your Opportunity to Prevent Type 2 Diabetes | Guardian Primary Care',
-  description: 'Learn how prediabetes is a reversible condition and your chance to prevent type 2 diabetes through lifestyle changes, early detection, and personalized care in Birmingham, AL.',
+  title: 'Prediabetes: Your Chance to Prevent Type 2 Diabetes',
+  description: 'Prediabetes can often be reversed. Learn what the numbers mean, which lifestyle changes work best, and how to lower your risk of developing type 2 diabetes.',
   openGraph: {
     title: 'Prediabetes: Your Opportunity to Prevent Type 2 Diabetes',
     description: 'Expert guidance on reversing prediabetes and preventing type 2 diabetes through evidence-based lifestyle interventions.',
     type: 'article',
-    publishedTime: '2024-01-15T09:00:00Z',
-    authors: ['Guardian Primary Care Clinical Team'],
+    publishedTime: '2025-01-15T09:00:00Z',
+    authors: ['Guardian Primary Care Team'],
   },
 }
 
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Prediabetes: Your Opportunity to Prevent Type 2 Diabetes
           </h1>
 
@@ -43,7 +44,7 @@ export default function BlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
               </svg>
-              <span>January 15, 2024</span>
+              <span>January 15, 2025</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
@@ -55,31 +56,47 @@ export default function BlogPost() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Featured Image */}
+      <div className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-nutrition-counseling.jpg"
+              alt="A wooden crate of just-picked vegetables, leafy greens, kale, parsley, eggplant, peppers and radishes, representing the eating pattern that helps reverse prediabetes"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </div>
 
       {/* Article Body */}
       <article className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-6">
           {/* Opening Hook */}
           <p className="text-[var(--color-ink)] leading-loose text-lg mb-6">
-            Imagine receiving news that feels like a warning light on your dashboard—not quite an emergency, but definitely something that needs attention. That's what a prediabetes diagnosis can feel like. But here's the empowering truth: prediabetes is not a diagnosis of failure; it's an opportunity, a chance to change your trajectory before type 2 diabetes develops.
+            Imagine receiving news that feels like a warning light on your dashboard: not quite an emergency, but definitely something that needs attention. That's what a prediabetes diagnosis can feel like. But here's the empowering truth: prediabetes is not a diagnosis of failure; it's an opportunity, a chance to change your trajectory before type 2 diabetes develops.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            More than 96 million American adults—approximately one in three—have prediabetes, yet over 80% don't know it. If you've recently learned you have prediabetes, you're actually ahead of the curve. You now have the knowledge and the window of opportunity to make meaningful changes that can prevent or delay type 2 diabetes indefinitely.
+            Prediabetes is common among American adults, and most of the people who have it do not know. If you have recently learned you have prediabetes, you are actually ahead of the curve. You now have the knowledge and the window of opportunity to make meaningful changes that can prevent or delay type 2 diabetes indefinitely.
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Understanding Prediabetes: What the Numbers Mean
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            Prediabetes means your blood sugar levels are higher than normal but not yet high enough to be classified as type 2 diabetes. Think of it as a bridge between normal blood sugar regulation and diabetes—a bridge you don't have to cross.
+            Prediabetes means your blood sugar levels are higher than normal but not yet high enough to be classified as type 2 diabetes. Think of it as a bridge between normal blood sugar regulation and diabetes, a bridge you do not have to cross.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
@@ -110,16 +127,16 @@ export default function BlogPost() {
           </div>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            These numbers tell us that your body is beginning to struggle with insulin resistance—your cells aren't responding to insulin as effectively as they should, causing sugar to build up in your bloodstream. The good news? This process is often reversible with the right interventions.
+            These numbers tell us that your body is beginning to struggle with insulin resistance, meaning your cells are not responding to insulin as effectively as they should, causing sugar to build up in your bloodstream. The good news? This process is often reversible with the right interventions.
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Why Prediabetes Matters: The Stakes Are Real
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            Without lifestyle changes, 15-30% of people with prediabetes will develop type 2 diabetes within five years. Type 2 diabetes significantly increases your risk for:
+            Without lifestyle changes, a substantial share of people with prediabetes go on to develop type 2 diabetes within a few years. Type 2 diabetes significantly increases your risk for:
           </p>
 
           <ul className="space-y-2 text-[var(--color-ink)] leading-loose mb-6 ml-6">
@@ -132,21 +149,21 @@ export default function BlogPost() {
           </ul>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            But here's the encouraging part: studies show that lifestyle interventions can reduce the progression to type 2 diabetes by 58% overall, and by 71% in adults over 60. These aren't small numbers—they represent real lives changed through accessible, achievable actions.
+            But here is the encouraging part: studies of structured lifestyle programs show they sharply reduce how many people go on to develop type 2 diabetes, with the strongest benefit seen in older adults. Those are not small effects. They represent real lives changed through accessible, achievable actions.
           </p>
 
           {/* Pull Quote */}
-          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-light" style={{ fontFamily: 'Cormorant, serif' }}>
-            "Prediabetes is one of the few conditions in medicine where we have a proven roadmap for prevention. The science is clear: modest lifestyle changes deliver dramatic results."
+          <blockquote className="font-display bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-light">
+            Prediabetes is one of the few conditions in medicine where we have a proven roadmap for prevention. The science is clear: modest lifestyle changes deliver dramatic results.
           </blockquote>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             The Power of Modest Weight Loss
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            The landmark Diabetes Prevention Program (DPP) study, one of the most influential diabetes research trials ever conducted, found that losing just 5-7% of your body weight can cut your diabetes risk in half. For someone weighing 200 pounds, that's only 10-14 pounds—far less than many people think they need to lose.
+            The Diabetes Prevention Program, a large national prevention trial, found that losing a modest amount of weight, in the range of 5 to 7 percent of your body weight, meaningfully lowers your chance of developing type 2 diabetes. For someone weighing 200 pounds, that is 10 to 14 pounds, far less than many people assume they need to lose.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
@@ -181,11 +198,11 @@ export default function BlogPost() {
           </div>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            The goal isn't perfection or crash dieting—it's sustainable, gradual change that your body can maintain long-term.
+            The goal is not perfection or crash dieting. It is sustainable, gradual change that your body can maintain for the long term.
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Evidence-Based Strategies That Work
           </h2>
 
@@ -196,7 +213,7 @@ export default function BlogPost() {
           <h3 className="text-xl font-semibold text-[var(--color-ink)] mt-8 mb-3">Physical Activity</h3>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            Aim for at least 150 minutes of moderate-intensity activity per week (that's just 30 minutes, five days a week). Walking, swimming, cycling, dancing—choose activities you actually enjoy. Exercise helps your muscles use blood sugar without needing as much insulin.
+            Aim for at least 150 minutes of moderate-intensity activity per week (that's just 30 minutes, five days a week). Walking, swimming, cycling, dancing: choose activities you actually enjoy. Exercise helps your muscles use blood sugar without needing as much insulin.
           </p>
 
           <h3 className="text-xl font-semibold text-[var(--color-ink)] mt-8 mb-3">Nutrition Changes</h3>
@@ -243,7 +260,7 @@ export default function BlogPost() {
           <h3 className="text-xl font-semibold text-[var(--color-ink)] mt-8 mb-3">Sleep and Stress Management</h3>
           
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            Poor sleep and chronic stress both raise cortisol levels, which increases insulin resistance. Aim for 7-9 hours of quality sleep and find stress-reduction techniques that work for you—whether that's meditation, yoga, nature walks, or time with loved ones.
+            Poor sleep and chronic stress both raise cortisol levels, which increases insulin resistance. Aim for 7-9 hours of quality sleep and find stress-reduction techniques that work for you, whether that is meditation, yoga, nature walks, or time with loved ones.
           </p>
 
           <h3 className="text-xl font-semibold text-[var(--color-ink)] mt-8 mb-3">Regular Monitoring</h3>
@@ -253,12 +270,12 @@ export default function BlogPost() {
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             When Medication May Help
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            For some people, lifestyle changes alone may not be enough. Metformin, a diabetes medication, has been shown to reduce diabetes risk by 31% in people with prediabetes, particularly those who are younger, have a higher BMI, or have a history of gestational diabetes.
+            For some people, lifestyle changes alone may not be enough. Metformin, a diabetes medication, has been shown to lower the chance of progressing to type 2 diabetes in people with prediabetes, particularly those who are younger, have a higher BMI, or have a history of gestational diabetes.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -266,8 +283,8 @@ export default function BlogPost() {
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
-            Your Next Steps: Taking Action in Birmingham
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
+            Your Next Steps: Taking Action in Cape Girardeau
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
@@ -275,7 +292,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            At Guardian Primary Care in Birmingham, we specialize in personalized preventive care. Through our direct primary care model, you get the time and attention needed to develop a realistic, sustainable prevention plan. We'll work with you to:
+            At Guardian Primary Care in Cape Girardeau, MO, prevention is a core part of what we do. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available for patients who prefer transparent, predictable pricing. Either way, visits are unhurried enough to build a realistic prevention plan. We will work with you to:
           </p>
 
           <div className="space-y-3 mb-6">
@@ -312,11 +329,11 @@ export default function BlogPost() {
           </div>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            Prediabetes isn't a life sentence—it's a wake-up call and an opportunity. With the right support and evidence-based interventions, you can rewrite your health story. The science is clear, the path is proven, and we're here to walk it with you.
+            Prediabetes is not a life sentence. It is a wake-up call and an opportunity. With the right support and evidence-based interventions, you can rewrite your health story. The science is clear, the path is proven, and we're here to walk it with you.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base font-semibold">
-            Your future health is worth the investment. Let's start today.
+            Your future health is worth the investment. Call us at (573) 200-6143 and let us start today.
           </p>
         </div>
       </article>
@@ -331,8 +348,8 @@ export default function BlogPost() {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Clinical Team</h3>
-              <p className="text-[var(--color-muted)] leading-relaxed">Board-certified providers specializing in Primary Care / DPC, dedicated to delivering personalized, evidence-based preventive care to the Birmingham community.</p>
+              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Team</h3>
+              <p className="text-[var(--color-muted)] leading-relaxed">Primary care in Cape Girardeau, MO, led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri licensed collaborating physician.</p>
             </div>
           </div>
         </div>
@@ -341,13 +358,13 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl mb-8 text-[var(--color-ink)] font-light text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="font-display text-3xl mb-8 text-[var(--color-ink)] font-light text-center">
             Related Resources
           </h3>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/heart-disease-prevention-small-changes-that-protect-your-hea" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -355,11 +372,11 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-2">Prevention</div>
-                <h4 className="text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Understanding Your Risk for Heart Disease
+                <h4 className="font-display text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+                  Heart Disease Prevention: Small Changes That Protect Your Heart
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  Learn about cardiovascular risk factors and evidence-based strategies for prevention.
+                  Cardiovascular risk factors and the evidence-based habits that lower them.
                 </p>
                 <div className="text-[var(--color-accent)] text-sm font-medium flex items-center gap-2">
                   Read More
@@ -371,7 +388,7 @@ export default function BlogPost() {
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/weight-management-evidence-based-approaches-that-actually-wo" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -379,11 +396,11 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-2">Lifestyle</div>
-                <h4 className="text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  The Science of Sustainable Weight Loss
+                <h4 className="font-display text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+                  Weight Management: Approaches That Actually Work
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  Evidence-based approaches to achieving and maintaining a healthy weight long-term.
+                  Evidence-based approaches to reaching and holding a healthy weight long term.
                 </p>
                 <div className="text-[var(--color-accent)] text-sm font-medium flex items-center gap-2">
                   Read More
@@ -395,7 +412,7 @@ export default function BlogPost() {
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/blood-work-basics-understanding-your-lab-results" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-[var(--color-cream)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
@@ -403,11 +420,11 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-widest text-[var(--color-accent)] mb-2">Patient Education</div>
-                <h4 className="text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                  What Your Lab Results Really Mean
+                <h4 className="font-display text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+                  Blood Work Basics: Understanding Your Lab Results
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  A comprehensive guide to understanding common blood tests and health markers.
+                  A plain-language guide to common blood tests and what the numbers mean.
                 </p>
                 <div className="text-[var(--color-accent)] text-sm font-medium flex items-center gap-2">
                   Read More
@@ -424,21 +441,29 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 font-light">
-            Our team is here to help you prevent diabetes and optimize your health.
+            Our care team in Cape Girardeau, MO is here to help you lower your risk and feel your best.
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-[var(--color-accent)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--color-accent-dark)] transition-all duration-300 hover:gap-3 shadow-lg"
-          >
-            Schedule Your Consultation
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-white text-[var(--color-primary)] px-8 py-4 rounded-full font-medium hover:bg-[var(--color-cream)] transition-all duration-300 hover:gap-3 shadow-lg"
+            >
+              Schedule an Appointment
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+            <a
+              href="tel:+15732006143"
+              className="inline-block border border-white/70 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
+            >
+              Call (573) 200-6143
+            </a>
+          </div>
         </div>
       </section>
     </main>

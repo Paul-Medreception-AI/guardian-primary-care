@@ -1,138 +1,181 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
+import { CONDITIONS } from '@/lib/data/conditions'
 
-export const metadata = {
-  title: 'Conditions We Treat | Guardian Primary Care',
-  description: 'Comprehensive primary care treatment for chronic conditions, acute illnesses, and preventative health concerns in Birmingham, AL.',
+export const metadata: Metadata = {
+  title: 'Conditions We Treat | Guardian Primary Care | Cape Girardeau, MO',
+  description:
+    'Evidence-based primary care for chronic conditions, acute illness, and preventive health concerns in Cape Girardeau, MO. In-network with most major commercial insurances, Medicare and Medicaid.',
+}
+
+type CardMeta = { image: string; alt: string; blurb: string }
+
+const CONDITION_CARDS: Record<string, CardMeta> = {
+  'diabetes-and-blood-sugar-management': {
+    image: '/images/site/cond-diabetes.jpg',
+    alt: 'A platter of fresh fruit, nuts and cheese on a table',
+    blurb:
+      'Care for type 1, type 2, and prediabetes, including lab work, medication management, and practical food and activity coaching you can actually live with.',
+  },
+  'hypertension-high-blood-pressure': {
+    image: '/images/site/cond-hypertension.jpg',
+    alt: 'A blood pressure cuff being used during a primary care visit',
+    blurb:
+      'High blood pressure rarely feels like anything. We check it, treat it, and adjust as your body responds, so you lower your long-term risk.',
+  },
+  'high-cholesterol-and-lipid-disorders': {
+    image: '/images/site/cond-highcholesterol.jpg',
+    alt: 'A carton of eggs with one shell opened to show the yolk',
+    blurb:
+      'Lipid testing and treatment that looks past the total number, so you understand your LDL, HDL, and triglycerides and what to do about them.',
+  },
+  'asthma-and-respiratory-conditions': {
+    image: '/images/site/cond-asthma.jpg',
+    alt: 'A hand holding a nebulizer mask beside its compressor',
+    blurb:
+      'Breathing should not be a daily struggle. We work on triggers, inhaler technique, and a written plan for flare-ups.',
+  },
+  'chronic-obstructive-pulmonary-disease-copd': {
+    image: '/images/site/cond-copd.jpg',
+    alt: 'An inhaler lying next to a single cigarette',
+    blurb:
+      'Ongoing COPD care focused on symptom control, avoiding hospital stays, and keeping you doing the things you enjoy.',
+  },
+  'thyroid-disorders': {
+    image: '/images/site/cond-ckd.jpg',
+    alt: 'A hand holding an anatomical model of an organ',
+    blurb:
+      'Testing and treatment for an underactive or overactive thyroid, with follow-up labs until your energy, weight, and mood settle.',
+  },
+  'obesity-and-weight-management': {
+    image: '/images/site/cond-obesity.jpg',
+    alt: 'A bathroom scale on a wooden floor',
+    blurb:
+      'A judgment-free plan built around nutrition, movement, behavior, and medication when it is appropriate for you.',
+  },
+  'anxiety-and-depression': {
+    image: '/images/site/cond-anxiety.jpg',
+    alt: 'A person sitting with both hands covering their face',
+    blurb:
+      'Mental health is health. We screen, treat, and refer when more support would help, all as part of your regular primary care.',
+  },
+  'dementia-and-alzheimer-s-disease': {
+    image: '/images/site/cond-dementia-including-alzheimers.jpg',
+    alt: 'An older adult pictured behind missing jigsaw puzzle pieces, illustrating memory loss',
+    blurb:
+      'Evaluation of memory changes, ongoing management, and steady support for the family members doing the caring.',
+  },
+  'osteoarthritis-and-joint-pain': {
+    image: '/images/site/cond-arthritis.jpg',
+    alt: 'A person pressing one hand into the other to ease joint pain',
+    blurb:
+      'Pain relief strategies, movement guidance, and referrals to physical therapy or orthopedics when that is the right next step.',
+  },
+  osteoporosis: {
+    image: '/images/site/cond-osteoporosis.jpg',
+    alt: 'An anatomical model of the spine and pelvis',
+    blurb:
+      'Bone density screening, vitamin D and calcium guidance, fall prevention, and treatment to reduce fracture risk.',
+  },
+  'heart-disease-and-cardiovascular-conditions': {
+    image: '/images/site/cond-heart-disease.jpg',
+    alt: 'An illustration of a heart with a stethoscope resting against it',
+    blurb:
+      'Risk assessment, prevention, and coordinated care with cardiology when a specialist should be involved.',
+  },
+  'acid-reflux-and-gerd': {
+    image: '/images/site/cond-chronic-hepatitis.jpg',
+    alt: 'A medical illustration of the torso with the digestive organs highlighted',
+    blurb:
+      'Relief from heartburn and reflux through diet changes, timing, and medication, plus a look for causes that need more than a daily pill.',
+  },
+  'irritable-bowel-syndrome-ibs': {
+    image: '/images/site/cond-ibs.jpg',
+    alt: 'A person holding their abdomen, with the colon highlighted in an overlay',
+    blurb:
+      'A practical approach to IBS: identify your patterns and triggers, rule out what needs ruling out, and build a plan that calms symptoms.',
+  },
+  'urinary-tract-infections': {
+    image: '/images/site/cond-frequent-urinary-tract-infections-utis.jpg',
+    alt: 'A clean, tiled restroom',
+    blurb:
+      'Prompt testing and treatment for UTIs, and a prevention plan if you get them again and again.',
+  },
+  'skin-conditions-and-rashes': {
+    image: '/images/site/cond-eczema.jpg',
+    alt: 'Close view of dry, cracked skin on an open palm',
+    blurb:
+      'Treatment for eczema, acne, rashes, and skin infections, with skin checks and dermatology referrals when a lesion needs a closer look.',
+  },
+  'allergies-and-sinus-problems': {
+    image: '/images/site/cond-chronic-sinusitis.jpg',
+    alt: 'A woman with her eyes closed, smelling an orange flower',
+    blurb:
+      'Help for seasonal allergies and stubborn sinus trouble: identify triggers, treat the inflammation, and stop the cycle of repeat infections.',
+  },
+  'insomnia-and-sleep-disorders': {
+    image: '/images/site/cond-sleep-apnea.jpg',
+    alt: 'An empty, unmade bed in a darkened bedroom',
+    blurb:
+      'Poor sleep affects everything. We look at habits, mood, medications, and possible sleep apnea, then treat the cause.',
+  },
+  'migraines-and-headaches': {
+    image: '/images/site/cond-migraines.jpg',
+    alt: 'A person holding their head, with hands drawn above them to suggest pressure',
+    blurb:
+      'Trigger tracking, rescue treatment, and preventive options so headaches stop running your calendar.',
+  },
+  anemia: {
+    image: '/images/site/cond-pad.jpg',
+    alt: 'An illustration of red and white blood cells inside a blood vessel',
+    blurb:
+      'Fatigue is a symptom, not a personality trait. We test for anemia, find the reason behind it, and treat both.',
+  },
+  'vitamin-deficiencies': {
+    image: '/images/site/cond-nutrition-counseling.jpg',
+    alt: 'A wooden crate of fresh leafy greens, peppers and radishes',
+    blurb:
+      'Testing and sensible supplementation for vitamin D, B12, iron, and other deficiencies, with food-first guidance.',
+  },
+  'acute-illnesses-cold-flu-covid-19': {
+    image: '/images/site/cond-interstitial-lung-disease-ild.jpg',
+    alt: 'An anatomical model of the lungs shown in cross section',
+    blurb:
+      'Colds, flu, COVID-19, strep, and the rest of what circulates through Cape Girardeau every season. Call us and we will get you seen.',
+  },
+  'minor-injuries-and-wound-care': {
+    image: '/images/site/cond-tennis-elbow.jpg',
+    alt: 'A skeletal model of the arm and elbow',
+    blurb:
+      'Sprains, strains, cuts, and wound care in the office, including basic procedures like wound care, abscess drainage, and skin lesion removal.',
+  },
+  'women-s-health-concerns': {
+    image: '/images/site/cond-womens-wellness.jpg',
+    alt: 'A woman stretching on a yoga mat in an open field',
+    blurb:
+      'Annual exams, preventive screenings, contraception, and hormone-related concerns, handled with respect and plain language.',
+  },
+  'geriatric-health-management': {
+    image: '/images/site/cond-stroke.jpg',
+    alt: 'An older adult sitting outdoors with a hand resting against her cheek',
+    blurb:
+      'Care for older adults that weighs the whole picture: medication load, mobility, memory, mood, and what matters most to you.',
+  },
+}
+
+const FALLBACK: CardMeta = {
+  image: '/images/site/quilia-care.jpg',
+  alt: 'A physician balance scale mounted on a clinic wall',
+  blurb: 'Evidence-based primary care from the Guardian Primary Care team in Cape Girardeau, Missouri.',
 }
 
 export default function ConditionsPage() {
-  const conditions = [
-    {
-      name: 'Diabetes Management',
-      slug: 'diabetes-management',
-      description: 'Comprehensive care for Type 1, Type 2, and prediabetes including medication management, lifestyle counseling, and continuous glucose monitoring. We partner with you to achieve optimal blood sugar control and prevent complications.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.169.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Hypertension (High Blood Pressure)',
-      slug: 'hypertension',
-      description: 'Expert diagnosis and treatment of high blood pressure through medication, dietary changes, and lifestyle modifications. We help you reduce cardiovascular risk and maintain healthy blood pressure long-term.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'High Cholesterol & Heart Disease',
-      slug: 'heart-disease',
-      description: 'Cardiovascular risk assessment and management including cholesterol screening, statin therapy, and heart-healthy lifestyle planning. Our preventative approach helps reduce your risk of heart attack and stroke.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Asthma & COPD',
-      slug: 'asthma-copd',
-      description: 'Respiratory disease management including spirometry testing, inhaler therapy, and action plans for breathing disorders. We focus on symptom control, preventing exacerbations, and improving quality of life.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Thyroid Disorders',
-      slug: 'thyroid-disorders',
-      description: 'Diagnosis and treatment of hypothyroidism, hyperthyroidism, and thyroid nodules with comprehensive lab work and medication management. We restore hormonal balance to improve energy, weight, and overall wellness.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Arthritis & Joint Pain',
-      slug: 'arthritis',
-      description: 'Management of osteoarthritis, rheumatoid arthritis, and other musculoskeletal conditions with pain relief strategies, physical therapy referrals, and anti-inflammatory treatments to maintain mobility and function.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Depression & Anxiety',
-      slug: 'depression-anxiety',
-      description: 'Compassionate mental health care including screening, counseling, and medication management for mood and anxiety disorders. We provide integrated behavioral health support as part of your comprehensive primary care.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Obesity & Weight Management',
-      slug: 'weight-management',
-      description: 'Evidence-based weight loss programs combining nutrition counseling, exercise planning, behavioral support, and medication when appropriate. We help you achieve sustainable weight loss and reduce obesity-related health risks.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Infections & Acute Illness',
-      slug: 'infections',
-      description: 'Prompt diagnosis and treatment of common infections including respiratory illnesses, urinary tract infections, skin infections, and viral illnesses. We offer same-day sick visits and rapid testing for quick relief.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.169.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Allergies & Sinus Problems',
-      slug: 'allergies',
-      description: 'Allergy testing, immunotherapy, and treatment for seasonal allergies, chronic sinusitis, and related respiratory conditions. We help you identify triggers and find lasting relief from allergy symptoms.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Skin Conditions & Dermatology',
-      slug: 'dermatology',
-      description: 'Treatment of common skin conditions including acne, eczema, psoriasis, rashes, and skin infections. We provide dermatological care and skin cancer screenings as part of comprehensive primary care.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-        </svg>
-      ),
-    },
-    {
-      name: 'Dementia & Memory Disorders',
-      slug: 'dementia',
-      description: 'Specialized evaluation and ongoing management of Alzheimer\'s disease, vascular dementia, and other cognitive disorders. We provide compassionate care for patients and support for families navigating memory loss.',
-      icon: (
-        <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-        </svg>
-      ),
-    },
-  ]
-
   const warningSigns = [
     {
       title: 'Persistent Symptoms',
-      description: 'Chronic pain, fatigue, or symptoms that don\'t improve with rest or over-the-counter treatment may indicate an underlying condition requiring professional evaluation.',
+      description:
+        'Pain, fatigue, or symptoms that do not improve with rest or over-the-counter treatment may point to something underlying that deserves a real evaluation.',
       icon: (
         <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -141,7 +184,8 @@ export default function ConditionsPage() {
     },
     {
       title: 'New or Worsening Symptoms',
-      description: 'Sudden changes in health, unexplained weight loss or gain, new lumps or skin changes, or worsening of existing conditions should be evaluated promptly.',
+      description:
+        'Sudden changes in health, unexplained weight loss or gain, new lumps or skin changes, or a chronic condition that is getting worse should be looked at promptly.',
       icon: (
         <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
@@ -150,7 +194,8 @@ export default function ConditionsPage() {
     },
     {
       title: 'Impact on Daily Life',
-      description: 'When symptoms interfere with work, relationships, sleep, or daily activities, it\'s time to seek professional care to restore your quality of life and wellbeing.',
+      description:
+        'When symptoms start interfering with work, relationships, sleep, or the things you enjoy, that is reason enough to be seen.',
       icon: (
         <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-10 h-10 stroke-[var(--color-primary)]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
@@ -163,69 +208,92 @@ export default function ConditionsPage() {
     <main>
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h1 className="font-cormorant text-5xl font-light mb-6">Conditions We Treat</h1>
+          <div className="text-white/70 text-sm mb-4">
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <span className="mx-2">›</span>
+            <span>Conditions</span>
+          </div>
+          <h1 className="font-display text-5xl font-light mb-6">Conditions We Treat</h1>
           <p className="text-xl text-white/90 leading-relaxed">
-            Evidence-based care for a full range of acute and chronic health conditions affecting patients of all ages in Birmingham, AL
+            Evidence-based care for acute and chronic health conditions, for patients of every age in
+            Cape Girardeau, Missouri.
           </p>
         </div>
       </section>
 
       <section className="bg-[var(--color-cream)] py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-cormorant text-4xl text-center text-[var(--color-ink)] mb-4">Comprehensive Primary Care</h2>
-          <p className="text-[var(--color-muted)] text-center text-lg mb-16 max-w-3xl mx-auto">
-            From chronic disease management to acute illness treatment, our experienced providers deliver personalized, compassionate care for every health concern
+          <h2 className="font-display text-4xl text-center text-[var(--color-ink)] mb-4">
+            Comprehensive Primary Care
+          </h2>
+          <p className="text-[var(--color-muted)] text-center text-lg mb-16 max-w-3xl mx-auto leading-relaxed">
+            From managing a long-term condition to treating an illness that showed up this morning, our
+            care team looks for the root cause instead of reaching straight for a prescription.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {conditions.map((condition, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-8 border border-[var(--color-border)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-up"
-              >
-                <div className="mb-4">{condition.icon}</div>
-                <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] mt-4 mb-3">
-                  {condition.name}
-                </h3>
-                <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  {condition.description}
-                </p>
+            {CONDITIONS.map((condition) => {
+              const card = CONDITION_CARDS[condition.slug] ?? FALLBACK
+              return (
                 <Link
+                  key={condition.slug}
                   href={`/conditions/${condition.slug}`}
-                  className="text-[var(--color-primary)] font-semibold text-sm hover:underline inline-flex items-center"
+                  className="group bg-white rounded-2xl overflow-hidden border border-[var(--color-border)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-up flex flex-col"
                 >
-                  Learn More →
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-8 flex flex-col flex-1">
+                    <h3 className="font-display text-2xl font-semibold text-[var(--color-ink)] mb-3">
+                      {condition.title}
+                    </h3>
+                    <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4 flex-1">
+                      {card.blurb}
+                    </p>
+                    <span className="text-[var(--color-primary)] font-semibold text-sm group-hover:underline inline-flex items-center">
+                      Learn More →
+                    </span>
+                  </div>
                 </Link>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-cormorant text-4xl text-center text-[var(--color-ink)] mb-16">When to Seek Help</h2>
+          <h2 className="font-display text-4xl text-center text-[var(--color-ink)] mb-16">When to Seek Help</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {warningSigns.map((sign, index) => (
-              <div key={index} className="text-center animate-fade-up">
+            {warningSigns.map((sign) => (
+              <div key={sign.title} className="text-center animate-fade-up">
                 <div className="flex justify-center mb-4">{sign.icon}</div>
-                <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] mb-3">
+                <h3 className="font-display text-2xl font-semibold text-[var(--color-ink)] mb-3">
                   {sign.title}
                 </h3>
-                <p className="text-[var(--color-muted)] leading-relaxed">
-                  {sign.description}
-                </p>
+                <p className="text-[var(--color-muted)] leading-relaxed">{sign.description}</p>
               </div>
             ))}
           </div>
 
           <div className="max-w-3xl mx-auto bg-gradient-to-br from-[var(--color-light)] to-white border border-[var(--color-border)] rounded-2xl p-8 text-center animate-fade-up">
-            <h3 className="font-cormorant text-2xl font-semibold text-[var(--color-ink)] mb-4">
-              Need Immediate Support?
+            <h3 className="font-display text-2xl font-semibold text-[var(--color-ink)] mb-4">
+              Need Support Right Now?
             </h3>
             <p className="text-[var(--color-muted)] mb-6 leading-relaxed">
-              Guardian Primary Care is here to help with same-day appointments for urgent concerns. For mental health emergencies, these resources are available 24/7:
+              Call Guardian Primary Care at{' '}
+              <a href="tel:+15732006143" className="text-[var(--color-primary)] font-semibold hover:underline">
+                (573) 200-6143
+              </a>{' '}
+              and ask about a sick visit. If this is a medical emergency, call 911. For a mental
+              health crisis, these national resources answer around the clock:
             </p>
             <div className="space-y-3">
               <div className="flex items-center justify-center gap-3">
@@ -233,8 +301,8 @@ export default function ConditionsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                 </svg>
                 <div className="text-left">
-                  <p className="font-semibold text-[var(--color-ink)]">988 Suicide & Crisis Lifeline</p>
-                  <p className="text-sm text-[var(--color-muted)]">Call or text 988 anytime</p>
+                  <p className="font-semibold text-[var(--color-ink)]">988 Suicide &amp; Crisis Lifeline</p>
+                  <p className="text-sm text-[var(--color-muted)]">Call or text 988 at any time</p>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-3">
@@ -253,9 +321,10 @@ export default function ConditionsPage() {
 
       <section className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-dark)] py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="font-cormorant text-4xl text-white mb-6">Ready to Get the Care You Need?</h2>
+          <h2 className="font-display text-4xl text-white mb-6">Ready to Get the Care You Need?</h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Schedule an appointment with Guardian Primary Care and experience compassionate, comprehensive healthcare for your whole family
+            Schedule with Guardian Primary Care and work with a provider who takes the time to listen.
+            We are in-network with most major commercial insurances, Medicare and Medicaid.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Direct Primary Care vs. Traditional Insurance | Guardian Primary Care',
-  description: 'Compare Direct Primary Care and Traditional Insurance models. Learn which healthcare approach is right for you in Birmingham, AL with detailed side-by-side analysis.',
+  description: 'Guardian Primary Care in Cape Girardeau, MO is in-network with most major commercial insurances, Medicare and Medicaid, and also offers Guardian Direct Care. Compare both ways to get care.',
 }
 
 export default function ComparePage() {
@@ -14,123 +15,155 @@ export default function ComparePage() {
           <nav className="flex items-center justify-center gap-2 text-sm mb-8 opacity-90">
             <a href="/" className="hover:underline">Home</a>
             <span>›</span>
-            <a href="/resources" className="hover:underline">Resources</a>
+            <span>Resources</span>
             <span>›</span>
             <span>Comparison</span>
           </nav>
-          <h1 className="font-['Cormorant_Garamond',serif] text-5xl md:text-6xl font-light leading-tight mb-6">
-            Direct Primary Care vs. Traditional Insurance: Which Model Is Right for You?
+          <h1 className="font-display text-5xl md:text-6xl font-light leading-tight mb-6">
+            Direct Primary Care vs. Traditional Insurance: Which Way Works Better for You?
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive comparison to help you make an informed decision about your healthcare in Birmingham, AL
+            At Guardian Primary Care in Cape Girardeau, MO you can use your insurance or choose Guardian Direct Care. Here is a plain-language look at both.
           </p>
+        </div>
+      </section>
+
+      {/* You Can Choose Either */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-up">
+            <div className="relative h-80 w-full rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/site/insurance.jpg"
+                alt="Insurance card and coverage paperwork being reviewed at a primary care front desk"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div>
+              <h2 className="font-display text-4xl font-light text-[var(--color-ink)] mb-6">
+                Good News: You Do Not Have to Pick a Side
+              </h2>
+              <p className="text-lg text-[var(--color-muted)] leading-relaxed mb-4">
+                Guardian Primary Care is in-network with most major commercial insurances, Medicare and Medicaid. If you have coverage, bring it. We file your visits the way any in-network primary care office does, and our team can help you understand what your plan covers before you are seen.
+              </p>
+              <p className="text-lg text-[var(--color-muted)] leading-relaxed">
+                We also offer <strong className="text-[var(--color-ink)]">Guardian Direct Care</strong>, a membership option for patients who would rather pay the practice directly at a flat, published price. It is an alternative, not a requirement. Many of our patients simply use their insurance, and that is welcome here.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Comparison Table */}
       <section className="bg-[var(--color-cream)] py-24">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-['Cormorant_Garamond',serif] text-4xl font-light text-[var(--color-ink)] text-center mb-12 animate-fade-up">
+          <h2 className="font-display text-4xl font-light text-[var(--color-ink)] text-center mb-12 animate-fade-up">
             Side-by-Side Comparison
           </h2>
-          
+
           <div className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fade-up">
             {/* Header Row */}
             <div className="grid grid-cols-3 gap-4 bg-[var(--color-primary)] text-white p-6 font-semibold">
               <div className="text-lg">Factor</div>
-              <div className="text-lg">Direct Primary Care</div>
-              <div className="text-lg">Traditional Insurance</div>
+              <div className="text-lg">Guardian Direct Care</div>
+              <div className="text-lg">Using Your Insurance</div>
             </div>
 
             {/* Row: Access to Care */}
             <div className="grid grid-cols-3 gap-4 p-6 border-b border-[var(--color-border)]">
               <div className="font-semibold text-[var(--color-ink)]">Access to Care</div>
-              <div className="text-[var(--color-muted)]">Same-day or next-day appointments, unlimited visits, direct phone/text access to your doctor</div>
-              <div className="text-[var(--color-muted)]">Wait times of days to weeks, limited appointment duration, communication through office staff</div>
+              <div className="text-[var(--color-muted)]">Same-day or next-day sick visits, office visits with no visit limits, direct access to your provider and your medical records</div>
+              <div className="text-[var(--color-muted)]">Scheduled appointments at Guardian, with coverage and visit frequency shaped by your plan</div>
             </div>
 
-            {/* Row: Monthly Cost */}
+            {/* Row: What You Pay */}
             <div className="grid grid-cols-3 gap-4 p-6 bg-[var(--color-cream)] border-b border-[var(--color-border)]">
-              <div className="font-semibold text-[var(--color-ink)]">Monthly Cost</div>
-              <div className="text-[var(--color-muted)]">Flat monthly membership fee ($75-150), no copays for visits</div>
-              <div className="text-[var(--color-muted)]">Premium + copays ($20-50 per visit) + deductible ($1,000-8,000+)</div>
+              <div className="font-semibold text-[var(--color-ink)]">What You Pay</div>
+              <div className="text-[var(--color-muted)]">A flat published membership fee: adults $85/month, seniors 65+ $70/month, children $40/month, couples $150/month, families $210/month</div>
+              <div className="text-[var(--color-muted)]">Your plan&apos;s premium, copay, coinsurance and deductible, as set by your insurer</div>
             </div>
 
-            {/* Row: Appointment Time */}
+            {/* Row: Price Transparency */}
             <div className="grid grid-cols-3 gap-4 p-6 border-b border-[var(--color-border)]">
-              <div className="font-semibold text-[var(--color-ink)]">Appointment Time</div>
-              <div className="text-[var(--color-muted)]">30-60 minutes per visit, unhurried care</div>
-              <div className="text-[var(--color-muted)]">10-15 minutes per visit, often rushed</div>
+              <div className="font-semibold text-[var(--color-ink)]">Price Transparency</div>
+              <div className="text-[var(--color-muted)]">Published rates, no hidden fees or surprise bills. Fair, upfront fee-for-service pricing is available on request</div>
+              <div className="text-[var(--color-muted)]">Your share depends on your benefits. Our team will help you check coverage before your visit</div>
             </div>
 
             {/* Row: Preventive Care */}
             <div className="grid grid-cols-3 gap-4 p-6 bg-[var(--color-cream)] border-b border-[var(--color-border)]">
               <div className="font-semibold text-[var(--color-ink)]">Preventive Care</div>
-              <div className="text-[var(--color-muted)]">Included in membership: screenings, annual exams, chronic disease management</div>
-              <div className="text-[var(--color-muted)]">Often covered after deductible, may require copays</div>
+              <div className="text-[var(--color-muted)]">Annual wellness visits and sports physicals are included in the membership</div>
+              <div className="text-[var(--color-muted)]">Most plans cover preventive visits, often at little or no cost to you. Coverage varies by plan</div>
             </div>
 
-            {/* Row: Lab Work & Tests */}
+            {/* Row: Chronic Conditions */}
             <div className="grid grid-cols-3 gap-4 p-6 border-b border-[var(--color-border)]">
-              <div className="font-semibold text-[var(--color-ink)]">Lab Work & Tests</div>
-              <div className="text-[var(--color-muted)]">Wholesale pricing (often 80-90% below retail), transparent costs</div>
-              <div className="text-[var(--color-muted)]">Insurance-negotiated rates, surprise bills common, applied to deductible</div>
+              <div className="font-semibold text-[var(--color-ink)]">Chronic Conditions</div>
+              <div className="text-[var(--color-muted)]">Ongoing care for diabetes, high blood pressure, asthma and more, with no visit limits</div>
+              <div className="text-[var(--color-muted)]">Ongoing care billed to your plan, with copay or deductible amounts applied per visit</div>
             </div>
 
-            {/* Row: Doctor-Patient Relationship */}
+            {/* Row: In-Office Procedures */}
             <div className="grid grid-cols-3 gap-4 p-6 bg-[var(--color-cream)] border-b border-[var(--color-border)]">
-              <div className="font-semibold text-[var(--color-ink)]">Doctor-Patient Relationship</div>
-              <div className="text-[var(--color-muted)]">Deep, long-term relationship with your physician who knows your health history intimately</div>
-              <div className="text-[var(--color-muted)]">Limited continuity, physician manages 2,000+ patients</div>
+              <div className="font-semibold text-[var(--color-ink)]">In-Office Procedures</div>
+              <div className="text-[var(--color-muted)]">Basic procedures included: wound care, abscess drainage, cryotherapy and skin lesion removal</div>
+              <div className="text-[var(--color-muted)]">The same procedures, billed to your plan under your benefits</div>
             </div>
 
-            {/* Row: Paperwork & Billing */}
+            {/* Row: Ways to Pay */}
             <div className="grid grid-cols-3 gap-4 p-6 border-b border-[var(--color-border)]">
-              <div className="font-semibold text-[var(--color-ink)]">Paperwork & Billing</div>
-              <div className="text-[var(--color-muted)]">Minimal, no insurance claims to file for primary care</div>
-              <div className="text-[var(--color-muted)]">Extensive pre-authorizations, claims, denials, appeals</div>
+              <div className="font-semibold text-[var(--color-ink)]">Ways to Pay</div>
+              <div className="text-[var(--color-muted)]">HSA, FSA and CareCredit accepted. Prepaying annually lowers the rate, and contracted businesses receive an additional 10% discount</div>
+              <div className="text-[var(--color-muted)]">Most major commercial insurances, Medicare and Medicaid accepted in-network</div>
             </div>
 
             {/* Row: Best For */}
             <div className="grid grid-cols-3 gap-4 p-6 bg-[var(--color-cream)]">
               <div className="font-semibold text-[var(--color-ink)]">Best For</div>
-              <div className="text-[var(--color-muted)]">People who value convenience, personalized care, and predictable costs</div>
-              <div className="text-[var(--color-muted)]">People who prefer large networks and are comfortable with traditional healthcare navigation</div>
+              <div className="text-[var(--color-muted)]">Patients who want predictable pricing, direct access and no visit limits, including self-pay and high-deductible households</div>
+              <div className="text-[var(--color-muted)]">Patients who already carry coverage and want to use the benefits they are paying for</div>
             </div>
           </div>
+
+          <p className="text-sm text-[var(--color-muted)] text-center mt-6 max-w-2xl mx-auto">
+            Guardian Direct Care plans start as low as $40 per month. An initial enrollment fee of $25 per member applies and is waived with a licensed provider referral.
+          </p>
         </div>
       </section>
 
-      {/* Deep Dive: Direct Primary Care */}
+      {/* Deep Dive */}
       <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="mb-16 animate-fade-up">
-            <h2 className="font-['Cormorant_Garamond',serif] text-4xl font-light text-[var(--color-ink)] mb-6">
-              Understanding Direct Primary Care
+            <h2 className="font-display text-4xl font-light text-[var(--color-ink)] mb-6">
+              Understanding Guardian Direct Care
             </h2>
             <p className="text-lg text-[var(--color-muted)] leading-relaxed mb-4">
-              Direct Primary Care (DPC) is a healthcare model that removes insurance companies from the primary care equation. Instead of billing insurance for each visit, patients pay a flat monthly membership fee directly to their physician's practice. This fee covers all primary care services including unlimited office visits, preventive care, chronic disease management, and direct communication with your doctor via phone, text, or email.
+              Direct primary care is a model where you pay the practice directly for your primary care instead of routing every visit through an insurance claim. Guardian Direct Care is our version of that model: accessible, high-quality and transparent, with predictable pricing and care from a provider who knows you, without hidden fees or surprise bills.
             </p>
             <p className="text-lg text-[var(--color-muted)] leading-relaxed mb-4">
-              The DPC model allows physicians to reduce their patient panel from 2,000-3,000 patients (typical in insurance-based practices) to 400-600 patients. This dramatic reduction means your doctor has significantly more time to spend with you, can offer same-day or next-day appointments, and can develop a deep understanding of your health history and goals. Appointments typically last 30-60 minutes rather than the rushed 10-15 minutes common in traditional practices.
+              A Guardian Direct Care membership includes office visits when you need care with no visit limits, same-day or next-day sick visits, direct access to your provider and your medical records, annual wellness and sports physicals, ongoing care for chronic conditions such as diabetes, high blood pressure and asthma, and basic in-office procedures including wound care, abscess drainage, cryotherapy and skin lesion removal.
             </p>
             <p className="text-lg text-[var(--color-muted)] leading-relaxed">
-              In Birmingham, AL, Guardian Primary Care offers wholesale pricing on lab work and medications, often saving patients 80-90% compared to insurance-negotiated rates. This transparency extends to all costs—you'll know exactly what you're paying each month with no surprise bills, no copays, and no deductibles for primary care services. DPC is particularly effective for patients with chronic conditions who require regular monitoring, those who value convenience and accessibility, and families seeking comprehensive, personalized care.
+              Published pricing for patients in Cape Girardeau, MO: adults ages 18 to 64 are $85 per month or $925 prepaid for the year, seniors 65 and older are $70 per month or $760 per year, and children ages 0 to 17 are $40 per month or $430 per year (a parent or guardian must be enrolled, and annual and sports physicals are included). Couples are $150 per month or $1,620 per year, and a family of two adults plus up to two children is $210 per month or $2,250 per year. Each additional child is $30 per month. HSA and FSA funds are accepted, CareCredit is accepted, and fair upfront fee-for-service pricing is available on request.
             </p>
           </div>
 
           <div className="animate-fade-up">
-            <h2 className="font-['Cormorant_Garamond',serif] text-4xl font-light text-[var(--color-ink)] mb-6">
-              Understanding Traditional Insurance-Based Care
+            <h2 className="font-display text-4xl font-light text-[var(--color-ink)] mb-6">
+              Understanding Insurance-Based Care at Guardian
             </h2>
             <p className="text-lg text-[var(--color-muted)] leading-relaxed mb-4">
-              Traditional insurance-based primary care is the model most Americans are familiar with. You pay monthly premiums to an insurance company, meet a deductible (often $1,000-8,000 or more), and then pay copays ($20-50) for each doctor visit. Your physician bills the insurance company for services rendered, and the insurance company determines what they'll pay and what you owe. This creates a three-way relationship between you, your doctor, and the insurance company.
+              Most of our patients use insurance, and Guardian Primary Care is in-network with most major commercial insurances, Medicare and Medicaid. In this model you pay a premium to your insurer, your plan sets a deductible along with copay or coinsurance amounts, and we bill your plan for the visit. Your out-of-pocket share depends on the benefits you chose or the benefits your employer provides.
             </p>
             <p className="text-lg text-[var(--color-muted)] leading-relaxed mb-4">
-              In this model, physicians typically manage 2,000-3,000 patients to remain financially viable. This high patient volume means appointments are often limited to 10-15 minutes, wait times can stretch to weeks for non-urgent issues, and communication with your doctor usually goes through office staff. The system works best for acute care—addressing specific problems when they arise—rather than long-term preventive care and relationship-building. Insurance networks provide access to a wide range of specialists and facilities, which can be valuable for complex medical needs.
+              Insurance has real strengths. It is designed to cover the expensive things: hospital stays, surgery, imaging, specialty care and emergencies. Preventive visits are covered by most plans, frequently at little or no cost to you. If you already carry coverage, using it at Guardian is usually the most straightforward path, and you keep the network access your plan provides for care beyond primary care.
             </p>
             <p className="text-lg text-[var(--color-muted)] leading-relaxed">
-              The traditional model includes significant administrative complexity. Pre-authorizations may be required for certain tests or treatments, claims can be denied requiring appeals, and surprise medical bills remain common despite recent legislation. For patients who rarely need medical care, who prefer the structure of a large network, or who have employer-sponsored insurance with low premiums, traditional insurance may provide adequate coverage. However, many patients in Birmingham, AL find themselves frustrated by the lack of access, short appointment times, and unpredictable costs inherent in this system.
+              The trade-offs are the ones most patients already know: deductibles have to be met, prior authorizations are sometimes required, and the amount you owe is not always clear until the claim is processed. Our team will help you check your benefits before your visit so there are as few surprises as possible, and if you would rather step outside that process entirely, Guardian Direct Care is available.
             </p>
           </div>
         </div>
@@ -140,8 +173,8 @@ export default function ComparePage() {
       <section className="bg-white py-20">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-[var(--color-light)] rounded-2xl p-12 animate-fade-up">
-            <h2 className="font-['Cormorant_Garamond',serif] text-4xl font-light text-[var(--color-ink)] text-center mb-12">
-              How to Decide: Which Model Is Right for You?
+            <h2 className="font-display text-4xl font-light text-[var(--color-ink)] text-center mb-12">
+              How to Decide: Which Option Is Right for You?
             </h2>
 
             <div className="mb-12">
@@ -149,56 +182,50 @@ export default function ComparePage() {
                 <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-8 h-8 text-[var(--color-accent)]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Choose Direct Primary Care if you...
+                Consider Guardian Direct Care if you...
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Value convenience and same-day access to your doctor</span>
+                  <span className="text-[var(--color-muted)]">Want direct access to your provider and your medical records</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Want longer appointments (30-60 minutes) and unhurried care</span>
+                  <span className="text-[var(--color-muted)]">Want office visits with no visit limits, plus same-day or next-day sick visits</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Have a chronic condition requiring regular monitoring and management</span>
+                  <span className="text-[var(--color-muted)]">Have a chronic condition that needs regular monitoring and management</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Prefer predictable, transparent pricing with no surprise bills</span>
+                  <span className="text-[var(--color-muted)]">Prefer predictable, published pricing with no hidden fees or surprise bills</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Want direct communication with your physician via phone, text, or email</span>
+                  <span className="text-[var(--color-muted)]">Are self-employed, between jobs, uninsured, or carrying a high deductible</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Are frustrated with insurance paperwork, pre-authorizations, and denials</span>
+                  <span className="text-[var(--color-muted)]">Run a business and want a flat monthly fee per employee (contracted businesses receive an additional 10% discount)</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Seek a deep, long-term relationship with a physician who knows your health history</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  <span className="text-[var(--color-muted)]">Are self-employed, between jobs, or have high-deductible insurance plans</span>
+                  <span className="text-[var(--color-muted)]">Want to put HSA, FSA or CareCredit funds toward your primary care</span>
                 </li>
               </ul>
             </div>
@@ -208,44 +235,38 @@ export default function ComparePage() {
                 <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-8 h-8 text-[var(--color-accent)]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                Choose Traditional Insurance if you...
+                Consider using your insurance if you...
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Have employer-sponsored insurance with low or no monthly premium</span>
+                  <span className="text-[var(--color-muted)]">Have commercial coverage, Medicare or Medicaid that you are already paying for</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Rarely need medical care and only visit the doctor once or twice per year</span>
+                  <span className="text-[var(--color-muted)]">Have employer-sponsored insurance with a low or no monthly premium</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Prefer access to a large network of specialists and facilities</span>
+                  <span className="text-[var(--color-muted)]">Want your preventive visits processed as covered preventive care</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Are comfortable navigating insurance pre-authorizations and claims processes</span>
+                  <span className="text-[var(--color-muted)]">Expect to need specialty care, imaging or a hospital stay this year</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-[var(--color-muted)]">Don't mind shorter appointments and longer wait times</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0 mt-1">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                  <span className="text-[var(--color-muted)]">Are satisfied with the traditional healthcare system as it currently operates</span>
+                  <span className="text-[var(--color-muted)]">Prefer the structure of a plan network and are comfortable with claims and referrals</span>
                 </li>
               </ul>
             </div>
@@ -264,7 +285,7 @@ export default function ComparePage() {
               Important Note About Coverage
             </h3>
             <p className="text-[var(--color-muted)] leading-relaxed">
-              Direct Primary Care is not insurance and does not replace the need for health insurance for hospitalizations, surgeries, specialist care, or emergency services. Many DPC patients pair their membership with a high-deductible health plan or health sharing ministry to cover catastrophic events while enjoying affordable, accessible primary care. This combination often results in lower overall healthcare spending while providing comprehensive protection.
+              Guardian Direct Care is a membership for primary care. It is not health insurance, and it does not replace coverage for hospital stays, surgery, specialty care, imaging or emergency services. Patients who choose Direct Care often keep a health plan for those larger costs. If you already have insurance we are glad to simply use it, since Guardian Primary Care is in-network with most major commercial insurances, Medicare and Medicaid.
             </p>
           </div>
         </div>
@@ -273,68 +294,80 @@ export default function ComparePage() {
       {/* FAQ Section */}
       <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-['Cormorant_Garamond',serif] text-4xl font-light text-[var(--color-ink)] text-center mb-12 animate-fade-up">
+          <h2 className="font-display text-4xl font-light text-[var(--color-ink)] text-center mb-12 animate-fade-up">
             Frequently Asked Questions
           </h2>
-          
+
           <div className="space-y-4 animate-fade-up">
             <details className="group bg-white rounded-xl shadow-sm overflow-hidden">
               <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex items-center justify-between hover:bg-[var(--color-light)] transition-colors">
-                Can I have both Direct Primary Care and traditional insurance?
+                Do I have to join a membership to be seen at Guardian Primary Care?
                 <svg className="w-5 h-5 transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Yes, and this is actually a common and smart strategy. Many patients use Direct Primary Care for all their primary care needs (unlimited visits, preventive care, chronic disease management) and maintain a high-deductible health insurance plan or catastrophic coverage for hospitalizations, surgeries, specialist care, and emergencies. This combination often costs less than traditional low-deductible insurance while providing superior primary care access. Your DPC membership fee is separate from insurance and paid directly to the practice.
+                No. Guardian Primary Care is in-network with most major commercial insurances, Medicare and Medicaid, and most of our patients simply use their coverage. Guardian Direct Care is an alternative for patients who prefer to pay the practice directly at a flat published price, and fair upfront fee-for-service pricing is available on request. Whichever way you come in, you are welcome here.
               </div>
             </details>
 
             <details className="group bg-white rounded-xl shadow-sm overflow-hidden">
               <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex items-center justify-between hover:bg-[var(--color-light)] transition-colors">
-                Does insurance cover Direct Primary Care membership fees?
+                Can I have both Guardian Direct Care and health insurance?
                 <svg className="w-5 h-5 transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                No, insurance does not cover DPC membership fees because Direct Primary Care intentionally operates outside the insurance system to eliminate administrative complexity and reduce costs. However, the monthly membership fee is often less expensive than traditional insurance copays for frequent visitors. Some employers offer DPC memberships as a benefit, and you may be able to use HSA or FSA funds to pay your membership fee. The value comes from unlimited access, longer appointments, and transparent pricing—benefits that more than offset the direct payment model for most members.
+                Yes. Guardian Direct Care covers your primary care at the practice. Your health plan stays in place for the things a primary care membership does not cover: hospital stays, surgery, specialty care, imaging and emergencies. Some patients with a high deductible choose this combination so their everyday care has a known price while their plan protects them from large bills.
               </div>
             </details>
 
             <details className="group bg-white rounded-xl shadow-sm overflow-hidden">
               <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex items-center justify-between hover:bg-[var(--color-light)] transition-colors">
-                What happens if I need specialist care or hospitalization?
+                What does Guardian Direct Care cost?
                 <svg className="w-5 h-5 transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Direct Primary Care covers primary care services only. If you need specialist care, surgery, hospitalization, or emergency services, you'll use your traditional health insurance, catastrophic coverage, or health sharing ministry just as you would in any healthcare system. Your DPC physician will coordinate your care, provide referrals, and communicate with specialists to ensure continuity. Many DPC doctors have strong relationships with local specialists in Birmingham, AL and can help you navigate the healthcare system more effectively. Think of DPC as handling 80-90% of your healthcare needs (primary care) while insurance covers the remaining 10-20% (specialists, hospitals, emergencies).
+                Plans start as low as $40 per month. Adults ages 18 to 64 are $85 per month or $925 prepaid for the year (a savings of $95). Seniors 65 and older are $70 per month or $760 per year (a savings of $80). Children ages 0 to 17 are $40 per month or $430 per year (a savings of $50) and must have a parent or guardian enrolled. Couples are $150 per month or $1,620 per year, and a family of two adults plus up to two children is $210 per month or $2,250 per year. Each additional child is $30 per month or $320 per year. An initial enrollment fee of $25 per member applies and is waived with a licensed provider referral. Re-enrollment after a cancellation is $200 per member.
               </div>
             </details>
 
             <details className="group bg-white rounded-xl shadow-sm overflow-hidden">
               <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex items-center justify-between hover:bg-[var(--color-light)] transition-colors">
-                How much money can I actually save with Direct Primary Care?
+                What happens if I need specialty care or a hospital stay?
                 <svg className="w-5 h-5 transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Savings vary based on your individual situation, but many patients save significantly. Consider this: a DPC membership might cost $100/month ($1,200/year) with no additional copays for unlimited visits. In contrast, traditional insurance might charge $300/month premium ($3,600/year) plus $30-50 copays per visit plus lab fees applied to your deductible. If you visit the doctor 6 times per year, traditional insurance could cost $4,000-5,000 total versus $1,200 for DPC. Add in wholesale lab pricing (often 80-90% below retail) and the savings compound. Patients with chronic conditions requiring frequent monitoring often see the greatest financial benefit, but even healthy patients appreciate predictable costs with no surprise bills.
+                Primary care is the foundation, not the whole building. If you need a specialist, surgery, a hospital stay or emergency services, those are billed through your health plan the same way they would be anywhere else. Your Guardian provider coordinates that care, sends the referral, and follows up with you afterward so nothing falls through the cracks.
               </div>
             </details>
 
             <details className="group bg-white rounded-xl shadow-sm overflow-hidden">
               <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex items-center justify-between hover:bg-[var(--color-light)] transition-colors">
-                What if I'm not satisfied with Direct Primary Care?
+                Can I use HSA, FSA or CareCredit for a Direct Care membership?
                 <svg className="w-5 h-5 transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Most Direct Primary Care practices, including Guardian Primary Care in Birmingham, AL, offer month-to-month memberships with no long-term contracts. You can cancel at any time if you're not satisfied. This flexibility is part of the patient-centered philosophy of DPC—your doctor earns your membership every month through excellent service and accessible care. We encourage prospective members to schedule a consultation to meet the physician, tour the practice, ask questions, and ensure DPC is the right fit before committing. The vast majority of patients who try Direct Primary Care find the personalized attention, convenience, and transparent pricing far superior to traditional insurance-based care and remain members for years.
+                Guardian Primary Care accepts HSA and FSA funds and also accepts CareCredit. Employers and contracted businesses can enroll their teams at a flat monthly fee per employee with an additional 10% discount. Call our office at <a href="tel:+15732006143" className="text-[var(--color-primary)] hover:underline">(573) 200-6143</a> and we will walk you through the options.
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl shadow-sm overflow-hidden">
+              <summary className="cursor-pointer list-none p-6 font-semibold text-[var(--color-ink)] flex items-center justify-between hover:bg-[var(--color-light)] transition-colors">
+                What if Direct Care turns out not to be a good fit?
+                <svg className="w-5 h-5 transition-transform group-open:rotate-180" stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
+                You can cancel a Guardian Direct Care membership. Please note that re-enrolling after a cancellation carries a $200 per member fee, so it is worth talking the decision through first. If Direct Care is not the right fit, you can keep seeing us using your insurance, since we are in-network with most major commercial insurances, Medicare and Medicaid. We would rather help you land in the right place than sign you up for the wrong one.
               </div>
             </details>
           </div>
@@ -344,18 +377,26 @@ export default function ComparePage() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20">
         <div className="max-w-4xl mx-auto px-6 text-center animate-fade-up">
-          <h2 className="font-['Cormorant_Garamond',serif] text-4xl md:text-5xl font-light text-white mb-6">
-            Ready to Explore Your Healthcare Options?
+          <h2 className="font-display text-4xl md:text-5xl font-light text-white mb-6">
+            Ready to Explore Your Options?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Schedule a consultation with Guardian Primary Care in Birmingham, AL to discuss which healthcare model best fits your needs, budget, and health goals.
+            Our team at Guardian Primary Care in Cape Girardeau, MO will help you check your insurance benefits or walk you through Guardian Direct Care, whichever fits your family better.
           </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-semibold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
-          >
-            Discuss Your Options
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-semibold px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg"
+            >
+              Discuss Your Options
+            </a>
+            <a
+              href="tel:+15732006143"
+              className="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full transition-all border-2 border-white/30"
+            >
+              Call (573) 200-6143
+            </a>
+          </div>
         </div>
       </section>
     </main>

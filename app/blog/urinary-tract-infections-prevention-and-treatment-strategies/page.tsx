@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Urinary Tract Infections: Prevention and Treatment Strategies | Guardian Primary Care',
-  description: 'Learn evidence-based strategies for preventing and treating urinary tract infections. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+  title: 'Urinary Tract Infections: Prevention and Treatment',
+  description: 'What causes urinary tract infections, how to lower your risk, when to be seen and how recurrent UTIs are managed. Guardian Primary Care, Cape Girardeau MO.',
   openGraph: {
-    title: 'Urinary Tract Infections: Prevention and Treatment Strategies',
-    description: 'Learn evidence-based strategies for preventing and treating urinary tract infections. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+    title: 'Urinary Tract Infections: Prevention and Treatment',
+    description: 'What causes urinary tract infections, how to lower your risk, when to be seen and how recurrent UTIs are managed. Guardian Primary Care, Cape Girardeau MO.',
     type: 'article',
     publishedTime: '2025-01-15T09:00:00Z',
-    authors: ['Guardian Primary Care Clinical Team'],
+    authors: ['Guardian Primary Care'],
   },
 }
 
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
           
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h1 className="text-5xl font-light leading-tight text-center mb-8 font-display">
             Urinary Tract Infections: Prevention and Treatment Strategies
           </h1>
           
@@ -43,7 +44,23 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-urinary-leakage-incontinence.jpg"
+              alt="A restroom sign mounted on a bright hallway wall, representing urinary health and frequent trips to the bathroom"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -54,7 +71,7 @@ export default function BlogPost() {
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              That familiar burning sensation during urination. The constant urge to go, even when your bladder is empty. The uncomfortable pressure in your lower abdomen. If you've experienced a urinary tract infection (UTI), you know how disruptive and painful it can be. For millions of Americans each year, UTIs are more than just an inconvenience—they're a recurring health concern that impacts quality of life, work productivity, and overall wellbeing.
+              That familiar burning sensation during urination. The constant urge to go, even when your bladder is empty. The uncomfortable pressure in your lower abdomen. If you've experienced a urinary tract infection (UTI), you know how disruptive and painful it can be. For many people, a UTI is more than an inconvenience, it is a recurring health concern that affects quality of life, work, and overall wellbeing.
             </p>
             <p className="mb-6">
               The good news? While UTIs are incredibly common, they're also highly preventable and treatable when you understand the underlying causes and implement evidence-based strategies. Whether you're dealing with your first UTI or you're tired of recurring infections, this comprehensive guide will help you understand what's happening in your body and what you can do about it.
@@ -62,28 +79,28 @@ export default function BlogPost() {
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Understanding Urinary Tract Infections
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              A urinary tract infection occurs when bacteria—most commonly E. coli from the digestive tract—enter the urinary system and multiply. The infection can affect different parts of your urinary tract, including the bladder (cystitis), urethra (urethritis), or kidneys (pyelonephritis). While UTIs can occur in anyone, women are significantly more susceptible due to anatomical differences, with shorter urethras that make bacterial travel to the bladder easier.
+              A urinary tract infection occurs when bacteria (most commonly E. coli from the digestive tract) enter the urinary system and multiply. The infection can affect different parts of your urinary tract, including the bladder (cystitis), urethra (urethritis), or kidneys (pyelonephritis). While UTIs can occur in anyone, women are significantly more susceptible due to anatomical differences, with shorter urethras that make bacterial travel to the bladder easier.
             </p>
             <p className="mb-6">
-              Common symptoms include a persistent urge to urinate, burning sensation during urination, cloudy or strong-smelling urine, pelvic pain, and frequent small amounts of urine. More serious infections that reach the kidneys may cause fever, back pain, nausea, and vomiting—requiring immediate medical attention.
+              Common symptoms include a persistent urge to urinate, burning sensation during urination, cloudy or strong-smelling urine, pelvic pain, and frequent small amounts of urine. More serious infections that reach the kidneys may cause fever, back pain, nausea, and vomiting, which require immediate medical attention.
             </p>
             <p className="mb-6">
-              It's estimated that 50-60% of women will experience at least one UTI in their lifetime, and approximately 20-30% will have recurrent infections. Understanding your risk factors and implementing prevention strategies can significantly reduce your likelihood of developing these uncomfortable infections.
+              UTIs are one of the most common infections treated in primary care, and a large share of women will have at least one in their lifetime, with some going on to have repeat infections. Understanding your risk factors and using prevention strategies can significantly reduce your likelihood of developing these uncomfortable infections.
             </p>
           </div>
 
           {/* Pull Quote */}
-          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-light font-display">
             "Prevention is always better than treatment when it comes to UTIs. Small daily habits can make a tremendous difference in breaking the cycle of recurring infections."
           </blockquote>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Risk Factors and Who's Most Vulnerable
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -94,12 +111,12 @@ export default function BlogPost() {
               Medical conditions such as diabetes, kidney stones, or an enlarged prostate can impair normal urine flow and create environments where bacteria thrive. A suppressed immune system, whether from illness or medications, reduces your body's ability to fight off infection. Catheter use and recent urinary procedures also elevate risk.
             </p>
             <p className="mb-6">
-              Pregnancy deserves special mention—hormonal changes and physical pressure from the growing uterus can slow urine flow and increase infection susceptibility. UTIs during pregnancy require prompt treatment, as they can lead to serious complications for both mother and baby.
+              Pregnancy deserves special mention, because hormonal changes and physical pressure from the growing uterus can slow urine flow and increase infection susceptibility. UTIs during pregnancy require prompt treatment, as they can lead to serious complications for both mother and baby.
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Evidence-Based Prevention Strategies
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -154,7 +171,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             When to Seek Medical Treatment
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -162,7 +179,7 @@ export default function BlogPost() {
               While preventive measures are powerful, they don't guarantee you'll never develop a UTI. Knowing when to seek medical care is crucial. Contact your healthcare provider if you experience burning during urination, frequent urgent need to urinate, cloudy or bloody urine, pelvic pain, or strong-smelling urine.
             </p>
             <p className="mb-6">
-              Seek immediate medical attention if you develop fever, chills, back pain, nausea, or vomiting—these may indicate a kidney infection requiring urgent treatment. Pregnant women should contact their provider at the first sign of any UTI symptoms.
+              Seek immediate medical attention if you develop fever, chills, back pain, nausea, or vomiting, since these may indicate a kidney infection requiring urgent treatment. Pregnant women should contact their provider at the first sign of any UTI symptoms.
             </p>
             <p className="mb-6">
               Your healthcare provider will typically perform a urinalysis and urine culture to confirm the infection and identify the specific bacteria causing it. This information guides appropriate antibiotic selection. Most uncomplicated UTIs respond well to a short course of antibiotics, with symptoms improving within a few days.
@@ -170,12 +187,12 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Managing Recurrent Infections
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              If you experience two or more UTIs within six months or three or more within a year, you have recurrent UTIs. This frustrating pattern affects approximately 25% of women who've had a UTI. Working with your healthcare provider to identify underlying causes is essential.
+              If you experience two or more UTIs within six months or three or more within a year, you have recurrent UTIs. This frustrating pattern affects a substantial share of women who have had a UTI. Working with your healthcare provider to identify underlying causes is essential.
             </p>
             <p className="mb-6">
               Management strategies may include low-dose prophylactic antibiotics taken daily or after sexual activity, depending on your pattern of infections. Postmenopausal women may benefit from topical vaginal estrogen to restore healthy tissue. Some patients find success with D-mannose supplements, a sugar that may prevent bacterial adhesion.
@@ -186,7 +203,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Taking Control of Your Urinary Health
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -197,20 +214,20 @@ export default function BlogPost() {
               Remember that every person's situation is unique. What works for one individual may not work for another, which is why personalized medical guidance is invaluable. Don't hesitate to discuss your concerns, ask questions, and advocate for comprehensive evaluation if you're struggling with recurrent infections.
             </p>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, our team understands the impact UTIs have on your daily life. We take the time to develop individualized prevention and treatment plans that address your specific risk factors and lifestyle. You don't have to accept recurring infections as inevitable—effective solutions are available.
+              At Guardian Primary Care in Cape Girardeau, MO, our team understands the impact UTIs have on your daily life. We take the time to develop individualized prevention and treatment plans that address your specific risk factors and lifestyle. You don't have to accept recurring infections as inevitable, effective solutions are available.
             </p>
           </div>
 
           {/* Closing CTA */}
           <div className="bg-[var(--color-light)] rounded-2xl p-8 my-12 text-center">
             <p className="text-[var(--color-ink)] text-lg mb-4">
-              Experiencing UTI symptoms or struggling with recurrent infections? Our experienced team is here to help you find lasting relief.
+              Experiencing UTI symptoms or struggling with recurrent infections? Our care team in Cape Girardeau is here to help you find lasting relief. Call <a href="tel:+15732006143" className="text-[var(--color-primary)] font-medium underline underline-offset-4">(573) 200-6143</a>.
             </p>
             <a 
               href="/contact" 
               className="inline-block bg-[var(--color-accent)] text-white px-8 py-3 rounded-full font-medium hover:bg-[var(--color-accent-dark)] transition-all"
             >
-              Schedule a Consultation
+              Request an Appointment
             </a>
           </div>
         </div>
@@ -227,10 +244,10 @@ export default function BlogPost() {
             </div>
             <div>
               <h3 className="text-xl font-medium text-[var(--color-ink)] mb-2">
-                Written by the Guardian Primary Care Clinical Team
+                Written by the Guardian Primary Care team
               </h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC, dedicated to delivering personalized, evidence-based care to the Birmingham community.
+                Guardian Primary Care is led by Preston Holifield, DNP, APRN, FNP-C, a board-certified family nurse practitioner who works with a Missouri Licensed Collaborating Physician. Our care team serves Cape Girardeau and Southeast Missouri.
               </p>
             </div>
           </div>
@@ -240,7 +257,7 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl font-light text-[var(--color-ink)] mb-8 text-center" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h3 className="text-3xl font-light text-[var(--color-ink)] mb-8 text-center font-display">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -252,7 +269,7 @@ export default function BlogPost() {
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{fontFamily: 'var(--font-cormorant)'}}>
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-display">
                   Understanding Women's Health: A Comprehensive Guide
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
@@ -269,7 +286,7 @@ export default function BlogPost() {
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{fontFamily: 'var(--font-cormorant)'}}>
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-display">
                   The Importance of Preventive Care
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
@@ -286,7 +303,7 @@ export default function BlogPost() {
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{fontFamily: 'var(--font-cormorant)'}}>
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-display">
                   Antibiotic Stewardship: What You Need to Know
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
@@ -301,17 +318,17 @@ export default function BlogPost() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="text-4xl font-light mb-4 font-display">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 font-light">
-            Our team is here to help.
+            Our care team in Cape Girardeau, Missouri can help you treat a UTI now and lower the odds of the next one. We see patients by appointment, so call <a href="tel:+15732006143" className="font-semibold underline underline-offset-4 hover:text-white">(573) 200-6143</a> and we will find a time.
           </p>
           <a 
             href="/contact" 
             className="inline-block bg-white text-[var(--color-primary)] px-8 py-4 rounded-full font-medium hover:bg-[var(--color-cream)] transition-all"
           >
-            Contact Us Today
+            Request an Appointment
           </a>
         </div>
       </section>

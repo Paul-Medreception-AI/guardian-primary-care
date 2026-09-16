@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://guardianprimary.com'
+  const base = 'https://www.guardianprimary.com'
   const now = new Date()
 
   const corePages = [
@@ -110,10 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const locationPages = [
-    { url: `${base}/locations/birmingham-al`, priority: 0.8, changeFrequency: 'monthly' as const, lastModified: now },
-    { url: `${base}/locations/hoover-al`, priority: 0.8, changeFrequency: 'monthly' as const, lastModified: now },
-    { url: `${base}/locations/vestavia-hills-al`, priority: 0.8, changeFrequency: 'monthly' as const, lastModified: now },
-    { url: `${base}/locations/mountain-brook-al`, priority: 0.8, changeFrequency: 'monthly' as const, lastModified: now }
+    { url: `${base}/locations/cape-girardeau-mo`, priority: 0.8, changeFrequency: 'monthly' as const, lastModified: now },
   ]
 
   const priorRecoveryPages = [

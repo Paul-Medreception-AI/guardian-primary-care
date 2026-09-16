@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Asthma Management: Controlling Symptoms for Better Quality of Life | Guardian Primary Care',
-  description: 'Learn evidence-based strategies for managing asthma symptoms, preventing flare-ups, and improving your quality of life. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+  title: 'Asthma Management: Control Symptoms, Breathe Easier',
+  description: 'Evidence-based ways to control asthma symptoms, find your triggers and build an asthma action plan with your provider in Cape Girardeau, MO.',
 }
 
 export default function BlogPost() {
@@ -19,7 +20,7 @@ export default function BlogPost() {
             <span>Article</span>
           </div>
           <div className="text-xs uppercase tracking-widest text-white/70 mb-4 text-center">Patient Education</div>
-          <h1 className="font-serif text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Asthma Management: Controlling Symptoms for Better Quality of Life
           </h1>
           <div className="flex items-center justify-center gap-6 text-sm text-white/80">
@@ -27,7 +28,23 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-asthma.jpg"
+              alt="A nebulizer face mask and tubing held in one hand beside its compressor, one of the tools used to treat asthma symptoms at home."
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -44,12 +61,12 @@ export default function BlogPost() {
               Understanding your condition and working closely with your healthcare provider to develop an effective management plan can make all the difference between constantly struggling to breathe and enjoying life to the fullest.
             </p>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Understanding Asthma: More Than Just Shortness of Breath
             </h2>
 
             <p className="mb-6">
-              Asthma is a chronic inflammatory disease of the airways that affects approximately 25 million Americans, including 5 million children. When you have asthma, your airways are constantly inflamed and overly sensitive to certain triggers. During an asthma episode or "attack," three things happen simultaneously:
+              Asthma is a chronic inflammatory disease of the airways that affects millions of Americans, including many children. When you have asthma, your airways are constantly inflamed and overly sensitive to certain triggers. During an asthma episode or "attack," three things happen simultaneously:
             </p>
 
             <ul className="mb-6 space-y-3">
@@ -77,7 +94,7 @@ export default function BlogPost() {
               This combination makes it difficult for air to flow through your airways, resulting in wheezing, coughing, chest tightness, and shortness of breath. The severity and frequency of these symptoms vary widely from person to person.
             </p>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Identifying Your Personal Triggers
             </h2>
 
@@ -129,12 +146,12 @@ export default function BlogPost() {
             </p>
 
             <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-              <p className="text-[var(--color-ink)] italic text-xl font-serif">
-                "Well-controlled asthma means being able to do everything you want to do without thinking about your breathing. It's absolutely achievable with the right treatment plan and self-management strategies."
+              <p className="text-[var(--color-ink)] text-xl font-display">
+                Well-controlled asthma means being able to do everything you want to do without thinking about your breathing. With the right treatment plan and steady self-management, that is a realistic goal for most people.
               </p>
             </div>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               The Two Types of Asthma Medications
             </h2>
 
@@ -160,12 +177,12 @@ export default function BlogPost() {
               Many people make the mistake of relying solely on their rescue inhaler while avoiding daily controller medications due to concerns about side effects or the inconvenience of daily use. This approach is like only calling the fire department when your house is on fire rather than installing smoke detectors and fire extinguishers. Daily controller medications prevent the "fires" from starting in the first place.
             </p>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Creating Your Asthma Action Plan
             </h2>
 
             <p className="mb-6">
-              An Asthma Action Plan is a written, personalized set of instructions that tells you how to manage your asthma daily and how to handle worsening symptoms. Working with your healthcare provider in Birmingham to develop this plan is crucial for successful asthma management.
+              An Asthma Action Plan is a written, personalized set of instructions that tells you how to manage your asthma daily and how to handle worsening symptoms. Working with your healthcare provider in Cape Girardeau to develop this plan is crucial for successful asthma management.
             </p>
 
             <p className="mb-6">
@@ -185,10 +202,10 @@ export default function BlogPost() {
             </p>
 
             <p className="mb-6">
-              Peak flow monitoring—using a simple device that measures how fast you can blow air out of your lungs—provides objective data about your lung function and can detect problems before you feel symptoms.
+              Peak flow monitoring, which uses a simple device that measures how fast you can blow air out of your lungs, provides objective data about your lung function and can detect problems before you feel symptoms.
             </p>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Lifestyle Strategies for Better Control
             </h2>
 
@@ -235,7 +252,7 @@ export default function BlogPost() {
               </li>
             </ul>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               When to Seek Help
             </h2>
 
@@ -280,7 +297,7 @@ export default function BlogPost() {
               Seek emergency care immediately if you experience severe shortness of breath, your rescue inhaler isn't helping, or you have difficulty walking or talking due to breathlessness.
             </p>
 
-            <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+            <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
               Living Well with Asthma
             </h2>
 
@@ -326,7 +343,7 @@ export default function BlogPost() {
             </p>
 
             <p className="mb-6">
-              If you're struggling with asthma symptoms, don't accept them as inevitable. Effective control is possible, and our team at Guardian Primary Care in Birmingham is here to help you develop a comprehensive management plan tailored to your individual needs and lifestyle. Better breathing and a better quality of life are within reach.
+              If you&apos;re struggling with asthma symptoms, don&apos;t accept them as inevitable. Effective control is possible, and our care team at Guardian Primary Care in Cape Girardeau, Missouri is here to help you build a management plan that fits your needs and your daily life. Call us at (573) 200-6143 to set up a visit. Better breathing and a better quality of life are within reach.
             </p>
           </div>
         </div>
@@ -340,8 +357,8 @@ export default function BlogPost() {
               </svg>
             </div>
             <div>
-              <div className="font-semibold text-[var(--color-ink)] mb-1">Written by the Guardian Primary Care Clinical Team</div>
-              <div className="text-[var(--color-muted)] text-sm">Board-certified providers specializing in Primary Care / DPC</div>
+              <div className="font-semibold text-[var(--color-ink)] mb-1">Written by the Guardian Primary Care Team</div>
+              <div className="text-[var(--color-muted)] text-sm">Primary care for every stage of life in Cape Girardeau, Missouri. Our care team is led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri licensed collaborating physician.</div>
             </div>
           </div>
         </div>
@@ -350,39 +367,39 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="font-serif text-3xl text-[var(--color-ink)] mb-8 text-center">Related Resources</h3>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">Related Resources</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <a href="/blog" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/managing-seasonal-allergies-beyond-over-the-counter-medicati" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-[var(--color-light)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">Understanding Allergies: Causes and Management</h4>
-                <p className="text-[var(--color-muted)] text-sm">Learn how allergies and asthma are connected and strategies for managing both conditions effectively.</p>
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">Managing Seasonal Allergies: Beyond OTC Medications</h4>
+                <p className="text-[var(--color-muted)] text-sm">How allergies and asthma are connected, and what helps when over-the-counter medicine is not enough.</p>
               </div>
             </a>
-            <a href="/blog" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/copd-breathing-easier-with-proper-management" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-[var(--color-light)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">Exercise and Breathing: Staying Active Safely</h4>
-                <p className="text-[var(--color-muted)] text-sm">Practical tips for maintaining an active lifestyle while managing respiratory conditions.</p>
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">COPD: Breathing Easier with Proper Management</h4>
+                <p className="text-[var(--color-muted)] text-sm">Early symptoms, treatment options and the daily habits that protect your lungs.</p>
               </div>
             </a>
-            <a href="/blog" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <a href="/blog/the-role-of-exercise-in-chronic-disease-management" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="bg-[var(--color-light)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">Creating a Healthy Home Environment</h4>
-                <p className="text-[var(--color-muted)] text-sm">How to reduce indoor triggers and allergens to improve respiratory health at home.</p>
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">The Role of Exercise in Chronic Disease Management</h4>
+                <p className="text-[var(--color-muted)] text-sm">How to stay active safely when you are living with a long-term condition.</p>
               </div>
             </a>
           </div>
@@ -392,11 +409,19 @@ export default function BlogPost() {
       {/* CTA */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-light mb-4">Ready to Take the Next Step?</h2>
-          <p className="text-xl mb-8 text-white/90">Our team is here to help you breathe easier and live better.</p>
-          <a href="/contact" className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            Schedule Your Consultation
-          </a>
+          <h2 className="font-display text-4xl font-light mb-4">Ready to Take the Next Step?</h2>
+          <p className="text-xl mb-8 text-white/90">Our care team is here to help you breathe easier and live better.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              Schedule an Appointment
+            </a>
+            <a href="tel:+15732006143" className="inline-block bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 border border-white/30">
+              Call (573) 200-6143
+            </a>
+          </div>
+          <p className="mt-6 text-sm text-white/80">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Visits are by appointment. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer predictable monthly pricing.
+          </p>
         </div>
       </section>
     </main>

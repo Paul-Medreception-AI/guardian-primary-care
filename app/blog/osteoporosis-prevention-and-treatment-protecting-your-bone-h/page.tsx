@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Osteoporosis Prevention and Treatment: Protecting Your Bone Health | Guardian Primary Care',
-  description: 'Learn evidence-based strategies for osteoporosis prevention and treatment. Expert guidance from Guardian Primary Care on protecting your bone health in Birmingham, AL.',
+  title: 'Osteoporosis: Prevention, Screening and Treatment',
+  description: 'Evidence-based ways to protect your bone health: risk factors, bone density screening, calcium and vitamin D, exercise, and treatment options explained.',
   openGraph: {
-    title: 'Osteoporosis Prevention and Treatment: Protecting Your Bone Health',
-    description: 'Learn evidence-based strategies for osteoporosis prevention and treatment. Expert guidance from Guardian Primary Care on protecting your bone health in Birmingham, AL.',
+    title: 'Osteoporosis: Prevention, Screening and Treatment',
+    description: 'Evidence-based ways to protect your bone health: risk factors, bone density screening, calcium and vitamin D, exercise, and treatment options explained.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00Z',
     authors: ['Guardian Primary Care Clinical Team'],
@@ -33,7 +34,7 @@ export default function OsteoporosisArticlePage() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Osteoporosis Prevention and Treatment: Protecting Your Bone Health
           </h1>
 
@@ -43,30 +44,46 @@ export default function OsteoporosisArticlePage() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
           </div>
         </div>
       </section>
 
+      {/* Featured Image */}
+      <div className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-osteoporosis.jpg"
+              alt="An older adult walking outdoors in daylight, a reminder that weight-bearing activity helps protect bone density"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Article Body */}
-      <article className="bg-white py-20">
+      <article className="bg-white pt-12 pb-20">
         <div className="max-w-3xl mx-auto px-6">
           {/* Opening Paragraph */}
           <p className="text-[var(--color-ink)] leading-loose text-lg mb-6">
-            Imagine bones so fragile that a simple sneeze, a gentle hug, or bending to tie your shoes could result in a fracture. For millions of Americans living with osteoporosis, this isn't a worst-case scenario—it's a daily reality. Often called the "silent disease," osteoporosis quietly weakens bones over years, giving no warning until a sudden break changes everything. But here's the empowering truth: osteoporosis doesn't have to be inevitable. With the right knowledge and proactive care, you can protect your bone health and maintain your independence and quality of life for years to come.
+            Imagine bones so fragile that a simple sneeze, a gentle hug, or bending to tie your shoes could result in a fracture. For millions of Americans living with osteoporosis, this isn't a worst-case scenario, it's a daily reality. Often called the "silent disease," osteoporosis quietly weakens bones over years, giving no warning until a sudden break changes everything. But here's the empowering truth: osteoporosis doesn't have to be inevitable. With the right knowledge and proactive care, you can protect your bone health and maintain your independence and quality of life for years to come.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            At Guardian Primary Care in Birmingham, AL, we believe that prevention is the cornerstone of lasting wellness. Understanding osteoporosis—what causes it, who's at risk, and how to prevent or manage it—is essential for everyone, especially as we age. Let's explore the science behind bone health and the practical steps you can take today to build and maintain strong bones for life.
+            At Guardian Primary Care in Cape Girardeau, Missouri, we believe prevention is the cornerstone of lasting wellness. Understanding osteoporosis (what causes it, who is at risk, and how to prevent or manage it) matters for everyone, and it matters more as we age. Let's explore the science behind bone health and the practical steps you can take today to build and maintain strong bones for life.
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             What Is Osteoporosis?
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Osteoporosis is a bone disease that occurs when the body loses too much bone mass, makes too little bone, or both. The result is bones that become weak, brittle, and prone to fractures. The name itself comes from Latin: "osteo" meaning bone and "porosis" meaning porous—literally, porous bones.
+            Osteoporosis is a bone disease that occurs when the body loses too much bone mass, makes too little bone, or both. The result is bones that become weak, brittle, and prone to fractures. The name itself comes from Latin: "osteo" meaning bone and "porosis" meaning porous, so literally, porous bones.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -74,11 +91,11 @@ export default function OsteoporosisArticlePage() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            According to the National Osteoporosis Foundation, approximately 10 million Americans have osteoporosis, and another 44 million have low bone density (osteopenia), placing them at increased risk. What makes this disease particularly dangerous is that it progresses silently—most people don't know they have it until they experience their first fracture, often in the hip, spine, or wrist.
+            According to the National Osteoporosis Foundation, approximately 10 million Americans have osteoporosis, and another 44 million have low bone density (osteopenia), placing them at increased risk. What makes this disease particularly dangerous is that it progresses silently, and most people don't know they have it until they experience their first fracture, often in the hip, spine, or wrist.
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Who Is at Risk?
           </h2>
 
@@ -135,13 +152,13 @@ export default function OsteoporosisArticlePage() {
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl leading-relaxed" style={{ fontFamily: 'var(--font-cormorant)' }}>
-              "The best time to start protecting your bone health was 20 years ago. The second best time is today. It's never too early—or too late—to take action."
+            <p className="font-display text-[var(--color-ink)] italic text-xl leading-relaxed">
+              "The best time to start protecting your bone health was 20 years ago. The second best time is today. It's never too early, or too late, to take action."
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Prevention: Building Strong Bones for Life
           </h2>
 
@@ -158,7 +175,7 @@ export default function OsteoporosisArticlePage() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            <strong>Vitamin D</strong> is equally crucial—it helps your body absorb calcium. Most adults need 600-800 IU daily, though many experts recommend higher amounts, especially for those with limited sun exposure. Few foods naturally contain vitamin D (fatty fish, egg yolks, fortified milk), so supplementation is often necessary. We recommend having your vitamin D levels checked to ensure you're getting enough.
+            <strong>Vitamin D</strong> is equally crucial, because it helps your body absorb calcium. Most adults need 600-800 IU daily, though many experts recommend higher amounts, especially for those with limited sun exposure. Few foods naturally contain vitamin D (fatty fish, egg yolks, fortified milk), so supplementation is often necessary. We recommend having your vitamin D levels checked to ensure you're getting enough.
           </p>
 
           <h3 className="text-xl text-[var(--color-ink)] mt-8 mb-4 font-semibold">
@@ -166,7 +183,7 @@ export default function OsteoporosisArticlePage() {
           </h3>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Weight-bearing and resistance exercises are vital for bone health. These activities force your bones to work against gravity or resistance, stimulating them to maintain or increase their density. Effective exercises include walking, jogging, dancing, tennis, strength training, and yoga. Aim for at least 30 minutes of weight-bearing activity most days of the week, combined with strength training twice weekly. The key is consistency—bones respond to regular mechanical stress by becoming stronger.
+            Weight-bearing and resistance exercises are vital for bone health. These activities force your bones to work against gravity or resistance, stimulating them to maintain or increase their density. Effective exercises include walking, jogging, dancing, tennis, strength training, and yoga. Aim for at least 30 minutes of weight-bearing activity most days of the week, combined with strength training twice weekly. The key is consistency, since bones respond to regular mechanical stress by becoming stronger.
           </p>
 
           <h3 className="text-xl text-[var(--color-ink)] mt-8 mb-4 font-semibold">
@@ -203,7 +220,7 @@ export default function OsteoporosisArticlePage() {
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Screening and Diagnosis
           </h2>
 
@@ -223,7 +240,7 @@ export default function OsteoporosisArticlePage() {
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Treatment Options: When Prevention Isn't Enough
           </h2>
 
@@ -252,7 +269,7 @@ export default function OsteoporosisArticlePage() {
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Living Well with Osteoporosis
           </h2>
 
@@ -265,19 +282,19 @@ export default function OsteoporosisArticlePage() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            Remember, managing osteoporosis is a marathon, not a sprint. The habits you build today—eating calcium-rich foods, staying active, taking prescribed medications consistently—accumulate over time to make a real difference in your bone health and quality of life.
+            Remember, managing osteoporosis is a marathon, not a sprint. The habits you build today (eating calcium-rich foods, staying active, taking prescribed medications consistently) accumulate over time to make a real difference in your bone health and quality of life.
           </p>
 
           {/* Closing */}
           <div className="bg-[var(--color-light)] rounded-xl p-8 mt-12">
-            <h3 className="text-2xl text-[var(--color-ink)] mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+            <h3 className="font-display text-2xl text-[var(--color-ink)] mb-4 font-light">
               Partner with Us for Your Bone Health
             </h3>
             <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-              At Guardian Primary Care in Birmingham, AL, we take a proactive, personalized approach to osteoporosis prevention and treatment. As a Direct Primary Care practice, we have the time to thoroughly assess your risk factors, discuss your concerns, and develop a comprehensive bone health plan tailored to your unique needs and goals.
+              At Guardian Primary Care in Cape Girardeau, Missouri, we take a proactive, personal approach to osteoporosis prevention and treatment. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available as an alternative if you would rather pay a flat monthly rate. Whichever route you choose, we take the time to assess your risk factors, talk through your concerns, and build a bone health plan around your needs and goals.
             </p>
             <p className="text-[var(--color-ink)] leading-loose text-base">
-              Whether you're interested in prevention, need screening, or are managing an existing diagnosis, we're here to support you every step of the way. Don't wait for a fracture to take your bone health seriously—reach out to us today to schedule a comprehensive bone health assessment.
+              Whether you're interested in prevention, need screening, or are managing an existing diagnosis, we're here to support you every step of the way. Don't wait for a fracture to take your bone health seriously. Call us at <a href="tel:+15732006143" className="text-[var(--color-primary)] underline">(573) 200-6143</a> to schedule a bone health assessment.
             </p>
           </div>
         </div>
@@ -297,7 +314,7 @@ export default function OsteoporosisArticlePage() {
                 Written by the Guardian Primary Care Clinical Team
               </h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC, dedicated to empowering patients with evidence-based health information and personalized care in Birmingham, AL.
+                Nurse practitioner led primary care in Cape Girardeau, Missouri. Reviewed by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri licensed collaborating physician.
               </p>
             </div>
           </div>
@@ -307,57 +324,57 @@ export default function OsteoporosisArticlePage() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl mb-8 text-[var(--color-ink)] font-light text-center" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h3 className="font-display text-3xl mb-8 text-[var(--color-ink)] font-light text-center">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <a href="/blog" className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+            <a href="/blog/heart-disease-prevention-small-changes-that-protect-your-hea" className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Heart Health: Prevention and Early Detection
+                <h4 className="font-display text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Heart Disease Prevention: Small Changes That Protect Your Heart
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Learn evidence-based strategies for protecting your cardiovascular health and reducing heart disease risk.
+                  Evidence-based habits that protect your cardiovascular health and lower your risk.
                 </p>
               </div>
             </a>
 
             {/* Card 2 */}
-            <a href="/blog" className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+            <a href="/blog/vitamin-d-deficiency-symptoms-testing-and-supplementation" className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Diabetes Management: Living Your Best Life
+                <h4 className="font-display text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Vitamin D Deficiency: Symptoms, Testing, and Supplementation
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Comprehensive guidance on managing diabetes effectively through lifestyle, medication, and ongoing care.
+                  Why vitamin D matters for bone strength, how it is tested, and how much most adults need.
                 </p>
               </div>
             </a>
 
             {/* Card 3 */}
-            <a href="/blog" className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group">
               <div className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] h-48 flex items-center justify-center">
                 <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  The Importance of Preventive Care
+                <h4 className="font-display text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Importance of Annual Wellness Exams for Adults
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Discover why regular check-ups and screenings are essential for catching health issues early.
+                  Why a yearly visit is the appointment most likely to catch a problem early.
                 </p>
               </div>
             </a>
@@ -368,18 +385,29 @@ export default function OsteoporosisArticlePage() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl mb-8 text-white/90">
-            Our team is here to help you protect your bone health and live your best life.
+            Our care team in Cape Girardeau, Missouri is here to help you protect your bone health.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
-          >
-            Schedule Your Consultation
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-[var(--color-primary)] px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:bg-[var(--color-cream)] hover:scale-105"
+            >
+              Schedule Your Consultation
+            </a>
+            <a
+              href="tel:+15732006143"
+              className="inline-block border border-white/70 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-white/10 transition-all duration-300"
+            >
+              Call (573) 200-6143
+            </a>
+          </div>
+          <p className="text-sm text-white/70 mt-6">
+            Guardian Primary Care &middot; 2441 Myra Dr, Cape Girardeau, MO 63703 &middot; By Appointment
+          </p>
         </div>
       </section>
     </main>

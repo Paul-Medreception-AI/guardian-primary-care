@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Understanding and Managing Migraine Headaches | Guardian Primary Care',
-  description: 'Learn about migraine triggers, symptoms, and evidence-based treatment strategies. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+  title: 'Understanding and Managing Migraine Headaches',
+  description: 'Migraine is a neurological condition, not just a bad headache. Learn the phases, triggers and treatments, and when to see your provider in Cape Girardeau MO.',
   openGraph: {
-    title: 'Understanding and Managing Migraine Headaches | Guardian Primary Care',
-    description: 'Learn about migraine triggers, symptoms, and evidence-based treatment strategies. Expert guidance from Guardian Primary Care in Birmingham, AL.',
+    title: 'Understanding and Managing Migraine Headaches',
+    description: 'Learn about migraine triggers, symptoms, and evidence-based treatment strategies. Expert guidance from Guardian Primary Care in Cape Girardeau, MO.',
     type: 'article',
     publishedTime: '2025-01-15T10:00:00Z',
   },
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
           
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Understanding and Managing Migraine Headaches
           </h1>
           
@@ -55,28 +56,44 @@ export default function BlogPost() {
               <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-5 h-5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/cond-migraines.jpg"
+              alt="A man hunched forward with one hand covering his face during a migraine attack"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Article Body */}
-      <article className="bg-white py-20">
+      <article className="bg-white pt-12 pb-20">
         <div className="max-w-3xl mx-auto px-6">
           
           {/* Opening Hook */}
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              The throbbing pain begins behind one eye. Light becomes unbearable. Sounds feel amplified. Nausea creeps in. For the nearly 39 million Americans living with migraines, these aren't just "bad headaches"—they're neurological events that can derail entire days, strain relationships, and significantly impact quality of life. Yet despite how common migraines are, many people suffer in silence, unaware that effective treatments and management strategies exist.
+              The throbbing pain begins behind one eye. Light becomes unbearable. Sounds feel amplified. Nausea creeps in. For the many people living with migraines, these are not just bad headaches. They are neurological events that can derail entire days, strain relationships and significantly affect quality of life. Yet despite how common migraines are, many people suffer in silence, unaware that effective treatments and management strategies exist.
             </p>
             <p>
-              At Guardian Primary Care in Birmingham, AL, we understand that migraine management requires more than just pain medication. It demands a comprehensive approach that addresses triggers, lifestyle factors, and personalized treatment plans. This guide will help you understand what migraines really are and how you can take control of them.
+              At Guardian Primary Care in Cape Girardeau, MO, we understand that migraine management requires more than just pain medication. It demands a comprehensive approach that addresses triggers, lifestyle factors, and personalized treatment plans. This guide will help you understand what migraines really are and how you can take control of them.
             </p>
           </div>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             What Makes a Migraine Different from a Regular Headache?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -84,7 +101,7 @@ export default function BlogPost() {
               Migraines are complex neurological conditions, not simply severe headaches. While a tension headache might cause steady, mild-to-moderate pain across your head, migraines typically present with intense, throbbing pain on one side of the head, often accompanied by additional symptoms that can be debilitating.
             </p>
             <p className="mb-6">
-              The migraine experience often unfolds in distinct phases. Many people experience a "prodrome" phase one to two days before the headache, with symptoms like food cravings, mood changes, neck stiffness, or increased thirst. Some people then experience an "aura"—visual disturbances like flashing lights, blind spots, or tingling sensations—before the headache phase begins. The headache itself can last anywhere from four hours to three days if untreated.
+              The migraine experience often unfolds in distinct phases. Many people experience a "prodrome" phase one to two days before the headache, with symptoms like food cravings, mood changes, neck stiffness, or increased thirst. Some people then experience an aura (visual disturbances like flashing lights, blind spots or tingling sensations) before the headache phase begins. The headache itself can last anywhere from four hours to three days if untreated.
             </p>
             <p>
               What sets migraines apart is their impact on daily functioning. They're often accompanied by severe sensitivity to light (photophobia) and sound (phonophobia), nausea and vomiting, and sometimes dizziness or visual disturbances. These symptoms can make it impossible to work, care for family, or engage in normal activities.
@@ -92,28 +109,28 @@ export default function BlogPost() {
           </div>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Who Gets Migraines and Why?
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
             <p className="mb-6">
-              Migraines affect people of all ages, but they're most common in adults aged 35 to 55. Women are three times more likely to experience migraines than men, largely due to hormonal influences. In fact, many women notice their migraines correlate with their menstrual cycles, pregnancy, or menopause.
+              Migraines affect people of all ages, but they're most common in adults aged 35 to 55. Migraines are considerably more common in women than in men, largely due to hormonal influences. In fact, many women notice their migraines correlate with their menstrual cycles, pregnancy, or menopause.
             </p>
             <p className="mb-6">
-              Genetics play a significant role—if one or both parents experience migraines, you're more likely to develop them as well. Research suggests that migraines involve changes in brain chemistry, particularly with serotonin levels, and alterations in blood flow to the brain. Environmental factors, stress levels, sleep patterns, and dietary choices all contribute to migraine susceptibility.
+              Genetics play a significant role. If one or both parents experience migraines, you are more likely to develop them as well. Research suggests that migraines involve changes in brain chemistry, particularly with serotonin levels, and alterations in blood flow to the brain. Environmental factors, stress levels, sleep patterns, and dietary choices all contribute to migraine susceptibility.
             </p>
             <p>
-              The economic impact is substantial. The American Migraine Foundation reports that migraines cost U.S. employers more than $20 billion annually in lost productivity and healthcare expenses. Yet despite this significant burden, research suggests that nearly half of migraine sufferers have never received a formal diagnosis.
+              The economic impact is substantial, with migraines accounting for a large share of lost productivity and healthcare spending every year. Yet despite that burden, many people who live with migraines have never received a formal diagnosis.
             </p>
           </div>
 
           {/* Pull Quote */}
-          <blockquote className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl" style={{fontFamily: 'var(--font-cormorant)'}}>
-            "Understanding your personal migraine triggers is one of the most powerful tools in prevention. A headache diary can reveal patterns you never knew existed."
+          <blockquote className="font-display bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl">
+            Understanding your personal migraine triggers is one of the most powerful tools in prevention. A headache diary can reveal patterns you never knew existed.
           </blockquote>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Common Migraine Triggers to Watch For
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -173,12 +190,12 @@ export default function BlogPost() {
             </div>
 
             <p>
-              Keeping a detailed headache diary—noting what you ate, how you slept, stress levels, weather conditions, and where you were in your menstrual cycle—can help you identify patterns over time. Many patients are surprised to discover connections they never suspected.
+              Keeping a detailed headache diary, noting what you ate, how you slept, your stress levels, the weather and where you were in your menstrual cycle, can help you identify patterns over time. Many patients are surprised to discover connections they never suspected.
             </p>
           </div>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Treatment Options: From Acute Relief to Prevention
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -197,7 +214,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Lifestyle Strategies That Make a Difference
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -262,7 +279,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             When to Seek Professional Help
           </h2>
           <div className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -273,7 +290,7 @@ export default function BlogPost() {
               You should seek immediate medical attention if you experience a sudden, severe headache unlike any you've had before, headache accompanied by fever, stiff neck, confusion, vision changes, difficulty speaking, or numbness, or headache following a head injury. These could indicate more serious conditions requiring urgent evaluation.
             </p>
             <p className="mb-6">
-              At Guardian Primary Care in Birmingham, AL, we take a comprehensive approach to migraine management. We'll work with you to identify your triggers, develop an individualized treatment plan, and adjust strategies as needed. Because we operate as a direct primary care practice, we have the time to thoroughly address your concerns and provide ongoing support.
+              At Guardian Primary Care in Cape Girardeau, Missouri, we take a comprehensive approach to migraine management. We will work with you to identify your triggers, develop an individualized treatment plan, and adjust strategies as needed. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available for patients who prefer a membership option. Either way, we take the time to thoroughly address your concerns and provide ongoing support.
             </p>
             <p>
               Living with migraines doesn't mean accepting a diminished quality of life. With proper diagnosis, treatment, and lifestyle modifications, most people can significantly reduce the impact of migraines on their daily activities. The key is taking that first step to seek help and commit to a management plan.
@@ -283,10 +300,10 @@ export default function BlogPost() {
           {/* Closing Paragraph */}
           <div className="bg-[var(--color-light)] rounded-2xl p-8 mt-12 text-[var(--color-ink)] leading-loose">
             <p className="mb-4">
-              <strong>Ready to take control of your migraines?</strong> Guardian Primary Care in Birmingham, AL offers comprehensive migraine evaluation and personalized treatment plans designed around your unique needs. Our direct primary care model means you'll have the time and attention necessary to address this complex condition effectively.
+              <strong>Ready to take control of your migraines?</strong> Guardian Primary Care in Cape Girardeau, Missouri offers comprehensive migraine evaluation and personalized treatment plans designed around your needs. You will have the time and attention this condition deserves, whether you use insurance or choose Guardian Direct Care.
             </p>
             <p>
-              Don't let migraines continue to control your life. Contact us today to schedule a consultation and start your journey toward better headache management.
+              Do not let migraines continue to control your life. Call us at <a href="tel:+15732006143" className="text-[var(--color-accent)] hover:underline">(573) 200-6143</a> or schedule online to start your journey toward better headache management.
             </p>
           </div>
 
@@ -303,9 +320,9 @@ export default function BlogPost() {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Clinical Team</h3>
+              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care team</h3>
               <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC. Our team is dedicated to providing evidence-based, compassionate care to patients in Birmingham, AL and surrounding communities.
+                Primary care in Cape Girardeau, Missouri, led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri Licensed Collaborating Physician.
               </p>
             </div>
           </div>
@@ -315,13 +332,13 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 font-light text-center" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 font-light text-center">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             
             {/* Card 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/managing-chronic-pain-without-opioids-alternative-approaches" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-16 h-16 text-[var(--color-primary)]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -329,10 +346,10 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Understanding Chronic Pain Management
+                  Managing Chronic Pain Without Opioids: Alternative Approaches
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  Explore evidence-based approaches to managing chronic pain conditions and improving quality of life.
+                  Evidence-based ways to lower pain and restore function without opioids.
                 </p>
                 <div className="text-[var(--color-accent)] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
                   Read Article
@@ -344,7 +361,7 @@ export default function BlogPost() {
             </a>
 
             {/* Card 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/the-connection-between-mental-health-and-physical-health" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-16 h-16 text-[var(--color-primary)]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
@@ -352,10 +369,10 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  The Role of Stress in Physical Health
+                  The Connection Between Mental Health and Physical Health
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  Learn how chronic stress impacts your body and practical strategies for stress reduction.
+                  How chronic stress affects your body, and practical strategies for reducing it.
                 </p>
                 <div className="text-[var(--color-accent)] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
                   Read Article
@@ -367,7 +384,7 @@ export default function BlogPost() {
             </a>
 
             {/* Card 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg stroke="currentColor" strokeWidth={1.5} fill="none" viewBox="0 0 24 24" className="w-16 h-16 text-[var(--color-primary)]">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -375,10 +392,10 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <h4 className="text-xl font-semibold text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Preventive Care: Your Best Health Investment
+                  The Importance of Annual Wellness Exams for Adults
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm leading-relaxed mb-4">
-                  Discover how preventive care and regular screenings can help you stay healthy and catch problems early.
+                  How preventive care and regular screenings help you stay healthy and catch problems early.
                 </p>
                 <div className="text-[var(--color-accent)] text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
                   Read Article
@@ -396,20 +413,26 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{fontFamily: 'var(--font-cormorant)'}}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Our team is here to help.
+            Our care team in Cape Girardeau, Missouri is here to help you take control of your migraines. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer a membership option.
           </p>
           <a 
             href="/contact" 
             className="inline-flex items-center gap-2 bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:gap-3 shadow-lg hover:shadow-xl"
           >
-            Schedule a Consultation
+            Schedule an Appointment
             <svg stroke="currentColor" strokeWidth={2} fill="none" viewBox="0 0 24 24" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
+          </a>
+          <a
+            href="tel:+15732006143"
+            className="inline-flex items-center gap-2 border border-white/70 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/10 mt-4 sm:mt-0 sm:ml-4"
+          >
+            Call (573) 200-6143
           </a>
         </div>
       </section>

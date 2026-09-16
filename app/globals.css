@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Palette per Guardian Primary Care's own published brand guidelines:
+   Primary #0095E9 (blue) · Secondary White #FFFFFF + Dark Blue #00304B.
+   #37B6FF is the logo wordmark blue, used only as a small highlight. */
 :root {
-  --color-primary: #1da1f2;
-  --color-dark: #13699d;
-  --color-light: #ddf1fd;
-  --color-ink: #1a2030;
-  --color-cream: #f8fcff;
-  --color-muted: #64748b;
-  --color-border: #d2eefd;
-  --color-accent: #1da1f2;
-  --color-accent-dark: #13699d;
+  --color-primary: #0095e9;
+  --color-dark: #00304b;
+  --color-mid: #1a80b6;
+  --color-light: #e0f4ff;
+  --color-ink: #00304b;
+  --color-cream: #f7fbfe;
+  --color-muted: #5a6b7a;
+  --color-border: #cde9fa;
+  --color-accent: #0095e9;
+  --color-accent-dark: #00304b;
+  --color-highlight: #37b6ff;
 }
 
 * { box-sizing: border-box; }
@@ -26,4 +31,33 @@ body { background-color: var(--color-cream); color: var(--color-ink); }
   animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) forwards;
   animation-timeline: view();
   animation-range: entry 0% entry 35%;
+}
+
+/* Header dropdown: CSS-driven so the nav needs no client component. */
+.nav-item > .nav-panel {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity .16s ease, transform .16s ease, visibility .16s;
+}
+.nav-item:hover > .nav-panel,
+.nav-item:focus-within > .nav-panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-item:hover > .nav-trigger,
+.nav-item:focus-within > .nav-trigger { color: var(--color-primary); }
+.nav-item:hover > .nav-trigger .nav-caret,
+.nav-item:focus-within > .nav-trigger .nav-caret { transform: rotate(180deg); }
+.nav-caret { transition: transform .16s ease; }
+
+/* Mobile nav: checkbox toggle, no JS. */
+#mobile-nav-toggle:checked ~ .mobile-panel { display: block; }
+#mobile-nav-toggle:checked ~ .burger .burger-open { display: none; }
+#mobile-nav-toggle:checked ~ .burger .burger-close { display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up { animation: none; opacity: 1; }
+  .nav-item > .nav-panel { transition: none; }
 }

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Sleep and Health: Why Quality Sleep Matters for Overall Wellness | Guardian Primary Care',
-  description: 'Discover the vital connection between quality sleep and overall health. Learn evidence-based strategies to improve your sleep and enhance your wellness in Birmingham, AL.',
-  keywords: 'sleep health, quality sleep, sleep wellness, sleep tips Birmingham AL, primary care sleep advice, sleep and health connection',
+  title: 'Sleep and Health: Why Quality Sleep Matters',
+  description: 'How quality sleep protects your heart, immune system, mood and weight, plus practical steps to sleep better and when to bring sleep problems to your provider.',
+  keywords: 'sleep health, quality sleep, sleep wellness, sleep tips Cape Girardeau MO, primary care sleep advice, sleep and health connection',
 }
 
 export default function BlogPost() {
@@ -27,7 +28,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="font-serif text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
+          <h1 className="font-display text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8">
             Sleep and Health: Why Quality Sleep Matters for Overall Wellness
           </h1>
 
@@ -37,23 +38,39 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full rounded-2xl overflow-hidden">
+            <Image
+              src="/images/site/cond-sleep-apnea.jpg"
+              alt="An unmade bed in a darkened bedroom with light coming through the window blinds"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
 
       {/* Article Body */}
-      <article className="bg-white py-20 max-w-3xl mx-auto px-6">
+      <article className="bg-white pt-12 pb-20 max-w-3xl mx-auto px-6">
         <div className="text-[var(--color-ink)] leading-loose text-base">
           <p className="text-xl mb-6">
-            You've probably heard it countless times: "Make sure you get enough sleep." Yet in our fast-paced world, sleep is often the first thing we sacrifice when life gets busy. But what if we told you that quality sleep isn't just about feeling rested—it's one of the most powerful tools you have for protecting your physical health, mental clarity, and emotional well-being?
+            You've probably heard it countless times: "Make sure you get enough sleep." Yet in our fast-paced world, sleep is often the first thing we sacrifice when life gets busy. But what if we told you that quality sleep is not just about feeling rested? It is one of the most powerful tools you have for protecting your physical health, mental clarity and emotional wellbeing.
           </p>
 
           <p className="mb-6">
             Sleep is not a luxury; it's a biological necessity. During those precious hours of rest, your body performs critical maintenance work that affects everything from your immune system to your heart health. Let's explore why sleep matters so much and what you can do to prioritize it in your life.
           </p>
 
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             What Happens When You Sleep?
           </h2>
 
@@ -65,12 +82,12 @@ export default function BlogPost() {
             The sleep cycle consists of multiple stages, including light sleep, deep sleep, and REM (rapid eye movement) sleep. Each stage plays a unique role. Deep sleep is when physical restoration happens, while REM sleep is crucial for cognitive function, learning, and emotional regulation. Missing out on complete sleep cycles means your body can't perform these vital functions effectively.
           </p>
 
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             The Health Consequences of Poor Sleep
           </h2>
 
           <p className="mb-6">
-            Chronic sleep deprivation isn't just about feeling tired—it has serious health implications that extend far beyond morning grogginess. Research has consistently shown that inadequate sleep increases your risk for numerous health conditions.
+            Chronic sleep deprivation is not just about feeling tired. It has serious health implications that extend far beyond morning grogginess. Research has consistently shown that inadequate sleep increases your risk for numerous health conditions.
           </p>
 
           <p className="mb-6">
@@ -78,26 +95,26 @@ export default function BlogPost() {
           </p>
 
           <p className="mb-6">
-            Mental health is deeply intertwined with sleep quality. Insufficient sleep is linked to depression, anxiety, and increased stress levels. It impairs cognitive function, affecting your memory, concentration, decision-making abilities, and reaction time. Even your weight is influenced by sleep—poor sleep disrupts hormones that control hunger and appetite, often leading to weight gain.
+            Mental health is deeply intertwined with sleep quality. Insufficient sleep is linked to depression, anxiety, and increased stress levels. It impairs cognitive function, affecting your memory, concentration, decision-making abilities, and reaction time. Even your weight is influenced by sleep, because poor sleep disrupts the hormones that control hunger and appetite, often leading to weight gain.
           </p>
 
-          <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-serif">
-            "Sleep is the golden chain that ties health and our bodies together. When we prioritize rest, we invest in every aspect of our wellness—from our hearts to our minds."
+          <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-display">
+            Sleep is not time taken away from your health. It is one of the times your body does the work of staying healthy, from your heart to your mind.
           </div>
 
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             How Much Sleep Do You Really Need?
           </h2>
 
           <p className="mb-6">
-            Sleep needs vary by age and individual factors, but most adults need 7-9 hours of quality sleep per night. Children and teenagers require even more—anywhere from 8-14 hours depending on their age. Unfortunately, research shows that more than one-third of American adults regularly get less than the recommended amount.
+            Sleep needs vary by age and individual factors, but most adults need 7-9 hours of quality sleep per night. Children and teenagers require even more, anywhere from 8 to 14 hours depending on their age. Many adults regularly get less than the recommended amount.
           </p>
 
           <p className="mb-6">
             Quality matters as much as quantity. You might spend 8 hours in bed but still wake feeling unrefreshed if your sleep is fragmented or you're not cycling through all sleep stages properly. Conditions like sleep apnea, restless leg syndrome, or chronic insomnia can severely impact sleep quality even when you're spending adequate time in bed.
           </p>
 
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             Evidence-Based Strategies for Better Sleep
           </h2>
 
@@ -170,7 +187,7 @@ export default function BlogPost() {
             </div>
           </div>
 
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             When to Seek Professional Help
           </h2>
 
@@ -179,15 +196,15 @@ export default function BlogPost() {
           </p>
 
           <p className="mb-6">
-            Sleep disorders like sleep apnea, insomnia, restless leg syndrome, and narcolepsy are common and treatable, but they require professional diagnosis and management. Don't dismiss sleep problems as just "getting older" or "being stressed"—they deserve the same attention as any other health concern.
+            Sleep disorders like sleep apnea, insomnia, restless leg syndrome, and narcolepsy are common and treatable, but they require professional diagnosis and management. Do not dismiss sleep problems as just getting older or being stressed. They deserve the same attention as any other health concern.
           </p>
 
-          <h2 className="font-serif text-3xl text-[var(--color-ink)] mt-12 mb-4">
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4">
             The Bottom Line: Sleep Is Healthcare
           </h2>
 
           <p className="mb-6">
-            In a culture that often glorifies busyness and productivity at the expense of rest, it's time to reclaim sleep as the health priority it truly is. Quality sleep isn't selfish or lazy—it's essential healthcare. When you prioritize sleep, you're investing in your immune function, your cardiovascular health, your mental clarity, your emotional resilience, and your overall quality of life.
+            In a culture that often glorifies busyness and productivity at the expense of rest, it's time to reclaim sleep as the health priority it truly is. Quality sleep is not selfish or lazy. It is essential healthcare. When you prioritize sleep, you're investing in your immune function, your cardiovascular health, your mental clarity, your emotional resilience, and your overall quality of life.
           </p>
 
           <p className="mb-6">
@@ -195,7 +212,7 @@ export default function BlogPost() {
           </p>
 
           <p className="mb-6">
-            If you're struggling with sleep issues in Birmingham, AL, our team at Guardian Primary Care is here to help. We take a comprehensive approach to health that includes addressing sleep quality as a cornerstone of wellness. Don't wait until poor sleep takes a serious toll on your health—reach out today and let's work together to help you get the restorative rest you deserve.
+            If you are struggling with sleep in Cape Girardeau, Missouri, our team at Guardian Primary Care is here to help. We take a comprehensive approach to health that includes sleep quality as a cornerstone of wellness, and we are in network with most major commercial insurances, Medicare and Medicaid. Do not wait until poor sleep takes a serious toll on your health. Call us at (573) 200-6143 and let us work together to help you get the restorative rest you deserve.
           </p>
         </div>
       </article>
@@ -210,10 +227,10 @@ export default function BlogPost() {
           </div>
           <div>
             <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">
-              Written by the Guardian Primary Care Clinical Team
+              Written by the Guardian Primary Care team
             </h3>
             <p className="text-[var(--color-muted)] text-sm">
-              Board-certified providers specializing in Primary Care / DPC, dedicated to delivering personalized, evidence-based care to patients in Birmingham, AL.
+              Primary care in Cape Girardeau, Missouri, led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri Licensed Collaborating Physician.
             </p>
           </div>
         </div>
@@ -222,57 +239,57 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="font-serif text-3xl text-[var(--color-ink)] mb-8 text-center">
+          <h3 className="font-display text-3xl text-[var(--color-ink)] mb-8 text-center">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Article 1 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/the-connection-between-mental-health-and-physical-health" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Stress Management Techniques for Better Health
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Connection Between Mental Health and Physical Health
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Learn practical strategies to reduce stress and improve your overall well-being.
+                  How stress and mood shape your physical health, and what you can do about it.
                 </p>
               </div>
             </a>
 
             {/* Article 2 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/nutrition-counseling-how-diet-impacts-chronic-disease-manage" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Nutrition Basics: Building a Healthier Diet
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  Nutrition Counseling: How Diet Impacts Chronic Disease Management
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Discover evidence-based nutritional guidance to fuel your body and support wellness.
+                  Evidence-based nutrition guidance to fuel your body and support wellness.
                 </p>
               </div>
             </a>
 
             {/* Article 3 */}
-            <a href="/blog" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 animate-fade-up">
               <div className="bg-gradient-to-br from-[var(--color-light)] to-white p-12 flex items-center justify-center">
                 <svg className="w-16 h-16 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
                 </svg>
               </div>
               <div className="p-6">
-                <h4 className="font-serif text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
-                  Preventive Care: The Foundation of Wellness
+                <h4 className="font-display text-xl text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors">
+                  The Importance of Annual Wellness Exams for Adults
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
-                  Understanding how preventive care helps catch health issues before they become serious.
+                  How a yearly visit helps catch health issues before they become serious.
                 </p>
               </div>
             </a>
@@ -283,17 +300,23 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-light mb-4">
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Our team is here to help you achieve better health and wellness.
+            Our care team in Cape Girardeau, Missouri is here to help you sleep better and feel better. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer a membership option.
           </p>
           <a
             href="/contact"
             className="inline-block bg-[var(--color-accent)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--color-accent-dark)] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
           >
-            Schedule a Consultation
+            Schedule an Appointment
+          </a>
+          <a
+            href="tel:+15732006143"
+            className="inline-block border border-white/70 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:bg-white/10 mt-4 sm:mt-0 sm:ml-4"
+          >
+            Call (573) 200-6143
           </a>
         </div>
       </section>

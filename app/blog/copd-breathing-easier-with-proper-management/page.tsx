@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'COPD: Breathing Easier with Proper Management | Guardian Primary Care',
-  description: 'Learn about COPD management, treatment options, and lifestyle strategies to improve breathing and quality of life. Expert guidance from Guardian Primary Care in Birmingham, AL.',
-  keywords: 'COPD, chronic obstructive pulmonary disease, COPD management, breathing problems, lung disease, Birmingham AL primary care',
+  title: 'COPD: Breathing Easier with Proper Management',
+  description: 'How COPD is diagnosed, the treatments that slow it down and the daily habits that help you breathe easier, from Guardian Primary Care in Cape Girardeau, MO.',
+  keywords: 'COPD, chronic obstructive pulmonary disease, COPD management, breathing problems, lung disease, Cape Girardeau MO primary care',
 }
 
 export default function BlogPost() {
@@ -27,7 +28,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="font-display text-5xl font-light leading-tight text-center mb-8">
             COPD: Breathing Easier with Proper Management
           </h1>
 
@@ -37,7 +38,23 @@ export default function BlogPost() {
             <span>•</span>
             <span>7 min read</span>
             <span>•</span>
-            <span>Dr. Care Team</span>
+            <span>Guardian Primary Care Team</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-copd.jpg"
+              alt="A blue metered dose inhaler resting beside a single cigarette, a reminder that smoking is the leading cause of COPD."
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -47,15 +64,15 @@ export default function BlogPost() {
         <div className="max-w-3xl mx-auto px-6">
           {/* Opening */}
           <p className="text-[var(--color-ink)] leading-loose text-lg mb-6">
-            Every breath we take is a gift we rarely think about—until breathing becomes difficult. For the millions of Americans living with Chronic Obstructive Pulmonary Disease (COPD), each breath can feel like a challenge. But here's the encouraging truth: with proper management, education, and support, people with COPD can breathe easier, stay active, and enjoy a fulfilling quality of life.
+            Every breath we take is a gift we rarely think about, until breathing becomes difficult. For the millions of Americans living with Chronic Obstructive Pulmonary Disease (COPD), each breath can feel like a challenge. But here's the encouraging truth: with proper management, education, and support, people with COPD can breathe easier, stay active, and enjoy a fulfilling quality of life.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            If you or a loved one has been diagnosed with COPD, you're not alone—and you're not without options. Understanding this condition and taking proactive steps can make all the difference in how you live each day.
+            If you or a loved one has been diagnosed with COPD, you&apos;re not alone, and you are not without options. Understanding this condition and taking proactive steps can make all the difference in how you live each day.
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             What Is COPD?
           </h2>
 
@@ -64,11 +81,11 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            According to the American Lung Association, COPD affects more than 16 million Americans, and millions more may be living with it undiagnosed. It's the third leading cause of death in the United States, yet with early detection and comprehensive management, its progression can be slowed significantly.
+            COPD affects millions of Americans, and many more may be living with it undiagnosed. It is one of the leading causes of death in the United States, yet with early detection and comprehensive management, its progression can be slowed significantly.
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Who Is at Risk?
           </h2>
 
@@ -81,7 +98,7 @@ export default function BlogPost() {
               <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <span><strong>Smoking:</strong> The leading cause of COPD. About 85-90% of cases are linked to cigarette smoking, including secondhand smoke exposure.</span>
+              <span><strong>Smoking:</strong> The leading cause of COPD. The large majority of cases are linked to cigarette smoking, including secondhand smoke exposure.</span>
             </li>
             <li className="flex items-start gap-3 text-[var(--color-ink)] leading-loose">
               <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -105,13 +122,13 @@ export default function BlogPost() {
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl leading-relaxed" style={{ fontFamily: 'Cormorant, serif' }}>
-              "COPD is not a death sentence. With the right treatment plan and lifestyle adjustments, patients can live active, meaningful lives for many years."
+            <p className="font-display text-[var(--color-ink)] text-xl leading-relaxed">
+              COPD is not a death sentence. With the right treatment plan and lifestyle adjustments, people living with COPD can stay active and enjoy meaningful lives for many years.
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Recognizing the Symptoms
           </h2>
 
@@ -163,7 +180,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Evidence-Based Treatment Approaches
           </h2>
 
@@ -176,7 +193,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            <strong>Pulmonary Rehabilitation:</strong> Studies published in the American Journal of Respiratory and Critical Care Medicine show that pulmonary rehab programs—combining exercise training, education, and behavioral support—significantly improve exercise capacity, reduce symptoms, and enhance quality of life.
+            <strong>Pulmonary Rehabilitation:</strong> Pulmonary rehabilitation programs, which combine exercise training, education and behavioral support, are shown to improve exercise capacity, reduce symptoms and enhance quality of life.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
@@ -188,7 +205,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             Lifestyle Strategies That Make a Difference
           </h2>
 
@@ -236,7 +253,7 @@ export default function BlogPost() {
           </ul>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             The Importance of Ongoing Care
           </h2>
 
@@ -253,11 +270,11 @@ export default function BlogPost() {
           </ul>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            In Birmingham, AL, Guardian Primary Care offers comprehensive COPD management through our direct primary care model. This means more time with your provider, easier access when you have concerns, and coordinated care that puts your needs first.
+            In Cape Girardeau, Missouri, Guardian Primary Care offers comprehensive COPD management. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available for patients who prefer predictable monthly pricing. Either way the goal is the same: time with your provider, easy access when you have a concern, and care coordinated around your needs.
           </p>
 
           {/* Closing */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light">
             You Can Breathe Easier
           </h2>
 
@@ -266,7 +283,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
-            If you're experiencing symptoms of COPD, don't wait. Early diagnosis and treatment make a significant difference in outcomes. Our team at Guardian Primary Care is here to provide the comprehensive, compassionate care you deserve—with the time and attention your health requires.
+            If you're experiencing symptoms of COPD, don't wait. Early diagnosis and treatment make a significant difference in outcomes. Our care team at Guardian Primary Care is here to provide comprehensive, compassionate care with the time and attention your health requires. Call us at (573) 200-6143 to schedule a visit.
           </p>
         </div>
 
@@ -279,10 +296,10 @@ export default function BlogPost() {
           </div>
           <div>
             <div className="font-semibold text-[var(--color-ink)] mb-1">
-              Written by the Guardian Primary Care Clinical Team
+              Written by the Guardian Primary Care Team
             </div>
             <div className="text-[var(--color-muted)] text-sm leading-relaxed">
-              Board-certified providers specializing in Primary Care / DPC
+              Primary care for every stage of life in Cape Girardeau, Missouri. Our care team is led by Preston Holifield, DNP, APRN, FNP-C, a nationally certified family nurse practitioner working with a Missouri licensed collaborating physician.
             </div>
           </div>
         </div>
@@ -291,50 +308,50 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl font-light text-center mb-12 text-[var(--color-ink)]" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="font-display text-3xl font-light text-center mb-12 text-[var(--color-ink)]">
             Related Resources
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <a href="/blog" className="bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 group animate-fade-up">
+            <a href="/blog/asthma-management-controlling-symptoms-for-better-quality-of" className="bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 group animate-fade-up">
               <div className="bg-[var(--color-light)] rounded-lg w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-[var(--color-primary)] transition-colors">
                 <svg className="w-6 h-6 text-[var(--color-primary)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                Managing Asthma: A Comprehensive Guide
+              <h4 className="font-display text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+                Asthma Management: Controlling Symptoms
               </h4>
               <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                Learn effective strategies for controlling asthma symptoms and living an active, healthy life.
+                Effective strategies for controlling asthma symptoms and living an active, healthy life.
               </p>
             </a>
 
             {/* Card 2 */}
-            <a href="/blog" className="bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 group animate-fade-up" style={{ animationDelay: '100ms' }}>
+            <a href="/blog/flu-vaccines-myths-facts-and-why-you-should-get-one" className="bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 group animate-fade-up" style={{ animationDelay: '100ms' }}>
               <div className="bg-[var(--color-light)] rounded-lg w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-[var(--color-primary)] transition-colors">
                 <svg className="w-6 h-6 text-[var(--color-primary)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                The Benefits of Quitting Smoking at Any Age
+              <h4 className="font-display text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+                Flu Vaccines: Myths, Facts and Why to Get One
               </h4>
               <p className="text-[var(--color-muted)] text-sm leading-relaxed">
-                It's never too late to quit. Discover how your body heals and the support available to help you succeed.
+                Why an annual flu shot matters when you live with a lung condition, and what to expect.
               </p>
             </a>
 
             {/* Card 3 */}
-            <a href="/blog" className="bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 group animate-fade-up" style={{ animationDelay: '200ms' }}>
+            <a href="/blog/the-importance-of-annual-wellness-exams-for-adults" className="bg-white rounded-xl p-6 hover:shadow-xl transition-all duration-300 group animate-fade-up" style={{ animationDelay: '200ms' }}>
               <div className="bg-[var(--color-light)] rounded-lg w-12 h-12 flex items-center justify-center mb-4 group-hover:bg-[var(--color-primary)] transition-colors">
                 <svg className="w-6 h-6 text-[var(--color-primary)] group-hover:text-white transition-colors" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                 </svg>
               </div>
-              <h4 className="text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'Cormorant, serif' }}>
-                Understanding Preventive Care and Screenings
+              <h4 className="font-display text-xl font-light mb-2 text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+                The Importance of Annual Wellness Exams
               </h4>
               <p className="text-[var(--color-muted)] text-sm leading-relaxed">
                 Stay ahead of health issues with regular screenings and preventive care tailored to your needs.
@@ -347,18 +364,21 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="font-display text-4xl font-light mb-4">
             Ready to Take the Next Step?
           </h2>
-          <p className="text-xl mb-8 text-white/90">
-            Our team is here to help.
+          <p className="text-xl mb-8 text-white/90">Our care team is here to help you breathe easier, one step at a time.</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="/contact" className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              Schedule an Appointment
+            </a>
+            <a href="tel:+15732006143" className="inline-block bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-medium transition-all duration-300 border border-white/30">
+              Call (573) 200-6143
+            </a>
+          </div>
+          <p className="mt-6 text-sm text-white/80">
+            Guardian Primary Care, 2441 Myra Dr, Cape Girardeau, MO 63703. Visits are by appointment. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer predictable monthly pricing.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg"
-          >
-            Schedule Your Consultation
-          </a>
         </div>
       </section>
     </main>

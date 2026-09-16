@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Weight Management: Evidence-Based Approaches That Actually Work | Guardian Primary Care',
-  description: 'Discover proven, science-backed strategies for sustainable weight management. Learn what actually works from the Primary Care experts at Guardian Primary Care in Birmingham, AL.',
-  keywords: 'weight management, weight loss, obesity treatment, evidence-based weight loss, sustainable weight management, Birmingham AL, primary care',
+  title: 'Weight Management: Evidence-Based Approaches That Work',
+  description: 'Proven, science-backed strategies for lasting weight management from the care team at Guardian Primary Care in Cape Girardeau, MO. Call (573) 200-6143.',
+  keywords: 'weight management, weight loss, obesity treatment, evidence-based weight loss, sustainable weight management, Cape Girardeau MO, primary care',
   openGraph: {
-    title: 'Weight Management: Evidence-Based Approaches That Actually Work',
-    description: 'Discover proven, science-backed strategies for sustainable weight management from Guardian Primary Care.',
+    title: 'Weight Management: Evidence-Based Approaches That Work',
+    description: 'Proven, science-backed strategies for lasting weight management from Guardian Primary Care in Cape Girardeau, Missouri.',
     type: 'article',
     publishedTime: '2025-01-15T00:00:00Z',
   },
@@ -33,7 +34,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h1 className="text-5xl font-light leading-tight max-w-3xl mx-auto text-center mb-8 font-display">
             Weight Management: Evidence-Based Approaches That Actually Work
           </h1>
 
@@ -61,16 +62,32 @@ export default function BlogPost() {
         </div>
       </section>
 
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-obesity.jpg"
+              alt="A bathroom scale on a wood floor, representing a steady, measured approach to weight management"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Article Body */}
       <article className="bg-white py-20 max-w-3xl mx-auto px-6">
         <div className="text-[var(--color-ink)] leading-loose text-base">
           {/* Opening Hook */}
-          <p className="text-xl leading-relaxed mb-8" style={{ fontFamily: 'var(--font-cormorant)' }}>
-            You've tried the diets. You've counted calories, eliminated food groups, and followed the latest trends. Maybe you've even lost weight—only to gain it back. If this sounds familiar, you're not alone. More than 70% of American adults struggle with weight management, and the confusion around what actually works has never been greater.
+          <p className="text-xl leading-relaxed mb-8 font-display">
+            You've tried the diets. You've counted calories, eliminated food groups, and followed the latest trends. Maybe you've even lost weight, only to gain it back. If this sounds familiar, you're not alone. Weight is one of the most common concerns patients bring to primary care, and the confusion around what actually works has never been greater.
           </p>
 
           <p className="mb-6">
-            The truth is, sustainable weight management isn't about the next miracle diet or trendy supplement. It's about understanding the science behind metabolism, behavior, and long-term lifestyle change. At Guardian Primary Care in Birmingham, AL, we take an evidence-based approach that focuses on what research consistently shows actually works—and just as importantly, what doesn't.
+            The truth is, sustainable weight management isn't about the next miracle diet or trendy supplement. It's about understanding the science behind metabolism, behavior, and long-term lifestyle change. At Guardian Primary Care in Cape Girardeau, MO, we take an evidence-based approach that focuses on what research consistently shows actually works, and just as importantly, what doesn't.
           </p>
 
           <p className="mb-6">
@@ -78,12 +95,12 @@ export default function BlogPost() {
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Why Most Diets Fail (And What This Tells Us)
           </h2>
 
           <p className="mb-6">
-            Research shows that approximately 80% of people who lose weight regain it within a year. This isn't a failure of willpower—it's a failure of approach. Restrictive diets trigger biological responses that make weight regain almost inevitable: metabolic adaptation slows calorie burning, hunger hormones increase, and satiety signals decrease.
+            Research consistently shows that most people who lose weight on a restrictive diet regain it within a year or two. This isn't a failure of willpower, it's a failure of approach. Restrictive diets trigger biological responses that make weight regain almost inevitable: metabolic adaptation slows calorie burning, hunger hormones increase, and satiety signals decrease.
           </p>
 
           <p className="mb-6">
@@ -91,7 +108,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             The Foundations: What the Evidence Actually Shows
           </h2>
 
@@ -122,7 +139,7 @@ export default function BlogPost() {
               <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              <p><strong className="text-[var(--color-ink)]">Behavioral self-monitoring:</strong> People who track their food intake, weight, and activity consistently lose 2-3 times more weight than those who don't.</p>
+              <p><strong className="text-[var(--color-ink)]">Behavioral self-monitoring:</strong> People who consistently track their food intake, weight, and activity tend to lose considerably more weight than people who never track at all.</p>
             </div>
             <div className="flex gap-3 items-start">
               <svg className="w-6 h-6 text-[var(--color-primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -133,16 +150,16 @@ export default function BlogPost() {
           </div>
 
           <p className="mb-6">
-            None of these principles are glamorous or revolutionary—but that's precisely the point. Sustainable weight management is built on consistent application of proven fundamentals, not dramatic interventions.
+            None of these principles are glamorous or revolutionary, but that's precisely the point. Sustainable weight management is built on consistent application of proven fundamentals, not dramatic interventions.
           </p>
 
           {/* Pull Quote */}
-          <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl" style={{ fontFamily: 'var(--font-cormorant)' }}>
-            "Sustainable weight management isn't about finding the perfect diet—it's about building habits you can maintain for life."
+          <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8 text-[var(--color-ink)] italic text-xl font-display">
+            "Sustainable weight management isn't about finding the perfect diet, it's about building habits you can maintain for life."
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             The Role of Medical Support
           </h2>
 
@@ -155,7 +172,7 @@ export default function BlogPost() {
           </p>
 
           <p className="mb-6">
-            <strong>FDA-approved weight management medications</strong> have come a long way. Modern options like GLP-1 receptor agonists work with your body's natural hunger and satiety signals, helping you feel satisfied with appropriate portion sizes. These aren't "shortcuts"—they're tools that address real biological barriers to weight loss.
+            <strong>FDA-approved weight management medications</strong> have come a long way. Modern options like GLP-1 receptor agonists work with your body's natural hunger and satiety signals, helping you feel satisfied with appropriate portion sizes. These aren't "shortcuts," they're tools that address real biological barriers to weight loss.
           </p>
 
           <p className="mb-6">
@@ -163,12 +180,12 @@ export default function BlogPost() {
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Practical Strategies That Work
           </h2>
 
           <p className="mb-6">
-            Translating evidence into daily life requires practical, sustainable strategies. Here's what we recommend to our patients in Birmingham:
+            Translating evidence into daily life requires practical, sustainable strategies. Here's what we recommend to our patients in Cape Girardeau:
           </p>
 
           <div className="space-y-4 my-8">
@@ -211,7 +228,7 @@ export default function BlogPost() {
           </div>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             Rethinking Success: Beyond the Scale
           </h2>
 
@@ -224,16 +241,16 @@ export default function BlogPost() {
           </p>
 
           <p className="mb-6">
-            Furthermore, improvements in fitness, energy, mood, and quality of life often precede changes on the scale. If you're feeling better, sleeping better, and moving more easily, that's success—regardless of what the scale says this week.
+            Furthermore, improvements in fitness, energy, mood, and quality of life often precede changes on the scale. If you're feeling better, sleeping better, and moving more easily, that's success, regardless of what the scale says this week.
           </p>
 
           {/* Section 6 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-light font-display">
             When to Seek Professional Support
           </h2>
 
           <p className="mb-6">
-            Weight management is complex, and going it alone isn't necessary—or always advisable. Consider professional support if:
+            Weight management is complex, and going it alone is neither necessary nor always advisable. Consider professional support if:
           </p>
 
           <div className="space-y-4 my-8">
@@ -276,10 +293,10 @@ export default function BlogPost() {
           {/* Closing */}
           <div className="mt-12 pt-8 border-t border-[var(--color-border)]">
             <p className="text-lg mb-6">
-              Sustainable weight management is possible—but it requires moving beyond fad diets and quick fixes. By focusing on evidence-based strategies, addressing underlying medical factors, and building habits you can maintain for life, you can achieve meaningful, lasting results.
+              Sustainable weight management is possible, but it requires moving beyond fad diets and quick fixes. By focusing on evidence-based strategies, addressing underlying medical factors, and building habits you can maintain for life, you can achieve meaningful, lasting results.
             </p>
             <p className="text-lg">
-              If you're ready to take a different approach to weight management—one grounded in science, personalized to your needs, and supported by experienced healthcare providers—we're here to help. Let's work together to create a plan that actually works for you.
+              If you're ready to take a different approach to weight management (one grounded in science, personalized to your needs, and supported by a care team that knows you), we're here to help. Let's work together to create a plan that actually works for you.
             </p>
           </div>
         </div>
@@ -295,9 +312,9 @@ export default function BlogPost() {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Clinical Team</h3>
+              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care team</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC, dedicated to delivering evidence-based, compassionate care to the Birmingham community.
+                Guardian Primary Care is led by Preston Holifield, DNP, APRN, FNP-C, a board-certified family nurse practitioner who works with a Missouri Licensed Collaborating Physician. Our care team serves Cape Girardeau and Southeast Missouri.
               </p>
             </div>
           </div>
@@ -307,7 +324,7 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center font-light" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center font-light font-display">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -320,7 +337,7 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-accent)] mb-2">Preventive Care</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-display">
                   Understanding Diabetes Prevention and Management
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
@@ -338,7 +355,7 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-accent)] mb-2">Nutrition</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-display">
                   The Truth About Nutrition: Separating Fact from Fiction
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
@@ -356,7 +373,7 @@ export default function BlogPost() {
               </div>
               <div className="p-6">
                 <div className="text-xs uppercase tracking-wider text-[var(--color-accent)] mb-2">Wellness</div>
-                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors" style={{ fontFamily: 'var(--font-cormorant)' }}>
+                <h4 className="text-xl font-light text-[var(--color-ink)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-display">
                   Sleep and Metabolic Health: What You Need to Know
                 </h4>
                 <p className="text-[var(--color-muted)] text-sm">
@@ -371,17 +388,17 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'var(--font-cormorant)' }}>
+          <h2 className="text-4xl font-light mb-4 font-display">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl mb-8 text-white/90">
-            Our team is here to help you achieve your health goals with evidence-based, personalized care.
+            Our care team in Cape Girardeau, Missouri can help you build a weight plan you are able to live with. We are in network with most major commercial insurances, Medicare and Medicaid, and Guardian Direct Care is available if you prefer it. We see patients by appointment, so call <a href="tel:+15732006143" className="font-semibold underline underline-offset-4 hover:text-white">(573) 200-6143</a> and we will find a time.
           </p>
           <a
             href="/contact"
             className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-8 py-4 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Schedule a Consultation
+            Request an Appointment
           </a>
         </div>
       </section>

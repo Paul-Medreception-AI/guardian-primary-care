@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Managing GERD and Acid Reflux: Lifestyle and Medical Approaches | Guardian Primary Care',
-  description: 'Expert guidance on managing GERD and acid reflux through lifestyle modifications and medical treatments. Learn evidence-based approaches from Birmingham\'s trusted primary care team.',
-  keywords: 'GERD, acid reflux, heartburn, digestive health, lifestyle changes, Birmingham AL, primary care',
+  title: 'GERD and Acid Reflux: Lifestyle and Medical Care',
+  description: 'Practical lifestyle changes and medical treatments that ease GERD and acid reflux, and the warning signs to act on. Guardian Primary Care, Cape Girardeau MO.',
+  keywords: 'GERD, acid reflux, heartburn, digestive health, lifestyle changes, Cape Girardeau MO, primary care',
 }
 
 export default function BlogPost() {
@@ -27,7 +28,7 @@ export default function BlogPost() {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-light leading-tight text-center mb-8" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h1 className="text-5xl font-light leading-tight text-center mb-8 font-display">
             Managing GERD and Acid Reflux: Lifestyle and Medical Approaches
           </h1>
 
@@ -49,8 +50,24 @@ export default function BlogPost() {
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
               </svg>
-              <span>Dr. Care Team</span>
+              <span>Guardian Primary Care Team</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section className="bg-white pt-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/site/cond-ibs.jpg"
+              alt="A person holding their abdomen with an illustration of the digestive tract overlaid"
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -60,7 +77,7 @@ export default function BlogPost() {
         <div className="max-w-3xl mx-auto px-6">
           {/* Opening Hook */}
           <p className="text-[var(--color-ink)] leading-loose text-lg mb-6">
-            That burning sensation in your chest after a meal. The bitter taste that wakes you up at night. The constant throat clearing that becomes second nature. If these experiences sound familiar, you're not alone. Gastroesophageal reflux disease (GERD) and acid reflux affect millions of Americans, impacting not just physical comfort but quality of life, sleep, and even social activities. The good news? With the right combination of lifestyle modifications and medical approaches, most people find significant relief.
+            That burning sensation in your chest after a meal. The bitter taste that wakes you up at night. The constant throat clearing that becomes second nature. If these experiences sound familiar, you're not alone. Gastroesophageal reflux disease (GERD) and acid reflux are among the most common digestive complaints seen in primary care, affecting not just physical comfort but quality of life, sleep, and even social activities. The good news? With the right combination of lifestyle modifications and medical approaches, most people find significant relief.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-8">
@@ -68,16 +85,16 @@ export default function BlogPost() {
           </p>
 
           {/* Section 1 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Understanding GERD and Acid Reflux
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            Acid reflux occurs when stomach acid flows backward into the esophagus, the tube connecting your mouth to your stomach. This happens when the lower esophageal sphincter (LES)—a ring of muscle that acts as a valve between the esophagus and stomach—weakens or relaxes inappropriately. When this occurs occasionally, it's simply called acid reflux or heartburn. When it happens frequently (more than twice a week), it's diagnosed as GERD.
+            Acid reflux occurs when stomach acid flows backward into the esophagus, the tube connecting your mouth to your stomach. This happens when the lower esophageal sphincter (LES), a ring of muscle that acts as a valve between the esophagus and stomach, weakens or relaxes at the wrong time. When this occurs occasionally, it's simply called acid reflux or heartburn. When it happens frequently (more than twice a week), it's diagnosed as GERD.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            The esophagus isn't designed to handle stomach acid, which is why reflux causes that characteristic burning sensation. Over time, repeated exposure can lead to inflammation, damage to the esophageal lining, and complications such as esophagitis, strictures, or Barrett's esophagus—a precancerous condition that requires monitoring.
+            The esophagus isn't designed to handle stomach acid, which is why reflux causes that characteristic burning sensation. Over time, repeated exposure can lead to inflammation, damage to the esophageal lining, and complications such as esophagitis, strictures, or Barrett's esophagus, a precancerous condition that requires monitoring.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -85,12 +102,12 @@ export default function BlogPost() {
           </p>
 
           {/* Section 2 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Lifestyle Modifications That Make a Difference
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            For many people, lifestyle changes form the foundation of GERD management. These modifications address the root causes of reflux and can significantly reduce symptoms without medication—or allow you to use less medication for better control.
+            For many people, lifestyle changes form the foundation of GERD management. These modifications address the root causes of reflux and can significantly reduce symptoms without medication, or allow you to use less medication for better control.
           </p>
 
           <div className="bg-[var(--color-cream)] rounded-xl p-6 mb-6">
@@ -193,13 +210,13 @@ export default function BlogPost() {
 
           {/* Pull Quote */}
           <div className="bg-[var(--color-light)] border-l-4 border-[var(--color-primary)] p-6 my-8">
-            <p className="text-[var(--color-ink)] italic text-xl leading-relaxed" style={{ fontFamily: 'Cormorant, serif' }}>
-              "For many patients, combining even two or three lifestyle modifications—such as elevating the bed, avoiding late meals, and eliminating trigger foods—can reduce symptoms by 50% or more within just a few weeks."
+            <p className="text-[var(--color-ink)] italic text-xl leading-relaxed font-display">
+              "For many people, combining even two or three lifestyle changes (elevating the bed, avoiding late meals, and cutting out trigger foods) brings noticeable relief within a few weeks."
             </p>
           </div>
 
           {/* Section 3 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Medical Treatment Options
           </h2>
 
@@ -214,7 +231,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            <strong>H2 blockers</strong> (famotidine/Pepcid, cimetidine/Tagamet) reduce acid production and provide longer relief than antacids—typically 6-12 hours. They take 30-60 minutes to work and are effective for mild to moderate symptoms, especially nighttime reflux.
+            <strong>H2 blockers</strong> (famotidine/Pepcid, cimetidine/Tagamet) reduce acid production and provide longer relief than antacids, typically 6 to 12 hours. They take 30-60 minutes to work and are effective for mild to moderate symptoms, especially nighttime reflux.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -232,8 +249,8 @@ export default function BlogPost() {
           </p>
 
           {/* Section 4 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
-            When to See Your Doctor
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
+            When to See Your Provider
           </h2>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
@@ -276,7 +293,7 @@ export default function BlogPost() {
           </p>
 
           {/* Section 5 */}
-          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-3xl text-[var(--color-ink)] mt-12 mb-4 font-display">
             Creating Your Personalized Management Plan
           </h2>
 
@@ -285,7 +302,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            Implement lifestyle changes gradually—trying to change everything at once can feel overwhelming and unsustainable. Start with the modifications most relevant to your situation. If you have nighttime symptoms, prioritize elevating your bed and avoiding late meals. If daytime heartburn is your main issue, focus on dietary triggers and smaller meals.
+            Implement lifestyle changes gradually, since trying to change everything at once can feel overwhelming and unsustainable. Start with the modifications most relevant to your situation. If you have nighttime symptoms, prioritize elevating your bed and avoiding late meals. If daytime heartburn is your main issue, focus on dietary triggers and smaller meals.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
@@ -298,7 +315,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base font-semibold">
-            If you're struggling with acid reflux or GERD symptoms in Birmingham, our team at Guardian Primary Care is here to help. We take the time to understand your unique situation and develop a comprehensive management plan that fits your life. Schedule a consultation today to start feeling better.
+            If you're struggling with acid reflux or GERD symptoms in Cape Girardeau, our care team at Guardian Primary Care is here to help. We take the time to understand your situation and build a management plan that fits your life. Call (573) 200-6143 to get started.
           </p>
         </div>
       </article>
@@ -313,9 +330,9 @@ export default function BlogPost() {
               </svg>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care Clinical Team</h3>
+              <h3 className="text-xl font-semibold text-[var(--color-ink)] mb-2">Written by the Guardian Primary Care team</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Board-certified providers specializing in Primary Care / DPC. Our team is dedicated to providing evidence-based, compassionate care to the Birmingham community.
+                Guardian Primary Care is led by Preston Holifield, DNP, APRN, FNP-C, a board-certified family nurse practitioner who works with a Missouri Licensed Collaborating Physician. Our care team serves Cape Girardeau and Southeast Missouri.
               </p>
             </div>
           </div>
@@ -325,7 +342,7 @@ export default function BlogPost() {
       {/* Related Articles */}
       <section className="bg-[var(--color-cream)] py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h3 className="text-3xl text-[var(--color-ink)] mb-8 text-center font-display">
             Related Resources
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -407,17 +424,17 @@ export default function BlogPost() {
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-light mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
+          <h2 className="text-4xl font-light mb-4 font-display">
             Ready to Take the Next Step?
           </h2>
           <p className="text-xl text-white/90 mb-8 leading-relaxed">
-            Our team is here to help you find lasting relief from GERD and acid reflux.
+            Our care team in Cape Girardeau, Missouri can help you find lasting relief from GERD and acid reflux. We see patients by appointment, so call <a href="tel:+15732006143" className="font-semibold underline underline-offset-4 hover:text-white">(573) 200-6143</a> and we will find a time.
           </p>
           <a
             href="/contact"
             className="inline-block bg-white text-[var(--color-primary)] px-8 py-4 rounded-full font-medium hover:bg-[var(--color-cream)] transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
-            Schedule a Consultation
+            Request an Appointment
           </a>
         </div>
       </section>
