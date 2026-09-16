@@ -65,19 +65,32 @@ export default function HomePage() {
         {/* Scrim. Written as an explicit rgba gradient on purpose: Tailwind cannot
             apply an alpha modifier to an arbitrary var() colour, so
             `from-[var(--color-dark)]/85` compiles to NOTHING and the hero text ends
-            up white on a bright photo. #00304B = 0,48,75 · #0095E9 = 0,149,233. */}
+            up white on a bright photo. #00304B = 0,48,75 · #0095E9 = 0,149,233.
+            Kept deliberately light so the photograph still reads; legibility comes
+            from the softer band behind the copy plus the text-shadow below. */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom right, rgba(0,48,75,0.92) 0%, rgba(0,48,75,0.80) 45%, rgba(0,149,233,0.66) 100%)',
+              'linear-gradient(to bottom right, rgba(0,48,75,0.34) 0%, rgba(0,48,75,0.20) 50%, rgba(0,149,233,0.14) 100%)',
+          }}
+        />
+        {/* A soft vertical band centred on the copy. Darkens only where the type
+            sits, so the edges of the photo stay bright. */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(ellipse 66% 52% at 50% 47%, rgba(0,30,48,0.52) 0%, rgba(0,30,48,0.26) 55%, rgba(0,30,48,0) 100%)',
           }}
         />
         <div className="relative max-w-5xl mx-auto px-6 text-center py-20">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] font-display max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] font-display max-w-4xl mx-auto"
+            style={{ textShadow: '0 2px 18px rgba(0,24,40,0.55), 0 1px 3px rgba(0,24,40,0.45)' }}>
             Comprehensive Primary Care Built Around You and Your Family
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto mt-6 leading-relaxed">
+          <p className="text-xl text-white max-w-2xl mx-auto mt-6 leading-relaxed"
+            style={{ textShadow: '0 2px 12px rgba(0,24,40,0.6), 0 1px 2px rgba(0,24,40,0.5)' }}>
             Guardian Primary Care is a family practice in Cape Girardeau, Missouri, offering compassionate,
             personalized healthcare for every stage of life. We are in-network with most major commercial
             insurances, Medicare and Medicaid, and Guardian Direct Care is available if you would rather
