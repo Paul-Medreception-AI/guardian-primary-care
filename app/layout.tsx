@@ -59,6 +59,7 @@ const LOCAL_BUSINESS_JSONLD = {
   sameAs: [
     'https://www.facebook.com/profile.php?id=61567210552076',
     'https://www.instagram.com/guardianprimary/',
+    'https://www.youtube.com/@GuardianHealthMO',
     'https://www.youtube.com/@PrestonNP',
     'https://linkedin.com/company/guardian-primary-care',
     'https://www.tiktok.com/@guardianhealthmo',

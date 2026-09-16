@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { VideoEmbed, GUARDIAN_VIDEOS, GUARDIAN_CHANNEL_URL } from '@/components/VideoEmbed'
 
 export const metadata: Metadata = {
   title: 'Meet Our Team | Guardian Primary Care',
@@ -94,6 +95,18 @@ export default function TeamPage() {
           </p>
         </div>
       </section>
+
+      {/* A message from the team — Guardian's own video */}
+      <section className="bg-white py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-display text-4xl text-center text-[var(--color-ink)] mb-4">
+            A Message from Guardian
+          </h2>
+          <p className="text-center text-[var(--color-muted)] mb-10">Meet Nurse Madi.</p>
+          <VideoEmbed videoId={GUARDIAN_VIDEOS.nurseMadi.videoId} title={GUARDIAN_VIDEOS.nurseMadi.title} />
+        </div>
+      </section>
+
 
       {/* Team Section */}
       <section className="bg-[var(--color-cream)] py-24">
@@ -193,6 +206,36 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
+    
+      {/* More from the Guardian channel */}
+      <section className="bg-[var(--color-cream)] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="font-display text-4xl text-center text-[var(--color-ink)] mb-12">
+            More from Guardian
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <figure>
+              <VideoEmbed videoId={GUARDIAN_VIDEOS.heatherPullen.videoId} title={GUARDIAN_VIDEOS.heatherPullen.title} />
+              <figcaption className="mt-3 text-sm font-semibold text-[var(--color-ink)]">
+                Meet Heather Pullen, Aesthetic Injector
+              </figcaption>
+            </figure>
+            <figure>
+              <VideoEmbed videoId={GUARDIAN_VIDEOS.brand.videoId} title={GUARDIAN_VIDEOS.brand.title} />
+              <figcaption className="mt-3 text-sm font-semibold text-[var(--color-ink)]">
+                Empowered in Care, Excellence in Health
+              </figcaption>
+            </figure>
+          </div>
+          <div className="text-center mt-10">
+            <a href={GUARDIAN_CHANNEL_URL} target="_blank" rel="noopener noreferrer"
+               className="text-[var(--color-primary)] font-semibold hover:underline">
+              Watch more on the Guardian Health channel &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }

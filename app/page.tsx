@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { VideoEmbed, GUARDIAN_VIDEOS } from '@/components/VideoEmbed'
 
 // Every quote below is a real, verbatim patient review from Guardian Primary Care.
 // Do not edit the wording, do not add ratings, counts or platform badges.
@@ -52,7 +53,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center text-white overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center text-white overflow-hidden bg-[var(--color-dark)]">
         <Image 
           src="/images/site/hero-family.jpg" 
           alt="A Guardian Primary Care provider examining an infant while the child's mother holds them" 
@@ -118,6 +119,19 @@ export default function HomePage() {
               <span className="font-bold text-[var(--color-ink)]">Telehealth and In-Person Visits</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Welcome video — Guardian's own introduction */}
+      <section className="bg-[var(--color-cream)] py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-display text-4xl sm:text-5xl text-center text-[var(--color-ink)] mb-4">
+            Meet Guardian Primary Care
+          </h2>
+          <p className="text-center text-[var(--color-muted)] mb-10 max-w-2xl mx-auto">
+            A provider owned and operated practice in Cape Girardeau, Missouri.
+          </p>
+          <VideoEmbed videoId={GUARDIAN_VIDEOS.welcome.videoId} title={GUARDIAN_VIDEOS.welcome.title} />
         </div>
       </section>
 

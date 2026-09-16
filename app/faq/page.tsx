@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | Guardian Primary Care, Cape Girardeau MO',
@@ -144,6 +145,21 @@ export default function FAQPage() {
           </p>
         </div>
       </section>
+      {/* Section image */}
+      <section className="bg-[var(--color-cream)] pb-4">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/site/quilia-care.jpg"
+              alt="A clinician talking with a patient during an appointment"
+              fill
+              sizes="(max-width: 1024px) 100vw, 64rem"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
 
       <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-4xl mx-auto px-6">

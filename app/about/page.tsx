@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { VideoEmbed, PRESTON_NP_LIBRARY } from '@/components/VideoEmbed'
 
 export const metadata: Metadata = {
   title: 'About Us | Guardian Primary Care',
@@ -285,6 +286,38 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+    
+      {/* PrestonNP health-education library — Preston's own channel */}
+      <section className="bg-white py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="font-display text-4xl text-center text-[var(--color-ink)] mb-4">
+            PrestonNP: Health Education
+          </h2>
+          <p className="text-center text-[var(--color-muted)] mb-12 max-w-2xl mx-auto">
+            PrestonNP is a health education platform created by Preston Holifield, DNP, APRN, FNP-C,
+            designed to make health education understandable, engaging and empowering for everyday people.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {PRESTON_NP_LIBRARY.slice(0, 4).map((v) => (
+              <figure key={v.videoId}>
+                <VideoEmbed videoId={v.videoId} title={v.title} />
+                <figcaption className="mt-3 text-sm font-semibold text-[var(--color-ink)]">{v.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <a
+              href="https://www.youtube.com/@PrestonNP"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white font-semibold px-8 py-4 rounded-xl transition-colors"
+            >
+              Watch more on the PrestonNP channel
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }

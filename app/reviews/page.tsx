@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Patient Testimonials | Guardian Primary Care',
@@ -62,6 +63,21 @@ export default function ReviewsPage() {
           </p>
         </div>
       </section>
+      {/* Section image */}
+      <section className="bg-[var(--color-cream)] pb-4">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/site/hero-poster.jpg"
+              alt="A Guardian Primary Care provider greeting a patient at the clinic entrance"
+              fill
+              sizes="(max-width: 1024px) 100vw, 64rem"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
 
       {/* Testimonials */}
       <section className="bg-[var(--color-cream)] py-24">
