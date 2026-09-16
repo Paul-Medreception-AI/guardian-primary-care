@@ -61,3 +61,94 @@ body { background-color: var(--color-cream); color: var(--color-ink); }
   .animate-fade-up { animation: none; opacity: 1; }
   .nav-item > .nav-panel { transition: none; }
 }
+
+/* ── Homepage hero, desktop ─────────────────────────────────────────────────
+   The copy is placed in IMAGE coordinates, not viewport coordinates.
+
+   hero-family.jpg is 3:2 and drawn with object-fit: cover, so how much of it is
+   cropped depends on the screen's aspect ratio: a 1724x768 laptop loses ~20% off
+   the top, a 1280x1024 monitor loses a sliver off the sides. A fixed pixel offset
+   that looked right at 1440x900 put the headline under the header on short wide
+   screens and across the baby's face on ultrawides.
+
+   So the maths the browser does for cover is done here too:
+     rendered width  --rw = max(section width, 1.5 * section height)
+     rendered height --rh = --rw / 1.5
+   and the copy is positioned at a fixed point OF THE PHOTO: horizontally at 45% of
+   the image (the open window between mother and provider), vertically near the top
+   of that window, and sized as a fraction of the image. object-position is pinned
+   to 24% vertically so both the window above and the faces below survive the crop.
+   Measured, not guessed: scratchpad hero_viewports.py checks header clearance and
+   face overlap on 13 real viewports from 1024x768 to 3440x1440.
+
+   cqw is the section's own width (container-type below), so a scrollbar does not
+   skew it. Custom properties are substituted where they are USED, and they are only
+   used inside .hero, so cqw always resolves against the section. */
+.hero-scrim { display: none; }
+
+@media (min-width: 1024px) {
+  .hero {
+    --hero-h: max(88vh, 560px);
+    --rw: max(100cqw, calc(1.5 * var(--hero-h)));
+    --rh: calc(var(--rw) / 1.5);
+    /* Type scale. Follows the image width, but never lets the copy grow taller than a
+       short screen can hold: on 1724x768 width-scaled type reached the otoscope hand. */
+    --u: min(var(--rw), calc(2.28 * var(--hero-h)));
+    height: var(--hero-h);
+    min-height: 0;
+    container-type: inline-size;
+  }
+  /* Keep the window above AND the faces below inside the crop on short wide screens. */
+  .hero .hero-img { object-position: 50% 24%; }
+
+  .hero .hero-copy {
+    position: absolute;
+    padding: 0;
+    width: calc(0.34 * var(--rw));
+    /* image x = 0.44, whatever is cropped off the sides: the middle of the open window,
+       clear of the mother's hair on the left and the provider on the right */
+    left: calc(50cqw - 0.06 * var(--rw));
+    /* image y = 0.05 (the ceiling above the window) minus the top crop, which is 24% of
+       the overflow. Never closer than 28px to the header. */
+    top: max(28px, calc(0.05 * var(--rh) - 0.24 * (var(--rh) - var(--hero-h))));
+    transform: translateX(-50%);
+  }
+  .hero .hero-copy-inner {
+    position: relative;
+    isolation: isolate;
+    max-width: none;
+  }
+  .hero .hero-h1 { font-size: clamp(34px, calc(0.0368 * var(--u)), 84px); }
+  .hero .hero-sub {
+    font-size: clamp(18px, calc(0.0142 * var(--u)), 30px);
+    max-width: calc(0.30 * var(--rw));
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* One row, always. Wrapping to two rows at 1024 added ~64px and pushed the buttons onto
+     the baby's face. The row may be wider than the text column; justify-content: center
+     spills it evenly both sides, and it is measured to stay inside the window. */
+  .hero .hero-ctas {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: clamp(20px, calc(0.022 * var(--u)), 44px);
+  }
+  .hero .hero-btn {
+    font-size: clamp(14px, calc(0.0111 * var(--u)), 21px);
+    padding: 0.95em 1em;
+  }
+  /* Feathered pool behind the copy, attached to the copy so it can never drift off it.
+     Plateau across the text, gone well before the frame edges. */
+  .hero .hero-scrim {
+    display: block;
+    position: absolute;
+    left: -32%;
+    right: -32%;
+    top: -48%;
+    bottom: -48%;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(closest-side, rgba(15,35,45,0.56) 0%, rgba(15,35,45,0.50) 52%, rgba(15,35,45,0.20) 78%, rgba(15,35,45,0) 100%);
+  }
+}

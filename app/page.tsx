@@ -53,22 +53,26 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero — the photograph is the hero; the copy answers only
-          what this is, who it is for, and what to do next. */}
-      <section className="relative min-h-[82vh] lg:min-h-[88vh] flex items-start lg:items-center text-white overflow-hidden bg-[var(--color-dark)]">
+          what this is, who it is for, and what to do next.
+
+          Desktop layout is pinned to the PHOTO, not to the viewport. See .hero in
+          globals.css: the copy is placed in image coordinates (the open window between
+          mother and provider) using the same cover-crop maths the browser applies, so the
+          composition is identical at 1280x720, 1724x768 and 3440x1440. Fixed pixel
+          offsets put the headline under the header on short wide screens. */}
+      <section className="hero relative min-h-[82vh] flex items-start text-white overflow-hidden bg-[var(--color-dark)]">
         <Image
           src="/images/site/hero-family.jpg"
           alt="A Guardian Primary Care provider examining an infant while the child's mother holds them"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[30%_center] lg:object-center"
+          className="hero-img object-cover object-[30%_center]"
         />
-        {/* Localized scrim only. Strongest behind the copy, fading completely into
-            the photo so the image keeps its full brightness at the edges instead of
-            taking a flat grey wash. Inline rgba on purpose: Tailwind cannot apply an
-            alpha modifier to an arbitrary var() colour, so `from-[var(--color-dark)]/85`
-            compiles to nothing and the white copy lands on bare photograph. */}
-        {/* Mobile: a vertical band behind the centred copy. */}
+        {/* Mobile scrim: a vertical band behind the copy at the top. Inline rgba on purpose:
+            Tailwind cannot apply an alpha modifier to an arbitrary var() colour, so
+            `from-[var(--color-dark)]/85` compiles to nothing and white copy lands on bare
+            photograph. Desktop uses .hero-scrim, attached to the copy itself. */}
         <div
           className="absolute inset-0 lg:hidden"
           style={{
@@ -76,39 +80,32 @@ export default function HomePage() {
               'linear-gradient(to bottom, rgba(15,35,45,0.62) 0%, rgba(15,35,45,0.58) 34%, rgba(15,35,45,0.22) 48%, rgba(15,35,45,0) 58%)',
           }}
         />
-        {/* Desktop: a feathered pool placed on the copy's actual position. */}
-        <div
-          className="absolute inset-0 hidden lg:block"
-          style={{
-            background:
-              'radial-gradient(ellipse 42% 36% at 46% 20%, rgba(15,35,45,0.56) 0%, rgba(15,35,45,0.52) 48%, rgba(15,35,45,0.22) 74%, rgba(15,35,45,0) 100%)',
-          }}
-        />
 
-        <div className="relative w-full px-6 pt-8 pb-10 self-start lg:self-center lg:pt-0 lg:pb-24 lg:-translate-y-[calc(20%_+_105px)]">
-          <div className="mx-auto lg:mx-0 lg:ml-[25%] text-center" style={{ maxWidth: '600px' }}>
+        <div className="hero-copy relative w-full px-6 pt-8 pb-10 self-start">
+          <div className="hero-copy-inner mx-auto max-w-[600px] text-center">
+            <div className="hero-scrim" aria-hidden="true" />
             <h1
-              className="font-display text-[34px] sm:text-[46px] lg:text-[57px] leading-[1.08] tracking-tight"
+              className="hero-h1 font-display text-[34px] sm:text-[46px] leading-[1.08] tracking-tight"
               style={{ fontWeight: 600, textWrap: 'balance', textShadow: '0 1px 10px rgba(10,28,38,0.45)' }}
             >
               Primary Care for Your Whole Family
             </h1>
             <p
-              className="mt-5 text-[19px] lg:text-[22px] font-semibold leading-[1.5] text-white"
-              style={{ textShadow: '0 1px 8px rgba(10,28,38,0.5)' }}
+              className="hero-sub mt-5 text-[19px] font-semibold leading-[1.5] text-white"
+              style={{ textWrap: 'balance', textShadow: '0 1px 8px rgba(10,28,38,0.5)' }}
             >
-              Personalized care in Cape Girardeau for every stage of life.
+              Personalized care in Cape&nbsp;Girardeau for every stage of life.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
+            <div className="hero-ctas flex flex-col sm:flex-row gap-4 justify-center mt-9">
               <Link
                 href="/contact"
-                className="bg-[var(--color-primary)] hover:bg-[#007ec4] text-white px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all"
+                className="hero-btn bg-[var(--color-primary)] hover:bg-[#007ec4] text-white px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all whitespace-nowrap"
               >
                 Schedule an Appointment
               </Link>
               <a
                 href="tel:+15732006143"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white/20 bg-[rgba(10,40,60,0.55)] lg:bg-[rgba(10,40,60,0.20)] backdrop-blur-[2px]"
+                className="hero-btn border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white/20 bg-[rgba(10,40,60,0.55)] lg:bg-[rgba(10,40,60,0.20)] backdrop-blur-[2px] whitespace-nowrap"
               >
                 Call (573) 200-6143
               </a>
