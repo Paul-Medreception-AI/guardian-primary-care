@@ -37,14 +37,14 @@ const CONDITION_CARDS: Record<string, CardMeta> = {
       'Breathing should not be a daily struggle. We work on triggers, inhaler technique, and a written plan for flare-ups.',
   },
   'chronic-obstructive-pulmonary-disease-copd': {
-    image: '/images/site/cond-copd.jpg',
-    alt: 'An inhaler lying next to a single cigarette',
+    image: '/images/site/cond-copd-inhaler.jpg',
+    alt: 'A man holding a metered dose inhaler used to manage COPD symptoms',
     blurb:
       'Ongoing COPD care focused on symptom control, avoiding hospital stays, and keeping you doing the things you enjoy.',
   },
   'thyroid-disorders': {
-    image: '/images/site/cond-ckd.jpg',
-    alt: 'A hand holding an anatomical model of an organ',
+    image: '/images/site/cond-thyroid.jpg',
+    alt: 'A clinician gently palpating a patient&apos;s neck to examine the thyroid gland',
     blurb:
       'Testing and treatment for an underactive or overactive thyroid, with follow-up labs until your energy, weight, and mood settle.',
   },

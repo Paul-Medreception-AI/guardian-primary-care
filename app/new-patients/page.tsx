@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'New Patients | Guardian Primary Care, Cape Girardeau MO',
@@ -54,19 +55,13 @@ const visitSteps = [
 export default function NewPatientsPage() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <nav className="text-sm mb-6 opacity-90">
-            <Link href="/" className="hover:underline">Home</Link>
-            <span className="mx-2">›</span>
-            <span>New Patients</span>
-          </nav>
-          <h1 className="font-display text-5xl md:text-6xl font-light mb-6">New Patients</h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            Welcome to Guardian Primary Care. Here is what to expect before your first visit.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image="/images/site/parent-child.jpg"
+        alt="A parent and child together, representing families new to Guardian Primary Care"
+        title="New Patients"
+        subtitle="Welcome to Guardian Primary Care. Here is what to expect before your first visit."
+        crumbs={[{ label: 'New Patients' }]}
+      />
 
       {/* How to schedule */}
       <section className="bg-white py-20">
@@ -119,8 +114,8 @@ export default function NewPatientsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative h-80 md:h-96 w-full rounded-2xl overflow-hidden">
               <Image
-                src="/images/site/parent-child.jpg"
-                alt="A parent and child together at a family primary care visit"
+                src="/images/site/hero-poster.jpg"
+                alt="A Guardian Primary Care provider greeting a patient at the clinic entrance"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

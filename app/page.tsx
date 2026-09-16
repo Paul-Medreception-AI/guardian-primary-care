@@ -52,98 +52,77 @@ const SERVICE_CARDS = [
 export default function HomePage() {
   return (
     <main>
-      {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center text-white overflow-hidden bg-[var(--color-dark)]">
-        <Image 
-          src="/images/site/hero-family.jpg" 
-          alt="A Guardian Primary Care provider examining an infant while the child's mother holds them" 
-          fill 
-          priority 
-          sizes="100vw" 
-          className="object-cover object-center" 
+      {/* Hero — the photograph is the hero; the copy answers only
+          what this is, who it is for, and what to do next. */}
+      <section className="relative min-h-[88vh] flex items-center text-white overflow-hidden bg-[var(--color-dark)]">
+        <Image
+          src="/images/site/hero-family.jpg"
+          alt="A Guardian Primary Care provider examining an infant while the child's mother holds them"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
-        {/* Scrim. Written as an explicit rgba gradient on purpose: Tailwind cannot
-            apply an alpha modifier to an arbitrary var() colour, so
-            `from-[var(--color-dark)]/85` compiles to NOTHING and the hero text ends
-            up white on a bright photo. #00304B = 0,48,75 · #0095E9 = 0,149,233.
-            Kept deliberately light so the photograph still reads; legibility comes
-            from the softer band behind the copy plus the text-shadow below. */}
+        {/* Localized scrim only. Strongest behind the copy, fading completely into
+            the photo so the image keeps its full brightness at the edges instead of
+            taking a flat grey wash. Inline rgba on purpose: Tailwind cannot apply an
+            alpha modifier to an arbitrary var() colour, so `from-[var(--color-dark)]/85`
+            compiles to nothing and the white copy lands on bare photograph. */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(to bottom right, rgba(0,48,75,0.34) 0%, rgba(0,48,75,0.20) 50%, rgba(0,149,233,0.14) 100%)',
+              'radial-gradient(ellipse 52% 44% at 38% 38%, rgba(15,35,45,0.58) 0%, rgba(15,35,45,0.18) 60%, rgba(15,35,45,0) 100%)',
           }}
         />
-        {/* A soft vertical band centred on the copy. Darkens only where the type
-            sits, so the edges of the photo stay bright. */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(ellipse 66% 52% at 50% 47%, rgba(0,30,48,0.52) 0%, rgba(0,30,48,0.26) 55%, rgba(0,30,48,0) 100%)',
-          }}
-        />
-        <div className="relative max-w-5xl mx-auto px-6 text-center py-20">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] font-display max-w-4xl mx-auto"
-            style={{ textShadow: '0 2px 18px rgba(0,24,40,0.55), 0 1px 3px rgba(0,24,40,0.45)' }}>
-            Comprehensive Primary Care Built Around You and Your Family
-          </h1>
-          <p className="text-xl text-white max-w-2xl mx-auto mt-6 leading-relaxed"
-            style={{ textShadow: '0 2px 12px rgba(0,24,40,0.6), 0 1px 2px rgba(0,24,40,0.5)' }}>
-            Guardian Primary Care is a family practice in Cape Girardeau, Missouri, offering compassionate,
-            personalized healthcare for every stage of life. We are in-network with most major commercial
-            insurances, Medicare and Medicaid, and Guardian Direct Care is available if you would rather
-            pay a simple monthly rate.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <Link 
-              href="/contact" 
-              className="bg-white text-[var(--color-dark)] px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all"
+
+        <div className="relative w-full px-6 pb-24 self-center -translate-y-[6%] lg:-translate-y-[12%]">
+          <div className="mx-auto lg:mx-0 lg:ml-[13%] text-center" style={{ maxWidth: '680px' }}>
+            <h1
+              className="font-display text-[32px] sm:text-[44px] lg:text-[52px] leading-[1.08] tracking-tight"
+              style={{ fontWeight: 600, textWrap: 'balance', textShadow: '0 1px 10px rgba(10,28,38,0.45)' }}
             >
-              Schedule an Appointment
-            </Link>
-            <a
-              href="tel:+15732006143"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all"
+              Primary Care for Your Whole Family
+            </h1>
+            <p
+              className="mt-5 text-[18px] lg:text-[20px] leading-[1.5] text-white"
+              style={{ textShadow: '0 1px 8px rgba(10,28,38,0.5)' }}
             >
-              Call (573) 200-6143
-            </a>
+              Personalized care in Cape Girardeau for every stage of life.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
+              <Link
+                href="/contact"
+                className="bg-[var(--color-primary)] hover:bg-[#007ec4] text-white px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all"
+              >
+                Schedule an Appointment
+              </Link>
+              <a
+                href="tel:+15732006143"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all"
+              >
+                Call (573) 200-6143
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="bg-white py-8 border-b border-[var(--color-border)]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-4">
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-[var(--color-primary)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span className="font-bold text-[var(--color-ink)]">Nationally Certified Family Nurse Practitioner</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-[var(--color-primary)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span className="font-bold text-[var(--color-ink)]">In-Network With Most Major Insurances</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-[var(--color-primary)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span className="font-bold text-[var(--color-ink)]">Guardian Direct Care Available</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <svg className="w-6 h-6 text-[var(--color-primary)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <path d="M20 6L9 17l-5-5" />
-              </svg>
-              <span className="font-bold text-[var(--color-ink)]">Telehealth and In-Person Visits</span>
-            </div>
-          </div>
+      {/* Credibility strip — the coverage facts, out of the hero's way */}
+      <section className="bg-white py-5 border-b border-[var(--color-border)]">
+        <div className="max-w-5xl mx-auto px-6">
+          <p className="text-center text-sm sm:text-[15px] text-[var(--color-muted)] leading-relaxed">
+            <span className="text-[var(--color-ink)] font-semibold">Most major commercial insurance accepted</span>
+            <span className="mx-2 text-[var(--color-border)]" aria-hidden="true">&bull;</span>Medicare
+            <span className="mx-2 text-[var(--color-border)]" aria-hidden="true">&bull;</span>Medicaid
+            <span className="mx-2 text-[var(--color-border)]" aria-hidden="true">&bull;</span>
+            <Link href="/services/guardian-direct-care" className="text-[var(--color-primary)] font-semibold hover:underline">
+              Guardian Direct Care available
+            </Link>
+          </p>
         </div>
       </section>
+
 
       {/* Welcome video — Guardian's own introduction */}
       <section className="bg-[var(--color-cream)] py-20">

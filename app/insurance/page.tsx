@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Care Access: Insurance & Guardian Direct Care | Guardian Primary Care',
@@ -99,20 +100,13 @@ const faqs = [
 export default function InsurancePage() {
   return (
     <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <nav className="text-sm mb-6 opacity-90">
-            <Link href="/" className="hover:underline">Home</Link>
-            <span className="mx-2">›</span>
-            <span>Care Access</span>
-          </nav>
-          <h1 className="font-display text-5xl md:text-6xl font-light mb-6">Care Access</h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Accessible. High quality. Transparent. Use your insurance, or choose Guardian Direct Care. Either way, you
-            will know what to expect.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        image="/images/site/care-access.jpg"
+        alt="A patient checking in with a member of staff at a clinic reception desk"
+        title="Care Access"
+        subtitle="Accessible. High quality. Transparent. Use your insurance, or choose Guardian Direct Care. Either way, you will know what to expect."
+        crumbs={[{ label: 'Care Access' }]}
+      />
 
       {/* Insurance first: this is how most patients are seen. */}
       <section className="bg-white py-20">

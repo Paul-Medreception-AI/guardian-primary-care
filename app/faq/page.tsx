@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions | Guardian Primary Care, Cape Girardeau MO',
@@ -132,33 +133,13 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_JSONLD) }}
       />
 
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <nav className="text-sm mb-6 opacity-90">
-            <Link href="/" className="hover:underline">Home</Link>
-            <span className="mx-2">›</span>
-            <span>FAQ</span>
-          </nav>
-          <h1 className="font-display text-5xl font-light mb-6">Frequently Asked Questions</h1>
-          <p className="text-xl opacity-90 max-w-2xl mx-auto">
-            Straight answers about coverage, cost, scheduling and what to expect at Guardian Primary Care.
-          </p>
-        </div>
-      </section>
-      {/* Section image */}
-      <section className="bg-[var(--color-cream)] pb-4">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
-            <Image
-              src="/images/site/quilia-care.jpg"
-              alt="A clinician talking with a patient during an appointment"
-              fill
-              sizes="(max-width: 1024px) 100vw, 64rem"
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/site/quilia-care.jpg"
+        alt="A clinician talking with a patient during an appointment"
+        title="Frequently Asked Questions"
+        subtitle="Straight answers about coverage, cost, scheduling and what to expect at Guardian Primary Care."
+        crumbs={[{ label: 'FAQ' }]}
+      />
 
 
       <section className="bg-[var(--color-cream)] py-20">

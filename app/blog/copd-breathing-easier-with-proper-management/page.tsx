@@ -48,8 +48,8 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="relative h-80 w-full overflow-hidden rounded-2xl">
             <Image
-              src="/images/site/cond-copd.jpg"
-              alt="A blue metered dose inhaler resting beside a single cigarette, a reminder that smoking is the leading cause of COPD."
+              src="/images/site/cond-copd-inhaler.jpg"
+              alt="A man holding a metered dose inhaler used to manage COPD symptoms"
               fill
               sizes="(max-width: 768px) 100vw, 896px"
               className="object-cover"

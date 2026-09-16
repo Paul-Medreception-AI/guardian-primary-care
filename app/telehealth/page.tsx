@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+import PageHero from '@/components/PageHero'
 
 export const metadata: Metadata = {
   title: 'Telehealth Visits | Guardian Primary Care | Cape Girardeau, MO',
@@ -32,47 +33,28 @@ export default function TelehealthPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[var(--color-dark)] to-[var(--color-primary)] py-24 text-white">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="text-white/70 text-sm mb-4">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <span className="mx-2">›</span>
-              <span>Telehealth</span>
-            </div>
-            <h1 className="font-display text-5xl font-light mb-6">Telehealth Visits</h1>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">
-              Guardian Primary Care offers both in-person and telehealth appointments. When a visit does
-              not need an exam room, you can see your provider from home, from work, or from anywhere in
-              Southeast Missouri.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-block bg-white text-[var(--color-primary)] hover:bg-[var(--color-light)] px-8 py-4 rounded-full font-semibold transition-colors text-center"
-              >
-                Request an Appointment
-              </Link>
-              <a
-                href="tel:+15732006143"
-                className="inline-block border border-white/50 hover:bg-white/10 px-8 py-4 rounded-full font-semibold transition-colors text-center"
-              >
-                Call (573) 200-6143
-              </a>
-            </div>
-          </div>
-          <div className="relative w-full h-80 lg:h-96 rounded-2xl overflow-hidden animate-fade-up">
-            <Image
-              src="/images/site/care-access.jpg"
-              alt="A patient checking in with a staff member at the clinic reception desk"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-              priority
-            />
-          </div>
+      <PageHero
+        image="/images/site/telehealth.jpg"
+        alt="A patient having a video consultation with a clinician from home"
+        title="Telehealth Visits"
+        subtitle="Guardian Primary Care offers both in-person and telehealth appointments. When a visit does not need an exam room, you can see your provider from home, from work, or from anywhere in Southeast Missouri."
+        crumbs={[{ label: 'Telehealth' }]}
+      >
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            href="/contact"
+            className="bg-white text-[var(--color-dark)] px-8 py-4 rounded-xl font-bold shadow-xl hover:-translate-y-0.5 transition-all text-center"
+          >
+            Schedule a Telehealth Visit
+          </Link>
+          <a
+            href="tel:+15732006143"
+            className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all text-center"
+          >
+            Call (573) 200-6143
+          </a>
         </div>
-      </section>
+      </PageHero>
 
       {/* How It Works */}
       <section className="bg-[var(--color-cream)] py-24">

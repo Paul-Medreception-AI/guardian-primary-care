@@ -81,8 +81,8 @@ const POSTS: Post[] = [
     title: 'COPD: Breathing Easier with Proper Management',
     category: 'Respiratory',
     blurb: 'What good COPD care looks like day to day, and the warning signs that mean you should call sooner rather than later.',
-    image: '/images/site/cond-copd.jpg',
-    alt: 'An inhaler lying next to a single cigarette',
+    image: '/images/site/cond-copd-inhaler.jpg',
+    alt: 'A man holding a metered dose inhaler used to manage COPD symptoms',
   },
   {
     slug: 'managing-seasonal-allergies-beyond-over-the-counter-medicati',
@@ -97,8 +97,8 @@ const POSTS: Post[] = [
     title: 'Thyroid Disorders: Symptoms, Testing, and Treatment Options',
     category: 'Hormones',
     blurb: 'Fatigue, weight changes, and mood shifts sometimes trace back to your thyroid. Here is how it gets tested.',
-    image: '/images/site/cond-ckd.jpg',
-    alt: 'A hand holding an anatomical model of an organ',
+    image: '/images/site/cond-thyroid.jpg',
+    alt: 'A clinician gently palpating a patient&apos;s neck to examine the thyroid gland',
   },
   {
     slug: 'hormone-changes-and-menopause-what-to-expect-and-how-to-mana',

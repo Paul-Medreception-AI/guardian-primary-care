@@ -169,7 +169,7 @@ export default function SiteHeader() {
             href="/contact"
             className="ml-2 bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-colors whitespace-nowrap"
           >
-            Schedule an Appointment
+            Schedule Appointment
           </a>
         </nav>
 
@@ -194,7 +194,7 @@ export default function SiteHeader() {
               href="/contact"
               className="block text-center bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white px-5 py-3 rounded-xl font-semibold text-sm transition-colors"
             >
-              Schedule an Appointment
+              Schedule Appointment
             </a>
             <a
               href="tel:+15732006143"
