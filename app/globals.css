@@ -105,12 +105,15 @@ body { background-color: var(--color-cream); color: var(--color-ink); }
     position: absolute;
     padding: 0;
     width: calc(0.34 * var(--rw));
-    /* image x = 0.44, whatever is cropped off the sides: the middle of the open window,
-       clear of the mother's hair on the left and the provider on the right */
-    left: calc(50cqw - 0.06 * var(--rw));
-    /* image y = 0.05 (the ceiling above the window) minus the top crop, which is 24% of
-       the overflow. Never closer than 28px to the header. */
-    top: max(28px, calc(0.05 * var(--rh) - 0.24 * (var(--rh) - var(--hero-h))));
+    /* image x = 0.42, whatever is cropped off the sides: the widest part of the open
+       window, clear of the mother on the left and the otoscope hand on the right */
+    left: calc(50cqw - 0.08 * var(--rw));
+    /* Breathing room below the header: 74px (~3x the original gap) on a normal desktop.
+       It eases down on short or narrow screens, where 74px would push the buttons onto the
+       baby's head or the otoscope hand. Otherwise the copy sits at image y 0.05 (the
+       ceiling above the window) minus the top crop, which is 24% of the overflow. */
+    --header-gap: clamp(40px, min(calc(0.0514 * var(--rw)), calc(0.11 * var(--hero-h))), 74px);
+    top: max(var(--header-gap), calc(0.05 * var(--rh) - 0.24 * (var(--rh) - var(--hero-h))));
     transform: translateX(-50%);
   }
   .hero .hero-copy-inner {
