@@ -13,6 +13,7 @@ const lato = Lato({ subsets: ['latin'], weight: ['300', '400', '700', '900'], va
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
+  verification: { google: 'CD8xRi7kLa6I4aDk3_CWfq2cx_KFfPkIsxQGCrp3Uz0' },
   title: 'Guardian Primary Care | Cape Girardeau, MO Family Practice',
   description:
     'Guardian Primary Care provides routine, sick and preventative care for every stage of life in Cape Girardeau, Missouri. In-network with most major insurances, Medicare and Medicaid, with Guardian Direct Care available.',
