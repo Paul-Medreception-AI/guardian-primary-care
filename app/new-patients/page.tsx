@@ -100,7 +100,7 @@ export default function NewPatientsPage() {
             <div className="bg-[var(--color-light)] rounded-2xl p-8 animate-fade-up">
               <h3 className="font-display text-2xl text-[var(--color-ink)] mb-4">Already a Patient?</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
-                Current patients can self-schedule on the Patient Ally portal, where you can also review your records.
+                Current patients can self-schedule on the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>, where you can also review your records.
                 Call the office if you need help signing in.
               </p>
             </div>

@@ -155,7 +155,7 @@ export default function ContactPage() {
 
                   <p className="text-[var(--color-muted)] text-xs mt-4 leading-relaxed">
                     Please do not include sensitive medical information in this form. To share health details securely,
-                    use the Patient Ally portal or call the office. If this is a medical emergency, call 911.
+                    use the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a> or call the office. If this is a medical emergency, call 911.
                   </p>
                 </div>
               </form>
@@ -270,7 +270,7 @@ export default function ContactPage() {
                 </svg>
                 <h3 className="font-display text-2xl text-[var(--color-ink)] mb-3">Already a Patient?</h3>
                 <p className="text-[var(--color-muted)] leading-relaxed">
-                  Current patients can self-schedule appointments and review their records on the Patient Ally portal.
+                  Current patients can self-schedule appointments and review their records on the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>.
                   If you need help signing in, call the office and our team will walk you through it.
                 </p>
               </div>

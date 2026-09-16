@@ -222,7 +222,7 @@ export default function BlogArticle() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">
-            <strong>Patient portals</strong> let you message your provider, view results and request refills between visits. Many patients find this lowers anxiety, because a non-urgent question does not have to wait for the next appointment. Guardian patients use the Patient Ally portal, and existing patients can self-schedule there.
+            <strong>Patient portals</strong> let you message your provider, view results and request refills between visits. Many patients find this lowers anxiety, because a non-urgent question does not have to wait for the next appointment. Guardian patients use the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>, and existing patients can self-schedule there.
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-4">

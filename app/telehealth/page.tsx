@@ -73,7 +73,7 @@ export default function TelehealthPage() {
               <h3 className="font-display text-2xl text-[var(--color-ink)] mb-4">Schedule Your Visit</h3>
               <p className="text-[var(--color-muted)] leading-relaxed">
                 Call our office at (573) 200-6143 to book a telehealth appointment. Existing patients can
-                also self-schedule through the Patient Ally portal.
+                also self-schedule through the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>.
               </p>
             </div>
 

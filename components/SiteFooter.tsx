@@ -77,6 +77,7 @@ export default function SiteFooter() {
               <li><a href="/team" className="text-white/70 hover:text-white text-sm transition-colors">Meet the Team</a></li>
               <li><a href="/reviews" className="text-white/70 hover:text-white text-sm transition-colors">Patient Testimonials</a></li>
               <li><a href="/new-patients" className="text-white/70 hover:text-white text-sm transition-colors">New Patients</a></li>
+              <li><a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white text-sm transition-colors">Patient Portal</a></li>
               <li><a href="/faq" className="text-white/70 hover:text-white text-sm transition-colors">FAQ</a></li>
               <li><a href="/contact" className="text-white/70 hover:text-white text-sm transition-colors">Contact</a></li>
             </ul>

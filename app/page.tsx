@@ -72,11 +72,11 @@ export default function HomePage() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse 42% 36% at 46% 34%, rgba(15,35,45,0.56) 0%, rgba(15,35,45,0.52) 48%, rgba(15,35,45,0.22) 74%, rgba(15,35,45,0) 100%)',
+              'radial-gradient(ellipse 42% 36% at 46% 20%, rgba(15,35,45,0.56) 0%, rgba(15,35,45,0.52) 48%, rgba(15,35,45,0.22) 74%, rgba(15,35,45,0) 100%)',
           }}
         />
 
-        <div className="relative w-full px-6 pb-24 self-center -translate-y-[6%] lg:-translate-y-[20%]">
+        <div className="relative w-full px-6 pb-24 self-center -translate-y-[6%] lg:-translate-y-[calc(20%_+_105px)]">
           <div className="mx-auto lg:mx-0 lg:ml-[25%] text-center" style={{ maxWidth: '600px' }}>
             <h1
               className="font-display text-[34px] sm:text-[46px] lg:text-[57px] leading-[1.08] tracking-tight"
@@ -332,7 +332,7 @@ export default function HomePage() {
               <h3 className="font-display text-2xl mb-4">Schedule Your Visit</h3>
               <p className="text-sm text-white/70 leading-relaxed">
                 New patients can request a first appointment online or call us at (573) 200-6143. Already a
-                patient? Self-schedule on the Patient Ally portal. Visits are by appointment, in person or
+                patient? Self-schedule on the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>. Visits are by appointment, in person or
                 by telehealth.
               </p>
             </div>

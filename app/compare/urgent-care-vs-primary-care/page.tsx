@@ -315,7 +315,7 @@ export default function UrgentCareVsPrimaryCare() {
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-[var(--color-muted)] leading-relaxed">
-                Call our office at (573) 200-6143 and our team will find you the soonest appointment we have. Guardian Primary Care is by appointment, and Guardian Direct Care members have same-day or next-day sick visits included in their membership along with direct access to their provider. Established patients can also self-schedule through the Patient Ally portal. Calling us first is almost always the right first step.
+                Call our office at (573) 200-6143 and our team will find you the soonest appointment we have. Guardian Primary Care is by appointment, and Guardian Direct Care members have same-day or next-day sick visits included in their membership along with direct access to their provider. Established patients can also self-schedule through the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>. Calling us first is almost always the right first step.
               </div>
             </details>
           </div>

@@ -330,7 +330,7 @@ export default function BlogPost() {
           </p>
 
           <p className="text-[var(--color-ink)] leading-loose text-base mb-6">
-            If you are looking for a primary care practice in Cape Girardeau, Missouri that offers both in-office care and telehealth, we are here to help. Visits are by appointment: call (573) 200-6143 or request an appointment online, and existing patients can self-schedule on the Patient Ally portal.
+            If you are looking for a primary care practice in Cape Girardeau, Missouri that offers both in-office care and telehealth, we are here to help. Visits are by appointment: call (573) 200-6143 or request an appointment online, and existing patients can self-schedule on the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>.
           </p>
         </div>
 

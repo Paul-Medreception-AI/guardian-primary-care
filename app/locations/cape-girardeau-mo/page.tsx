@@ -119,7 +119,7 @@ const FAQS = [
         <a href="tel:+15732006143" className="text-[var(--color-primary)] font-medium hover:underline">
           (573) 200-6143
         </a>
-        . Patients already established with us can self-schedule through the Patient Ally portal. Let us
+        . Patients already established with us can self-schedule through the <a href="https://www.patientally.com/login" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold underline underline-offset-2 hover:text-[var(--color-dark)]">Patient Ally portal</a>. Let us
         know when you book if you have any accessibility or scheduling needs, and we will plan around
         them.
       </>

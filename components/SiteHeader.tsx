@@ -8,6 +8,10 @@ const PATIENT_LINKS = [
   { href: '/faq', label: 'FAQ', blurb: 'Answers to the questions we hear most often.' },
 ]
 
+// Existing patients self-schedule, message the team and see results here.
+// Same URL the practice's own site links from every page.
+const PATIENT_PORTAL_URL = 'https://www.patientally.com/login'
+
 const ABOUT_LINKS = [
   { href: '/about', label: 'About Guardian' },
   { href: '/team', label: 'Meet the Team' },
@@ -124,6 +128,20 @@ export default function SiteHeader() {
                     <span className="block text-xs text-[var(--color-muted)] mt-0.5 leading-snug">{l.blurb}</span>
                   </a>
                 ))}
+                <a
+                  href={PATIENT_PORTAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 flex items-center justify-between rounded-xl bg-[var(--color-light)] px-3 py-2.5 hover:bg-[var(--color-border)] transition-colors"
+                >
+                  <span>
+                    <span className="block text-sm font-semibold text-[var(--color-primary)]">Patient Portal</span>
+                    <span className="block text-xs text-[var(--color-muted)] mt-0.5 leading-snug">Existing patients: schedule, message and view results.</span>
+                  </span>
+                  <svg className="w-4 h-4 text-[var(--color-primary)] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                    <path d="M14 3h7v7M10 14L21 3M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -153,6 +171,15 @@ export default function SiteHeader() {
 
           <a href="/contact" className="px-3 py-2 text-sm font-medium text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors">
             Contact
+          </a>
+
+          <a
+            href={PATIENT_PORTAL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden xl:inline-flex px-3 py-2 text-sm font-medium text-[var(--color-ink)] hover:text-[var(--color-primary)] transition-colors whitespace-nowrap"
+          >
+            Patient Portal
           </a>
 
           <a
@@ -201,6 +228,14 @@ export default function SiteHeader() {
               className="block text-center border border-[var(--color-border)] text-[var(--color-primary)] px-5 py-3 rounded-xl font-semibold text-sm"
             >
               Call (573) 200-6143
+            </a>
+            <a
+              href={PATIENT_PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center border border-[var(--color-border)] text-[var(--color-ink)] px-5 py-3 rounded-xl font-semibold text-sm"
+            >
+              Patient Portal
             </a>
 
             <details className="border-t border-[var(--color-border)] pt-4">
