@@ -72,20 +72,20 @@ export default function HomePage() {
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(ellipse 52% 44% at 38% 38%, rgba(15,35,45,0.58) 0%, rgba(15,35,45,0.18) 60%, rgba(15,35,45,0) 100%)',
+              'radial-gradient(ellipse 42% 36% at 46% 34%, rgba(15,35,45,0.56) 0%, rgba(15,35,45,0.52) 48%, rgba(15,35,45,0.22) 74%, rgba(15,35,45,0) 100%)',
           }}
         />
 
-        <div className="relative w-full px-6 pb-24 self-center -translate-y-[6%] lg:-translate-y-[12%]">
-          <div className="mx-auto lg:mx-0 lg:ml-[13%] text-center" style={{ maxWidth: '680px' }}>
+        <div className="relative w-full px-6 pb-24 self-center -translate-y-[6%] lg:-translate-y-[20%]">
+          <div className="mx-auto lg:mx-0 lg:ml-[25%] text-center" style={{ maxWidth: '600px' }}>
             <h1
-              className="font-display text-[32px] sm:text-[44px] lg:text-[52px] leading-[1.08] tracking-tight"
+              className="font-display text-[34px] sm:text-[46px] lg:text-[57px] leading-[1.08] tracking-tight"
               style={{ fontWeight: 600, textWrap: 'balance', textShadow: '0 1px 10px rgba(10,28,38,0.45)' }}
             >
               Primary Care for Your Whole Family
             </h1>
             <p
-              className="mt-5 text-[18px] lg:text-[20px] leading-[1.5] text-white"
+              className="mt-5 text-[19px] lg:text-[22px] font-semibold leading-[1.5] text-white"
               style={{ textShadow: '0 1px 8px rgba(10,28,38,0.5)' }}
             >
               Personalized care in Cape Girardeau for every stage of life.
@@ -99,7 +99,8 @@ export default function HomePage() {
               </Link>
               <a
                 href="tel:+15732006143"
-                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold transition-all hover:bg-white/20"
+                style={{ backgroundColor: 'rgba(10,40,60,0.20)' }}
               >
                 Call (573) 200-6143
               </a>
