@@ -25,8 +25,9 @@ type ContactBody = {
   service?: string
   message?: string
   pagePath?: string
-  // Hidden in the UI. Real users never fill this in.
-  company_website?: string
+  // The honeypot, hidden in the UI. Real users never fill this in -- provided its name gives
+  // browser autofill nothing to recognise. See components/ContactForm.tsx.
+  hp_leave_blank?: string
   // Milliseconds between the form mounting and submit.
   timeElapsedMs?: number
 }
@@ -41,7 +42,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Invalid request' }, { status: 400 })
   }
 
-  if (body.company_website && body.company_website.trim()) {
+  // Only the new field name. The old one, company_website, was filled by Chrome autofill for
+  // real people; a stale bundle still sending it must not be able to drop a patient's message.
+  if (typeof body.hp_leave_blank === 'string' && body.hp_leave_blank.trim()) {
     console.warn('[contact] honeypot triggered, dropped')
     return NextResponse.json({ success: true }, { status: 200 })
   }

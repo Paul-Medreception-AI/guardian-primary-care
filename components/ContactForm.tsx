@@ -101,10 +101,26 @@ export default function ContactForm() {
         </div>
 
         {/* Honeypot. Hidden from people and from assistive tech; bots fill every field.
-            Not type=hidden, which many bots skip. */}
+            Not type=hidden, which many bots skip.
+
+            🔴 NOTHING IN ITS NAME, ID OR LABEL MAY LOOK LIKE A REAL FIELD. It was called
+            "company_website" / "Company website", and Chrome's autofill classifies anything
+            containing "company" as the company name -- autocomplete="off" does not stop it --
+            so a person who autofilled the form filled the trap too, and the route dropped
+            their message behind a fake "Message sent". Both of Paul's live tests on
+            2026-09-16 were lost that way. */}
         <div aria-hidden="true" className="absolute -left-[9999px] w-px h-px overflow-hidden">
-          <label htmlFor="company_website">Company website</label>
-          <input type="text" id="company_website" name="company_website" tabIndex={-1} autoComplete="off" />
+          <label htmlFor="hp_leave_blank">Leave this empty</label>
+          <input
+            type="text"
+            id="hp_leave_blank"
+            name="hp_leave_blank"
+            tabIndex={-1}
+            autoComplete="off"
+            data-1p-ignore
+            data-lpignore="true"
+            data-bwignore
+          />
         </div>
 
         {status.kind === 'error' && (

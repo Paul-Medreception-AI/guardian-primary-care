@@ -6,7 +6,7 @@ The assertions are about what Studio got, not what the website answered, because
 deliberately answers a fake 200 to bots -- a status-code-only test cannot tell "delivered" from
 "silently dropped". Each negative case is a control arm that must show NOTHING received.
 """
-import json, os, subprocess, threading, time, urllib.request, urllib.error, signal
+import json, os, re, subprocess, threading, time, urllib.request, urllib.error, signal
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -59,7 +59,25 @@ def post(payload):
 
 VALID = {'name': 'Pat Tester', 'email': 'pat@example.com', 'phone': '(573) 555-0142',
          'service': 'New Patient Appointment', 'message': 'Hoping to establish care.',
-         'pagePath': '/contact', 'company_website': '', 'timeElapsedMs': 4200}
+         'pagePath': '/contact', 'hp_leave_blank': '', 'timeElapsedMs': 4200}
+
+# What browser AUTOFILL would fill. A stand-in for Chrome's field classifier, not a copy of it:
+# the patterns for the profile types a person's saved address carries. Autofill looks at a
+# field's name, id and label -- which is exactly what put "Company website" in the trap.
+AUTOFILL_PROFILE = [
+    (r'company|business|organi[sz]ation', 'MedReception AI'),
+    (r'website|homepage|\burl\b', 'https://medreception.ai'),
+    (r'e.?mail', 'autofill@example.com'),
+    (r'phone|mobile|\btel\b', '5735550199'),
+    (r'address|street|city|zip|postal', '1 Main St'),
+    (r'name', 'Autofill Person'),
+]
+def autofill_value(*signals):
+    text = ' '.join(x or '' for x in signals).lower()
+    for pat, val in AUTOFILL_PROFILE:
+        if re.search(pat, text):
+            return val
+    return None
 
 passed = failed = 0
 def check(name, cond, detail=''):
@@ -85,15 +103,61 @@ try:
         check('phone normalised to E.164', b.get('phone') == '+15735550142', b.get('phone'))
         check('reason for visit preserved (becomes a Studio detail)', b.get('reason_for_visit') == 'New Patient Appointment', b)
         check('message carried', b.get('message') == 'Hoping to establish care.', b.get('message'))
-        check('honeypot NOT forwarded', 'company_website' not in b, list(b))
+        check('honeypot NOT forwarded', 'hp_leave_blank' not in b and 'company_website' not in b, list(b))
         check('timing NOT forwarded', 'timeElapsedMs' not in b, list(b))
         check('no `source` key that could collide with studio_source', 'source' not in b, list(b))
 
     print('\nCASE 2  control: honeypot filled -> fake 200, Studio receives NOTHING')
     received.clear()
-    st, _ = post({**VALID, 'company_website': 'http://spam.example'})
+    st, _ = post({**VALID, 'hp_leave_blank': 'http://spam.example'})
     check('fake 200 to the bot', st == 200, st)
     check('Studio received nothing', len(received) == 0, len(received))
+
+    print('\nCASE 2b  a stale page still sending the OLD trap, filled by autofill -> delivered')
+    received.clear()
+    st, _ = post({**VALID, 'company_website': 'MedReception AI', 'message': 'stale bundle'})
+    check('200', st == 200, st)
+    check('Studio received it (company_website no longer drops a person)', len(received) == 1, len(received))
+
+    print('\nCASE 2c  the autofill stand-in recognises the OLD trap and not the new one')
+    check('control: "company_website" / "Company website" WOULD be autofilled',
+          autofill_value('company_website', 'company_website', 'Company website') is not None)
+    check('"hp_leave_blank" / "Leave this empty" would not',
+          autofill_value('hp_leave_blank', 'hp_leave_blank', 'Leave this empty') is None)
+
+    print('\nCASE 2d  REAL BROWSER: autofill every field it recognises, submit, Studio receives it')
+    # The JSON cases above cannot see this bug: it lived in the rendered form, where a browser
+    # decides what to fill. So drive the built page, fill every input autofill would recognise
+    # -- hidden or not, as Chrome does -- and assert on what Studio got.
+    from playwright.sync_api import sync_playwright
+    received.clear()
+    with sync_playwright() as pw:
+        br = pw.chromium.launch()
+        pg = br.new_page()
+        pg.goto(f'http://127.0.0.1:{SITE_PORT}/contact', wait_until='networkidle')
+        if os.environ.get('CONTROL_RELABEL_TRAP'):
+            # CONTROL ARM: give the trap back the label autofill recognised. This case must then
+            # go RED -- if it stays green, it cannot see the bug it exists for.
+            pg.evaluate("document.querySelector(`label[for='hp_leave_blank']`).textContent = 'Company website'")
+        filled, trap_filled = [], False
+        for el in pg.query_selector_all('form input, form textarea'):
+            nm, ident = el.get_attribute('name'), el.get_attribute('id')
+            label = pg.evaluate("(id) => { const l = id && document.querySelector(`label[for='${id}']`); return l ? l.textContent : '' }", ident)
+            val = autofill_value(nm, ident, label)
+            if val is not None:
+                el.evaluate("(e, v) => { e.value = v; e.dispatchEvent(new Event('input', {bubbles: true})) }", val)
+                filled.append(nm)
+                trap_filled |= nm in ('hp_leave_blank', 'company_website')
+        pg.fill('#message', 'Filled by the autofill browser test.')
+        pg.wait_for_timeout(2000)                      # a person, not a bot, by the timing check
+        pg.click('button[type=submit]')
+        pg.wait_for_selector('text=Message sent', timeout=15000)
+        br.close()
+    check(f'autofill stand-in filled the visible fields ({", ".join(filled)})', {'name', 'email', 'phone'} <= set(filled), filled)
+    check('autofill did NOT fill the trap', not trap_filled, filled)
+    check('Studio received the autofilled submission', len(received) == 1, len(received))
+    if received:
+        check('it is the person, not a blank', received[0]['body'].get('email') == 'autofill@example.com', received[0]['body'])
 
     print('\nCASE 3  control: timing missing -> fake 200, Studio receives NOTHING')
     received.clear()
