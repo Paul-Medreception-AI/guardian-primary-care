@@ -41,11 +41,14 @@ export default function PatientFormSmsPage() {
           </p>
 
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-cream)] p-4 sm:p-6">
+            {/* Height measured against the live form, not guessed: its content is 661px at the
+                desktop width of this box and 763px on a 390px phone, where the text wraps. The
+                640px this used to be cut the form off by 21px on desktop and 123px on a phone,
+                behind a scrollbar inside the page. */}
             <iframe
               src={STUDIO_CONSENT_URL}
               title="Guardian Primary Care text message consent form"
-              className="w-full border-0 bg-transparent"
-              style={{ height: '640px' }}
+              className="w-full border-0 bg-transparent h-[880px] sm:h-[700px]"
               loading="eager"
             />
           </div>
